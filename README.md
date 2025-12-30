@@ -154,7 +154,6 @@ Comprehensive security toolkit for vulnerability management, threat modeling aut
   </a>
 </p>
 
-<!--
 ## GitHub Stats
 
 <p align="center">
@@ -165,9 +164,6 @@ Comprehensive security toolkit for vulnerability management, threat modeling aut
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&theme=dark&hide_border=true&bg_color=0D1117&title_color=3b82f6" alt="Top Languages" />
 </p>
 
-Descomente a seção acima se quiser usar as estatísticas do GitHub.
--->
-
 ---
 
 ## Customize Checklist
@@ -175,7 +171,7 @@ Descomente a seção acima se quiser usar as estatísticas do GitHub.
 - [ ] Atualizar link do repositório AppSec Express (se diferente de AppSec-Express-Site)
 - [ ] Adicionar link do repositório Security Suite quando disponível
 - [ ] Adicionar certificações na seção Milestones (se aplicável)
-- [ ] Descomentar seção GitHub Stats se desejar exibir
+- [x] GitHub Stats ativado
 - [ ] Personalizar banner SVG em `./assets/banner.svg` se necessário
 
 ---
