@@ -1,27 +1,27 @@
 <svg width="100%" height="300" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Gradiente de fundo com profundidade - AJUSTE AS CORES AQUI -->
+    <!-- Background gradient with depth - Palette: #040c23, #0c142c -->
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0a0e27;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#1a1f3a;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0d1117;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#040c23;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0c142c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#040c23;stop-opacity:1" />
     </linearGradient>
     
-    <!-- Gradiente para elementos de pipeline - AJUSTE AS CORES AQUI -->
+    <!-- Gradient for pipeline elements - Palette: #04c59d, #08b98b -->
     <linearGradient id="pipelineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.4" />
-      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:0.5" />
-      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.4" />
+      <stop offset="0%" style="stop-color:#04c59d;stop-opacity:0.4" />
+      <stop offset="50%" style="stop-color:#08b98b;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#04c59d;stop-opacity:0.4" />
     </linearGradient>
     
-    <!-- Gradiente alternativo (verde/azul para tema diferente) -->
+    <!-- Alternative gradient -->
     <linearGradient id="altGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.4" />
-      <stop offset="50%" style="stop-color:#3b82f6;stop-opacity:0.5" />
-      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0.4" />
+      <stop offset="0%" style="stop-color:#08b98b;stop-opacity:0.4" />
+      <stop offset="50%" style="stop-color:#04c59d;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#08b98b;stop-opacity:0.4" />
     </linearGradient>
     
-    <!-- Glow effect para shields - AJUSTE INTENSIDADE (stdDeviation) -->
+    <!-- Glow effect for shields - ADJUST INTENSITY (stdDeviation) -->
     <filter id="glow">
       <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
       <feMerge>
@@ -30,7 +30,7 @@
       </feMerge>
     </filter>
     
-    <!-- Glow mais intenso -->
+    <!-- Stronger glow -->
     <filter id="glowStrong">
       <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
       <feMerge>
@@ -39,28 +39,28 @@
       </feMerge>
     </filter>
     
-    <!-- Sombra suave - AJUSTE INTENSIDADE (stdDeviation) -->
+    <!-- Soft shadow - ADJUST INTENSITY (stdDeviation) -->
     <filter id="shadow">
       <feDropShadow dx="0" dy="3" stdDeviation="5" flood-opacity="0.4"/>
     </filter>
     
-    <!-- Padrão de ruído sutil - AJUSTE OPACIDADE DOS CÍRCULOS -->
+    <!-- Subtle noise pattern - Palette: #040c23 -->
     <pattern id="noise" patternUnits="userSpaceOnUse" width="100" height="100">
-      <rect width="100" height="100" fill="#0a0e27"/>
-      <circle cx="20" cy="20" r="1" fill="#ffffff" opacity="0.04"/>
-      <circle cx="80" cy="40" r="1" fill="#ffffff" opacity="0.04"/>
-      <circle cx="40" cy="80" r="1" fill="#ffffff" opacity="0.04"/>
-      <circle cx="60" cy="60" r="1" fill="#ffffff" opacity="0.04"/>
-      <circle cx="30" cy="70" r="0.8" fill="#ffffff" opacity="0.03"/>
-      <circle cx="70" cy="20" r="0.8" fill="#ffffff" opacity="0.03"/>
+      <rect width="100" height="100" fill="#040c23"/>
+      <circle cx="20" cy="20" r="1" fill="#d6d9de" opacity="0.04"/>
+      <circle cx="80" cy="40" r="1" fill="#d6d9de" opacity="0.04"/>
+      <circle cx="40" cy="80" r="1" fill="#d6d9de" opacity="0.04"/>
+      <circle cx="60" cy="60" r="1" fill="#d6d9de" opacity="0.04"/>
+      <circle cx="30" cy="70" r="0.8" fill="#d6d9de" opacity="0.03"/>
+      <circle cx="70" cy="20" r="0.8" fill="#d6d9de" opacity="0.03"/>
     </pattern>
   </defs>
   
-  <!-- Fundo com gradiente -->
+  <!-- Background with gradient -->
   <rect width="100%" height="100%" fill="url(#bgGradient)"/>
   <rect width="100%" height="100%" fill="url(#noise)" opacity="0.5"/>
   
-  <!-- Elementos de pipeline/CI (linhas horizontais com profundidade) - AJUSTE OPACIDADE -->
+  <!-- Pipeline/CI elements (horizontal lines with depth) - ADJUST OPACITY -->
   <g opacity="0.2">
     <line x1="0" y1="50" x2="100%" y2="50" stroke="url(#pipelineGradient)" stroke-width="2.5" filter="url(#glow)"/>
     <line x1="0" y1="110" x2="100%" y2="110" stroke="url(#pipelineGradient)" stroke-width="2.5" filter="url(#glow)"/>
@@ -68,100 +68,101 @@
     <line x1="0" y1="230" x2="100%" y2="230" stroke="url(#pipelineGradient)" stroke-width="2.5" filter="url(#glow)"/>
   </g>
   
-  <!-- Blocos de código (representação visual) - AJUSTE POSIÇÃO (x, y) E TAMANHO -->
+  <!-- Code blocks (visual representation) - Palette: #04c59d, #08b98b -->
   <g opacity="0.15">
-    <rect x="40" y="70" width="140" height="24" rx="5" fill="#3b82f6" filter="url(#shadow)"/>
-    <rect x="40" y="105" width="100" height="24" rx="5" fill="#8b5cf6" filter="url(#shadow)"/>
-    <rect x="40" y="140" width="120" height="24" rx="5" fill="#3b82f6" filter="url(#shadow)"/>
-    <!-- Linha de código adicional -->
-    <rect x="40" y="175" width="90" height="24" rx="5" fill="#8b5cf6" filter="url(#shadow)"/>
+    <rect x="40" y="70" width="140" height="24" rx="5" fill="#04c59d" filter="url(#shadow)"/>
+    <rect x="40" y="105" width="100" height="24" rx="5" fill="#08b98b" filter="url(#shadow)"/>
+    <rect x="40" y="140" width="120" height="24" rx="5" fill="#04c59d" filter="url(#shadow)"/>
+    <!-- Additional code line -->
+    <rect x="40" y="175" width="90" height="24" rx="5" fill="#08b98b" filter="url(#shadow)"/>
   </g>
   
-  <!-- Shield principal (centro-esquerda) - AJUSTE POSIÇÃO (translate) E TAMANHO -->
+  <!-- Main shield (center-left) - Palette: #04c59d, #08b98b -->
   <g transform="translate(70, 90)" opacity="0.5">
     <path d="M 0 25 L 25 0 L 75 0 L 100 25 L 100 75 L 50 125 L 0 75 Z" 
           fill="none" 
-          stroke="#3b82f6" 
+          stroke="#04c59d" 
           stroke-width="3" 
           filter="url(#glowStrong)"/>
     <path d="M 15 35 L 35 15 L 85 15 L 105 35 L 105 85 L 60 135 L 15 85 Z" 
           fill="none" 
-          stroke="#8b5cf6" 
+          stroke="#08b98b" 
           stroke-width="2.5" 
           filter="url(#glow)"/>
-    <!-- Lock icon dentro do shield -->
-    <rect x="40" y="45" width="20" height="20" rx="3" fill="none" stroke="#3b82f6" stroke-width="1.5" opacity="0.6"/>
-    <path d="M 45 50 L 45 45 L 55 45 L 55 50" fill="none" stroke="#8b5cf6" stroke-width="1.5" opacity="0.6"/>
+    <!-- Lock icon inside the shield -->
+    <rect x="40" y="45" width="20" height="20" rx="3" fill="none" stroke="#04c59d" stroke-width="1.5" opacity="0.6"/>
+    <path d="M 45 50 L 45 45 L 55 45 L 55 50" fill="none" stroke="#08b98b" stroke-width="1.5" opacity="0.6"/>
   </g>
   
-  <!-- Container/Cloud shapes (direita) - AJUSTE POSIÇÃO (translate) -->
+  <!-- Container/Cloud shapes (right) - Palette: #04c59d, #08b98b -->
   <g opacity="0.15" transform="translate(650, 70)">
-    <rect x="0" y="0" width="90" height="70" rx="10" fill="#3b82f6" filter="url(#shadow)"/>
-    <circle cx="45" cy="35" r="18" fill="#8b5cf6" filter="url(#shadow)"/>
-    <!-- Linhas de container -->
-    <line x1="10" y1="20" x2="80" y2="20" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
-    <line x1="10" y1="50" x2="80" y2="50" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+    <rect x="0" y="0" width="90" height="70" rx="10" fill="#04c59d" filter="url(#shadow)"/>
+    <circle cx="45" cy="35" r="18" fill="#08b98b" filter="url(#shadow)"/>
+    <!-- Container lines -->
+    <line x1="10" y1="20" x2="80" y2="20" stroke="#d6d9de" stroke-width="1" opacity="0.3"/>
+    <line x1="10" y1="50" x2="80" y2="50" stroke="#d6d9de" stroke-width="1" opacity="0.3"/>
   </g>
   
-  <!-- Gráfico de risco/radar (esquerda) - AJUSTE POSIÇÃO (translate) -->
+  <!-- Risk/radar chart (left) - Palette: #04c59d, #08b98b -->
   <g opacity="0.2" transform="translate(180, 140)">
     <polygon points="50,0 100,50 50,100 0,50" 
              fill="none" 
-             stroke="#3b82f6" 
+             stroke="#04c59d" 
              stroke-width="2.5" 
              filter="url(#glow)"/>
     <polygon points="50,25 75,50 50,75 25,50" 
              fill="none" 
-             stroke="#8b5cf6" 
+             stroke="#08b98b" 
              stroke-width="2" 
              filter="url(#glow)"/>
-    <!-- Linhas do radar -->
-    <line x1="50" y1="0" x2="50" y2="100" stroke="#3b82f6" stroke-width="1" opacity="0.4"/>
-    <line x1="0" y1="50" x2="100" y2="50" stroke="#3b82f6" stroke-width="1" opacity="0.4"/>
+    <!-- Radar lines -->
+    <line x1="50" y1="0" x2="50" y2="100" stroke="#04c59d" stroke-width="1" opacity="0.4"/>
+    <line x1="0" y1="50" x2="100" y2="50" stroke="#04c59d" stroke-width="1" opacity="0.4"/>
   </g>
   
-  <!-- Cadeado de segurança (novo elemento) -->
+  <!-- Security lock - Palette: #04c59d, #08b98b -->
   <g opacity="0.12" transform="translate(750, 150)">
-    <rect x="0" y="20" width="40" height="30" rx="5" fill="#3b82f6" filter="url(#shadow)"/>
+    <rect x="0" y="20" width="40" height="30" rx="5" fill="#04c59d" filter="url(#shadow)"/>
     <path d="M 10 20 L 10 10 Q 10 5 20 5 Q 30 5 30 10 L 30 20" 
           fill="none" 
-          stroke="#8b5cf6" 
+          stroke="#08b98b" 
           stroke-width="2" 
           filter="url(#glow)"/>
   </g>
   
-  <!-- Texto principal - AJUSTE TAMANHOS DE FONTE E CORES -->
+  <!-- Main text - ADJUST FONT SIZES AND COLORS -->
   <g transform="translate(50%, 50%)">
-    <!-- Nome - COR: #ffffff, TAMANHO: 44px -->
+    <!-- Name - Palette: #d6d9de -->
     <text x="0" y="-45" 
           font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" 
           font-size="44" 
           font-weight="700" 
-          fill="#ffffff" 
+          fill="#d6d9de" 
           text-anchor="middle" 
           filter="url(#shadow)"
           letter-spacing="0.5px">
       Lucas Henrique Grifoni
     </text>
     
-    <!-- Título - COR: #8b9dc3, TAMANHO: 26px -->
+    <!-- Title - Palette: #d6d9de with opacity -->
     <text x="0" y="12" 
           font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" 
           font-size="26" 
           font-weight="500" 
-          fill="#8b9dc3" 
+          fill="#d6d9de" 
           text-anchor="middle" 
           filter="url(#shadow)"
-          letter-spacing="0.3px">
+          letter-spacing="0.3px"
+          opacity="0.9">
       Application Security Specialist & DevSecOps Engineer
     </text>
     
-    <!-- Frase de impacto - COR: #3b82f6, TAMANHO: 20px -->
+    <!-- Impact statement - Palette: #04c59d -->
     <text x="0" y="55" 
           font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" 
           font-size="20" 
           font-weight="400" 
-          fill="#3b82f6" 
+          fill="#04c59d" 
           text-anchor="middle" 
           filter="url(#glowStrong)" 
           opacity="0.95"
@@ -170,16 +171,16 @@
     </text>
   </g>
   
-  <!-- Linha decorativa inferior - AJUSTE OPACIDADE E COR -->
+  <!-- Bottom decorative line - Palette: #04c59d -->
   <line x1="8%" y1="280" x2="92%" y2="280" 
-        stroke="#3b82f6" 
+        stroke="#04c59d" 
         stroke-width="2.5" 
         opacity="0.4" 
         filter="url(#glow)"/>
   
-  <!-- Linha decorativa superior (opcional) -->
+  <!-- Top decorative line - Palette: #04c59d -->
   <line x1="8%" y1="20" x2="92%" y2="20" 
-        stroke="#3b82f6" 
+        stroke="#04c59d" 
         stroke-width="1.5" 
         opacity="0.2" 
         filter="url(#glow)"/>

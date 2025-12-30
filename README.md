@@ -12,7 +12,7 @@ I work cross-functionally with development, architecture, infrastructure, and pr
 
 I have led and implemented Application Security & DevSecOps strategies across finance, aviation, telecommunications, and healthcare sectors, translating security requirements into practical solutions that strengthen the delivery of resilient, scalable, and reliable products.
 
-*Segurança como acelerador, não como obstáculo.*
+*Security as an accelerator, not an obstacle.*
 
 ---
 
@@ -77,14 +77,10 @@ Framework-aligned strategies (OWASP SAMM, NIST, ISO 27001) with metrics-driven m
 
 ---
 
-## Favorite Technologies
+## All Technologies
 
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=python,java,js,ts,react,nodejs" alt="Programming Languages" />
-  <br/>
-  <img src="https://skillicons.dev/icons?i=docker,kubernetes,terraform,azure,aws,gcp" alt="DevOps & Cloud" />
-  <br/>
-  <img src="https://skillicons.dev/icons?i=github,git,linux,bash" alt="Tools" />
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,java,js,ts,react,nodejs,docker,kubernetes,terraform,azure,aws,gcp,github,git,linux" alt="Technologies" />
 </p>
 
 ---
@@ -121,8 +117,8 @@ Framework-aligned strategies (OWASP SAMM, NIST, ISO 27001) with metrics-driven m
 <tr>
 <td width="50%" valign="top" style="padding: 20px; border: 1px solid #30363d; border-radius: 8px; background-color: #0d1117;">
 
-<div align="center" style="margin-bottom: 15px; padding: 15px; background-color: #161b22; border-radius: 6px; border: 1px solid #21262d;">
-  <img src="./assets/appsec-express-logo.png" alt="AppSec Express Logo" style="max-width: 100%; height: auto; max-height: 120px;" />
+<div align="center" style="margin-bottom: 15px; padding: 15px; background-color: #0c142c; border-radius: 6px; border: 1px solid #08b98b;">
+  <img src="https://raw.githubusercontent.com/lucashgrifoni/lucashgrifoni/main/assets/appsec-express-logo.png" alt="AppSec Express Logo" style="max-width: 100%; height: auto; max-height: 120px;" />
 </div>
 
 ### AppSec Express
@@ -133,8 +129,8 @@ Security automation platform for rapid integration of security controls into dev
 </td>
 <td width="50%" valign="top" style="padding: 20px; border: 1px solid #30363d; border-radius: 8px; background-color: #0d1117;">
 
-<div align="center" style="margin-bottom: 15px; padding: 15px; background-color: #161b22; border-radius: 6px; border: 1px solid #21262d;">
-  <img src="./assets/security-suite-logo.png" alt="Security Suite Logo" style="max-width: 100%; height: auto; max-height: 120px;" />
+<div align="center" style="margin-bottom: 15px; padding: 15px; background-color: #0c142c; border-radius: 6px; border: 1px solid #08b98b;">
+  <img src="https://raw.githubusercontent.com/lucashgrifoni/lucashgrifoni/main/assets/security-suite-logo.png" alt="Security Suite Logo" style="max-width: 100%; height: auto; max-height: 120px;" />
 </div>
 
 ### Security Suite
@@ -153,15 +149,15 @@ Comprehensive security toolkit for vulnerability management, threat modeling aut
 <div align="center">
 
 <a href="https://www.linkedin.com/in/lucas-henrique-grifoni/" target="_blank">
-  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0, 119, 181, 0.3); margin: 0 6px;" />
+  <img src="https://img.shields.io/badge/LinkedIn-04c59d?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=04c59d&color=04c59d" alt="LinkedIn" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(4, 197, 157, 0.3); margin: 0 6px;" />
 </a>
 
 <a href="https://github.com/lucashgrifoni/MyPortfolio-LucasGrifoni/blob/main/RESUME.md" target="_blank">
-  <img src="https://img.shields.io/badge/Portfolio-181717?style=for-the-badge&logo=github&logoColor=white" alt="Portfolio" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(24, 23, 23, 0.3); margin: 0 6px;" />
+  <img src="https://img.shields.io/badge/Portfolio-08b98b?style=for-the-badge&logo=github&logoColor=white&labelColor=08b98b&color=08b98b" alt="Portfolio" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(8, 185, 139, 0.3); margin: 0 6px;" />
 </a>
 
 <a href="mailto:lucas.henriquegrifoni@gmail.com" target="_blank">
-  <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(209, 72, 54, 0.3); margin: 0 6px;" />
+  <img src="https://img.shields.io/badge/Email-04c59d?style=for-the-badge&logo=gmail&logoColor=white&labelColor=04c59d&color=04c59d" alt="Email" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(4, 197, 157, 0.3); margin: 0 6px;" />
 </a>
 
 </div>
@@ -173,18 +169,18 @@ Comprehensive security toolkit for vulnerability management, threat modeling aut
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&theme=dark&hide_border=true&bg_color=0D1117&title_color=3b82f6" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&theme=dark&hide_border=true&bg_color=040c23&title_color=04c59d" alt="Top Languages" />
 </p>
 
 ---
 
 ## Customize Checklist
 
-- [ ] Atualizar link do repositório AppSec Express (se diferente de AppSec-Express-Site)
-- [ ] Adicionar link do repositório Security Suite quando disponível
-- [ ] Adicionar certificações na seção Milestones (se aplicável)
-- [x] GitHub Stats ativado
-- [ ] Personalizar banner SVG em `./assets/banner.svg` se necessário
+- [ ] Update AppSec Express repository link (if different from AppSec-Express-Site)
+- [ ] Add Security Suite repository link when available
+- [ ] Add certifications in Milestones section (if applicable)
+- [x] GitHub Stats enabled
+- [ ] Customize banner SVG in `./assets/banner.svg` if needed
 
 ---
 
