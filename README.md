@@ -1,3 +1,10 @@
+<div align="right">
+
+[![English](https://img.shields.io/badge/English-04c59d?style=flat-square&labelColor=0c142c)](./README.md)
+[![Português](https://img.shields.io/badge/Português-08b98b?style=flat-square&labelColor=0c142c)](./README_PT.md)
+
+</div>
+
 <p align="center">
   <img src="./assets/banner.svg" alt="Lucas Henrique Grifoni - Application Security Specialist" />
 </p>
@@ -149,15 +156,15 @@ Comprehensive security toolkit for vulnerability management, threat modeling aut
 <div align="center">
 
 <a href="https://www.linkedin.com/in/lucas-henrique-grifoni/" target="_blank">
-  <img src="https://img.shields.io/badge/LinkedIn-04c59d?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=04c59d&color=04c59d" alt="LinkedIn" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(4, 197, 157, 0.3); margin: 0 6px;" />
+  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0, 119, 181, 0.3); margin: 0 6px;" />
 </a>
 
 <a href="https://github.com/lucashgrifoni/MyPortfolio-LucasGrifoni/blob/main/RESUME.md" target="_blank">
-  <img src="https://img.shields.io/badge/Portfolio-08b98b?style=for-the-badge&logo=github&logoColor=white&labelColor=08b98b&color=08b98b" alt="Portfolio" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(8, 185, 139, 0.3); margin: 0 6px;" />
+  <img src="https://img.shields.io/badge/Portfolio-181717?style=for-the-badge&logo=github&logoColor=white" alt="Portfolio" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(24, 23, 23, 0.3); margin: 0 6px;" />
 </a>
 
 <a href="mailto:lucas.henriquegrifoni@gmail.com" target="_blank">
-  <img src="https://img.shields.io/badge/Email-04c59d?style=for-the-badge&logo=gmail&logoColor=white&labelColor=04c59d&color=04c59d" alt="Email" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(4, 197, 157, 0.3); margin: 0 6px;" />
+  <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(234, 67, 53, 0.3); margin: 0 6px;" />
 </a>
 
 </div>
