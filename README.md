@@ -168,7 +168,7 @@ Comprehensive security toolkit for vulnerability management, threat modeling aut
 <p align="center">
   <img
     height="165"
-    src="https://github-readme-stats.vercel.app/api?username=lucashgrifoni&show_icons=true&include_all_commits=true&count_private=true&hide_title=true&hide_border=true&theme=github_dark"
+    src="https://github-readme-stats.vercel.app/api?username=lucashgrifoni&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&theme=github_dark"
     alt="GitHub Stats"
   />
   <img
@@ -177,8 +177,6 @@ Comprehensive security toolkit for vulnerability management, threat modeling aut
     alt="Top Languages"
   />
 </p>
-
-<!-- Note: If cards are broken, check the official documentation for alternative hosts: https://github.com/anuraghazra/github-readme-stats -->
 
 ---
 
