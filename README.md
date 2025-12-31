@@ -154,9 +154,19 @@ Comprehensive security toolkit for vulnerability management, threat modeling aut
 
 ## GitHub Stats
 
+<!-- Fixed: Replaced broken image URLs with correct github-readme-stats.vercel.app API endpoints. Simplified parameters for better compatibility and added proper alt text. -->
+
 <p align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=lucashgrifoni&show_icons=true&theme=dark&hide_border=true&bg_color=0D1117&title_color=04c59d&icon_color=08b98b&text_color=ffffff&include_all_commits=true&count_private=true&hide=issues,contribs" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&theme=dark&hide_border=true&bg_color=0D1117&title_color=04c59d&text_color=ffffff&langs_count=8" />
+  <img
+    src="https://github-readme-stats.vercel.app/api?username=lucashgrifoni&show_icons=true&hide_title=true&include_all_commits=true&count_private=true"
+    alt="GitHub Stats"
+    height="165"
+  />
+  <img
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact"
+    alt="Top Languages"
+    height="165"
+  />
 </p>
 
 ---
