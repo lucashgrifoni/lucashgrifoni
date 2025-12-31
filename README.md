@@ -16,11 +16,11 @@ I work cross-functionally with development, architecture, infrastructure, and pr
 
 I have led and implemented Application Security & DevSecOps strategies across finance, aviation, telecommunications, and healthcare sectors, translating security requirements into practical solutions that strengthen the delivery of resilient, scalable, and reliable products.
 
-*Segurança como acelerador, não como obstáculo.*
+*Security as an accelerator, not a blocker.*
 
 ---
 
-## Core Strengths
+## 🛡️ Core Strengths
 
 <table>
 <tr>
@@ -81,10 +81,24 @@ Framework-aligned strategies (OWASP SAMM, NIST, ISO 27001) with metrics-driven m
 
 ---
 
-## All Technologies
+## ⚙️ Tech Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,java,js,ts,react,nodejs,docker,kubernetes,terraform,azure,aws,gcp,github,git,linux" alt="Technologies" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
+  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes" />
+  <img src="https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white" alt="Terraform" />
+  <img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white" alt="Azure" />
+  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS" />
+  <img src="https://img.shields.io/badge/GCP-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" alt="GCP" />
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />
 </p>
 
 ---
@@ -104,7 +118,7 @@ Framework-aligned strategies (OWASP SAMM, NIST, ISO 27001) with metrics-driven m
 
 ---
 
-## Now Building
+## 🚀 Now Building
 
 <table>
 <tr>
@@ -159,114 +173,22 @@ Comprehensive security toolkit for vulnerability management, threat modeling aut
 
 </div>
 
-## GitHub Stats
-
-<!-- Note: GitHub Stats cards depend on external availability. If broken, switch to the mirror URLs below. -->
+## 📊 GitHub Stats
 
 <p align="center">
-  <picture>
-    <source
-      srcset="https://github-readme-stats.vercel.app/api?username=lucashgrifoni&show_icons=true&include_all_commits=true&count_private=true&hide_title=true&hide_border=true&theme=github_dark&cache_seconds=86400"
-      media="(prefers-color-scheme: dark)"
-    />
-    <source
-      srcset="https://github-readme-stats.vercel.app/api?username=lucashgrifoni&show_icons=true&include_all_commits=true&count_private=true&hide_title=true&hide_border=true&cache_seconds=86400"
-      media="(prefers-color-scheme: light)"
-    />
-    <img
-      height="165"
-      src="https://github-readme-stats.vercel.app/api?username=lucashgrifoni&show_icons=true&include_all_commits=true&count_private=true&hide_title=true&hide_border=true&theme=github_dark&cache_seconds=86400"
-      alt="GitHub Stats"
-    />
-  </picture>
-
-  <picture>
-    <source
-      srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&hide_border=true&theme=github_dark&cache_seconds=86400"
-      media="(prefers-color-scheme: dark)"
-    />
-    <source
-      srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&hide_border=true&cache_seconds=86400"
-      media="(prefers-color-scheme: light)"
-    />
-    <img
-      height="165"
-      src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&hide_border=true&theme=github_dark&cache_seconds=86400"
-      alt="Top Languages"
-    />
-  </picture>
+  <img
+    height="165"
+    src="https://github-readme-stats.vercel.app/api?username=lucashgrifoni&show_icons=true&include_all_commits=true&count_private=true&hide_title=true&hide_border=true&theme=github_dark"
+    alt="GitHub Stats"
+  />
+  <img
+    height="165"
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&hide_border=true&theme=github_dark"
+    alt="Top Languages"
+  />
 </p>
 
-<!-- If cards are broken, switch to the mirror below -->
-<!--
-<p align="center">
-  <picture>
-    <source
-      srcset="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=lucashgrifoni&show_icons=true&include_all_commits=true&count_private=true&hide_title=true&hide_border=true&theme=github_dark&cache_seconds=86400"
-      media="(prefers-color-scheme: dark)"
-    />
-    <source
-      srcset="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=lucashgrifoni&show_icons=true&include_all_commits=true&count_private=true&hide_title=true&hide_border=true&cache_seconds=86400"
-      media="(prefers-color-scheme: light)"
-    />
-    <img
-      height="165"
-      src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=lucashgrifoni&show_icons=true&include_all_commits=true&count_private=true&hide_title=true&hide_border=true&theme=github_dark&cache_seconds=86400"
-      alt="GitHub Stats"
-    />
-  </picture>
-
-  <picture>
-    <source
-      srcset="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&hide_border=true&theme=github_dark&cache_seconds=86400"
-      media="(prefers-color-scheme: dark)"
-    />
-    <source
-      srcset="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&hide_border=true&cache_seconds=86400"
-      media="(prefers-color-scheme: light)"
-    />
-    <img
-      height="165"
-      src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&hide_border=true&theme=github_dark&cache_seconds=86400"
-      alt="Top Languages"
-    />
-  </picture>
-</p>
-
-<p align="center">
-  <picture>
-    <source
-      srcset="https://github-readme-stats-seven-chi.vercel.app/api?username=lucashgrifoni&show_icons=true&include_all_commits=true&count_private=true&hide_title=true&hide_border=true&theme=github_dark&cache_seconds=86400"
-      media="(prefers-color-scheme: dark)"
-    />
-    <source
-      srcset="https://github-readme-stats-seven-chi.vercel.app/api?username=lucashgrifoni&show_icons=true&include_all_commits=true&count_private=true&hide_title=true&hide_border=true&cache_seconds=86400"
-      media="(prefers-color-scheme: light)"
-    />
-    <img
-      height="165"
-      src="https://github-readme-stats-seven-chi.vercel.app/api?username=lucashgrifoni&show_icons=true&include_all_commits=true&count_private=true&hide_title=true&hide_border=true&theme=github_dark&cache_seconds=86400"
-      alt="GitHub Stats"
-    />
-  </picture>
-
-  <picture>
-    <source
-      srcset="https://github-readme-stats-seven-chi.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&hide_border=true&theme=github_dark&cache_seconds=86400"
-      media="(prefers-color-scheme: dark)"
-    />
-    <source
-      srcset="https://github-readme-stats-seven-chi.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&hide_border=true&cache_seconds=86400"
-      media="(prefers-color-scheme: light)"
-    />
-    <img
-      height="165"
-      src="https://github-readme-stats-seven-chi.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&hide_border=true&theme=github_dark&cache_seconds=86400"
-      alt="Top Languages"
-    />
-  </picture>
-</p>
--->
+<!-- Note: If cards are broken, check the official documentation for alternative hosts: https://github.com/anuraghazra/github-readme-stats -->
 
 ---
 
