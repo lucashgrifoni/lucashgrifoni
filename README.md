@@ -154,13 +154,10 @@ Comprehensive security toolkit for vulnerability management, threat modeling aut
 
 ## GitHub Stats
 
-<div align="center">
-  
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=lucashgrifoni&show_icons=true&theme=dark&hide_border=true&bg_color=0D1117&title_color=04c59d&icon_color=08b98b&text_color=ffffff&cache_seconds=86400&include_all_commits=true&count_private=true)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&theme=dark&hide_border=true&bg_color=0D1117&title_color=04c59d&text_color=ffffff&cache_seconds=86400)
-
-</div>
+<p align="center">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=lucashgrifoni&show_icons=true&theme=dark&hide_border=true&bg_color=0D1117&title_color=04c59d&icon_color=08b98b&text_color=ffffff&include_all_commits=true&count_private=true" alt="GitHub Stats" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&theme=dark&hide_border=true&bg_color=0D1117&title_color=04c59d&text_color=ffffff" alt="Top Languages" />
+</p>
 
 ---
 
