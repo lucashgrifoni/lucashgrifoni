@@ -158,18 +158,112 @@ Comprehensive security toolkit for vulnerability management, threat modeling aut
 
 ## GitHub Stats
 
+<!-- Note: GitHub Stats cards depend on external availability. If broken, switch to the mirror URLs below. -->
+
 <p align="center">
-  <img
-    height="165"
-    src="https://github-readme-stats.vercel.app/api?username=lucashgrifoni&show_icons=true&include_all_commits=true&count_private=true&hide_title=true&hide_border=true&theme=github_dark&cache_seconds=86400&v=20251231"
-    alt="GitHub Stats"
-  />
-  <img
-    height="165"
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&hide_border=true&theme=github_dark&cache_seconds=86400&v=20251231"
-    alt="Top Languages"
-  />
+  <picture>
+    <source
+      srcset="https://github-readme-stats.vercel.app/api?username=lucashgrifoni&show_icons=true&include_all_commits=true&count_private=true&hide_title=true&hide_border=true&theme=github_dark&cache_seconds=86400"
+      media="(prefers-color-scheme: dark)"
+    />
+    <source
+      srcset="https://github-readme-stats.vercel.app/api?username=lucashgrifoni&show_icons=true&include_all_commits=true&count_private=true&hide_title=true&hide_border=true&cache_seconds=86400"
+      media="(prefers-color-scheme: light)"
+    />
+    <img
+      height="165"
+      src="https://github-readme-stats.vercel.app/api?username=lucashgrifoni&show_icons=true&include_all_commits=true&count_private=true&hide_title=true&hide_border=true&theme=github_dark&cache_seconds=86400"
+      alt="GitHub Stats"
+    />
+  </picture>
+
+  <picture>
+    <source
+      srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&hide_border=true&theme=github_dark&cache_seconds=86400"
+      media="(prefers-color-scheme: dark)"
+    />
+    <source
+      srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&hide_border=true&cache_seconds=86400"
+      media="(prefers-color-scheme: light)"
+    />
+    <img
+      height="165"
+      src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&hide_border=true&theme=github_dark&cache_seconds=86400"
+      alt="Top Languages"
+    />
+  </picture>
 </p>
+
+<!-- If cards are broken, switch to the mirror below -->
+<!--
+<p align="center">
+  <picture>
+    <source
+      srcset="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=lucashgrifoni&show_icons=true&include_all_commits=true&count_private=true&hide_title=true&hide_border=true&theme=github_dark&cache_seconds=86400"
+      media="(prefers-color-scheme: dark)"
+    />
+    <source
+      srcset="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=lucashgrifoni&show_icons=true&include_all_commits=true&count_private=true&hide_title=true&hide_border=true&cache_seconds=86400"
+      media="(prefers-color-scheme: light)"
+    />
+    <img
+      height="165"
+      src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=lucashgrifoni&show_icons=true&include_all_commits=true&count_private=true&hide_title=true&hide_border=true&theme=github_dark&cache_seconds=86400"
+      alt="GitHub Stats"
+    />
+  </picture>
+
+  <picture>
+    <source
+      srcset="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&hide_border=true&theme=github_dark&cache_seconds=86400"
+      media="(prefers-color-scheme: dark)"
+    />
+    <source
+      srcset="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&hide_border=true&cache_seconds=86400"
+      media="(prefers-color-scheme: light)"
+    />
+    <img
+      height="165"
+      src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&hide_border=true&theme=github_dark&cache_seconds=86400"
+      alt="Top Languages"
+    />
+  </picture>
+</p>
+
+<p align="center">
+  <picture>
+    <source
+      srcset="https://github-readme-stats-seven-chi.vercel.app/api?username=lucashgrifoni&show_icons=true&include_all_commits=true&count_private=true&hide_title=true&hide_border=true&theme=github_dark&cache_seconds=86400"
+      media="(prefers-color-scheme: dark)"
+    />
+    <source
+      srcset="https://github-readme-stats-seven-chi.vercel.app/api?username=lucashgrifoni&show_icons=true&include_all_commits=true&count_private=true&hide_title=true&hide_border=true&cache_seconds=86400"
+      media="(prefers-color-scheme: light)"
+    />
+    <img
+      height="165"
+      src="https://github-readme-stats-seven-chi.vercel.app/api?username=lucashgrifoni&show_icons=true&include_all_commits=true&count_private=true&hide_title=true&hide_border=true&theme=github_dark&cache_seconds=86400"
+      alt="GitHub Stats"
+    />
+  </picture>
+
+  <picture>
+    <source
+      srcset="https://github-readme-stats-seven-chi.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&hide_border=true&theme=github_dark&cache_seconds=86400"
+      media="(prefers-color-scheme: dark)"
+    />
+    <source
+      srcset="https://github-readme-stats-seven-chi.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&hide_border=true&cache_seconds=86400"
+      media="(prefers-color-scheme: light)"
+    />
+    <img
+      height="165"
+      src="https://github-readme-stats-seven-chi.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&hide_border=true&theme=github_dark&cache_seconds=86400"
+      alt="Top Languages"
+    />
+  </picture>
+</p>
+-->
 
 ---
 
