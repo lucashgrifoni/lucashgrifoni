@@ -1,10 +1,3 @@
-<div align="right">
-
-[![English](https://img.shields.io/badge/English-04c59d?style=flat-square&labelColor=0c142c)](./README.md)
-[![Português](https://img.shields.io/badge/Português-08b98b?style=flat-square&labelColor=0c142c)](./README_PT.md)
-
-</div>
-
 <p align="center">
   <img src="./assets/banner.svg" alt="Lucas Henrique Grifoni - Application Security Specialist" />
 </p>
@@ -19,7 +12,7 @@ I work cross-functionally with development, architecture, infrastructure, and pr
 
 I have led and implemented Application Security & DevSecOps strategies across finance, aviation, telecommunications, and healthcare sectors, translating security requirements into practical solutions that strengthen the delivery of resilient, scalable, and reliable products.
 
-*Security as an accelerator, not an obstacle.*
+*Segurança como acelerador, não como obstáculo.*
 
 ---
 
@@ -105,17 +98,6 @@ Framework-aligned strategies (OWASP SAMM, NIST, ISO 27001) with metrics-driven m
 - Reduced development rework costs by integrating security from early SDLC stages
 - Transformed security role from control area to strategic partner of product and technology
 
-### Milestones
-
-- [x] Implemented automated security scanning in CI/CD pipelines
-- [x] Established vulnerability management workflows with SLA tracking
-- [x] Created security dashboards for risk visibility and compliance
-- [x] Led Security Champions program development
-- [x] Integrated threat modeling into architecture reviews
-- [ ] Published open-source security tools
-- [ ] Contributed to OWASP projects
-- [ ] Achieved security certifications (TROQUE_AQUI_SE_TIVER)
-
 ---
 
 ## Now Building
@@ -131,8 +113,6 @@ Framework-aligned strategies (OWASP SAMM, NIST, ISO 27001) with metrics-driven m
 ### AppSec Express
 Security automation platform for rapid integration of security controls into development workflows. Simplifies SAST/SCA/DAST setup and policy enforcement.
 
-**Repository:** [AppSec-Express-Site](https://github.com/lucashgrifoni/AppSec-Express-Site)
-
 </td>
 <td width="50%" valign="top" style="padding: 20px; border: 1px solid #30363d; border-radius: 8px; background-color: #0d1117;">
 
@@ -143,7 +123,6 @@ Security automation platform for rapid integration of security controls into dev
 ### Security Suite
 Comprehensive security toolkit for vulnerability management, threat modeling automation, and compliance reporting. Designed for DevSecOps teams.
 
-**Repository:** [TROQUE_AQUI_REPO_SECURITY_SUITE](https://github.com/lucashgrifoni/TROQUE_AQUI_REPO_SECURITY_SUITE)
 
 </td>
 </tr>
@@ -156,15 +135,19 @@ Comprehensive security toolkit for vulnerability management, threat modeling aut
 <div align="center">
 
 <a href="https://www.linkedin.com/in/lucas-henrique-grifoni/" target="_blank">
-  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0, 119, 181, 0.3); margin: 0 6px;" />
+  <img src="https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0, 119, 181, 0.3); margin: 0 6px;" />
 </a>
 
 <a href="https://github.com/lucashgrifoni/MyPortfolio-LucasGrifoni/blob/main/RESUME.md" target="_blank">
   <img src="https://img.shields.io/badge/Portfolio-181717?style=for-the-badge&logo=github&logoColor=white" alt="Portfolio" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(24, 23, 23, 0.3); margin: 0 6px;" />
 </a>
 
+<a href="https://gitlab.com/lucas.henriquegrifoni" target="_blank">
+  <img src="https://img.shields.io/badge/GitLab-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white" alt="GitLab" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(252, 109, 38, 0.3); margin: 0 6px;" />
+</a>
+
 <a href="mailto:lucas.henriquegrifoni@gmail.com" target="_blank">
-  <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(234, 67, 53, 0.3); margin: 0 6px;" />
+  <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(209, 72, 54, 0.3); margin: 0 6px;" />
 </a>
 
 </div>
@@ -172,22 +155,12 @@ Comprehensive security toolkit for vulnerability management, threat modeling aut
 ## GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=lucashgrifoni&show_icons=true&theme=dark&hide_border=true&bg_color=0D1117&title_color=3b82f6&icon_color=8b5cf6" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=lucashgrifoni&show_icons=true&theme=dark&hide_border=true&bg_color=0D1117&title_color=04c59d&icon_color=08b98b&text_color=ffffff" alt="GitHub Stats" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&theme=dark&hide_border=true&bg_color=040c23&title_color=04c59d" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&theme=dark&hide_border=true&bg_color=0D1117&title_color=04c59d&text_color=ffffff" alt="Top Languages" />
 </p>
-
----
-
-## Customize Checklist
-
-- [ ] Update AppSec Express repository link (if different from AppSec-Express-Site)
-- [ ] Add Security Suite repository link when available
-- [ ] Add certifications in Milestones section (if applicable)
-- [x] GitHub Stats enabled
-- [ ] Customize banner SVG in `./assets/banner.svg` if needed
 
 ---
 

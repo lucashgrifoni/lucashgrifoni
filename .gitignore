@@ -1,0 +1,10 @@
+# Profile README - Ignore everything except what we need
+*
+
+# But include these files
+!README.md
+!README_PT.md
+!assets/
+!assets/**
+!.gitignore
+
