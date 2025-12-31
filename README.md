@@ -165,18 +165,9 @@ Comprehensive security toolkit for vulnerability management, threat modeling aut
 
 ## 📊 GitHub Stats
 
-<p align="center">
-  <img
-    height="165"
-    src="https://github-readme-stats.vercel.app/api?username=lucashgrifoni&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&theme=github_dark"
-    alt="GitHub Stats"
-  />
-  <img
-    height="165"
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&hide_border=true&theme=github_dark"
-    alt="Top Languages"
-  />
-</p>
+![Lucas GitHub stats](https://github-readme-stats.vercel.app/api?username=lucashgrifoni&show_icons=true&theme=dracula)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&theme=dracula)
 
 ---
 
