@@ -3,6 +3,10 @@
 </p>
 
 <p align="center">
+  <img src="https://raw.githubusercontent.com/lucashgrifoni/lucashgrifoni/main/assets/LinkedIn%20Profile%20Light%20Blue%204.png" alt="Lucas Henrique Grifoni" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid #08b98b; box-shadow: 0 4px 8px rgba(8, 185, 139, 0.3);" />
+</p>
+
+<p align="center">
   <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3I2eXI1cmpwZXpyZHJxeGtkNTV3a3Znejl1czd4OGxzYms5eXZocyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fdOA43sHFE6Pu/giphy.gif" alt="GIF" style="width: 100%; max-width: 100%;" />
 </p>
 
