@@ -2,6 +2,10 @@
   <img src="./assets/banner.svg" alt="Lucas Henrique Grifoni - Application Security Specialist" />
 </p>
 
+<p align="center">
+  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzh2NmN3OWZydzd3a2t5cWltcGNnb3MxemFtZjk3MTc5MXo5bWprZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XTAqdwCL2oEus/giphy.gif" alt="GIF" />
+</p>
+
 ---
 
 ## About
