@@ -108,25 +108,28 @@ Framework-aligned strategies (OWASP SAMM, NIST, ISO 27001) with metrics-driven m
 
 <table>
 <tr>
-<td width="50%" valign="top" style="padding: 20px; border: 1px solid #30363d; border-radius: 8px; background-color: #0d1117;">
+<td width="50%" valign="top" style="padding: 20px; border: 1px solid #30363d; border-radius: 8px; background-color: #0d1117; text-align: center;">
 
 <div align="center" style="margin-bottom: 15px; padding: 15px; background-color: #0c142c; border-radius: 6px; border: 1px solid #08b98b;">
   <img src="https://raw.githubusercontent.com/lucashgrifoni/lucashgrifoni/main/assets/appsec-express-logo.png" alt="AppSec Express Logo" style="max-width: 100%; height: auto; max-height: 120px;" />
 </div>
 
+<div align="center">
 ### AppSec Express
 Security automation platform for rapid integration of security controls into development workflows. Simplifies SAST/SCA/DAST setup and policy enforcement.
+</div>
 
 </td>
-<td width="50%" valign="top" style="padding: 20px; border: 1px solid #30363d; border-radius: 8px; background-color: #0d1117;">
+<td width="50%" valign="top" style="padding: 20px; border: 1px solid #30363d; border-radius: 8px; background-color: #0d1117; text-align: center;">
 
 <div align="center" style="margin-bottom: 15px; padding: 15px; background-color: #0c142c; border-radius: 6px; border: 1px solid #08b98b;">
   <img src="https://raw.githubusercontent.com/lucashgrifoni/lucashgrifoni/main/assets/security-suite-logo.png" alt="Security Suite Logo" style="max-width: 100%; height: auto; max-height: 120px;" />
 </div>
 
+<div align="center">
 ### Security Suite
 Comprehensive security toolkit for vulnerability management, threat modeling automation, and compliance reporting. Designed for DevSecOps teams.
-
+</div>
 
 </td>
 </tr>
