@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/lucashgrifoni/lucashgrifoni/main/assets/LinkedIn%20Profile%20Light%20Blue%204.png" alt="Lucas Henrique Grifoni" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid #08b98b; box-shadow: 0 4px 8px rgba(8, 185, 139, 0.3);" />
+  <img src="https://raw.githubusercontent.com/lucashgrifoni/lucashgrifoni/main/assets/LinkedIn%20Profile%20Light%20Blue%204.png" alt="Lucas Henrique Grifoni" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #08b98b; box-shadow: 0 4px 8px rgba(0, 253, 185, 0.3);" />
 </p>
 
 <p align="center">
@@ -33,7 +33,6 @@ I have led and implemented Application Security & DevSecOps strategies across fi
 ### CI/CD Security Gates
 Automated security enforcement in pipelines with risk-based break-the-build policies and continuous validation.
 
-**Keywords:** Security Gates, Break-the-Build, Shift Left
 
 </td>
 <td width="50%" valign="top">
@@ -41,7 +40,6 @@ Automated security enforcement in pipelines with risk-based break-the-build poli
 ### SAST/SCA/DAST + Secrets
 Static, dynamic, and dependency scanning integrated with secrets detection for comprehensive code security.
 
-**Keywords:** SAST, SCA, DAST, Secrets Detection
 
 </td>
 </tr>
@@ -51,7 +49,6 @@ Static, dynamic, and dependency scanning integrated with secrets detection for c
 ### Threat Modeling & Code Review
 Secure architecture analysis and code review aligned with OWASP standards and risk-based prioritization.
 
-**Keywords:** Threat Modeling, Secure Code Review, OWASP
 
 </td>
 <td width="50%" valign="top">
@@ -59,7 +56,6 @@ Secure architecture analysis and code review aligned with OWASP standards and ri
 ### Vulnerability Management
 Triage workflows, SLA-driven remediation, and strategic dashboards for risk visibility and compliance.
 
-**Keywords:** Vulnerability Triage, SLA Management, Risk Metrics
 
 </td>
 </tr>
@@ -69,7 +65,6 @@ Triage workflows, SLA-driven remediation, and strategic dashboards for risk visi
 ### Cloud & Container Security
 Infrastructure security for multi-cloud environments with container scanning and policy enforcement.
 
-**Keywords:** Cloud Security, Container Security, IaC Security
 
 </td>
 <td width="50%" valign="top">
@@ -77,7 +72,6 @@ Infrastructure security for multi-cloud environments with container scanning and
 ### Security Strategy & Governance
 Framework-aligned strategies (OWASP SAMM, NIST, ISO 27001) with metrics-driven maturity programs.
 
-**Keywords:** Security Governance, Compliance, Maturity Models
 
 </td>
 </tr>
@@ -119,7 +113,7 @@ Framework-aligned strategies (OWASP SAMM, NIST, ISO 27001) with metrics-driven m
 </div>
 
 <div align="center">
-### AppSec Express
+AppSec Express
 Security automation platform for rapid integration of security controls into development workflows. Simplifies SAST/SCA/DAST setup and policy enforcement.
 </div>
 
@@ -131,7 +125,7 @@ Security automation platform for rapid integration of security controls into dev
 </div>
 
 <div align="center">
-### Security Suite
+Security Suite
 Comprehensive security toolkit for vulnerability management, threat modeling automation, and compliance reporting. Designed for DevSecOps teams.
 </div>
 
@@ -163,14 +157,8 @@ Comprehensive security toolkit for vulnerability management, threat modeling aut
 
 </div>
 
-## 📊 GitHub Stats
-
-![Lucas GitHub stats](https://github-readme-stats.vercel.app/api?username=lucashgrifoni&show_icons=true&theme=dracula)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=lucashgrifoni&layout=compact&theme=dracula)
-
 ---
 
 <p align="center">
-  <sub>Built with focus on security, automation, and impact.</sub>
+  <strong style="font-size: 1.2em; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; font-weight: 700; letter-spacing: 0.5px;">Built with focus on security, automation, and impact.</strong>
 </p>
