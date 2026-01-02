@@ -1,21 +1,21 @@
 <p align="center">
   <h1 align="center">Lucas Henrique Grifoni</h1>
-  <h2 align="center" style="font-size: 1.0em;">Applicationa Security & DevSecOps Engineer</h2>
+  <h2 align="center" style="font-size: 1.9em;">Application Security & DevSecOps Engineer</h2>
 </p>
 
 <p align="center">
-  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3I2eXI1cmpwZXpyZHJxeGtkNTV3a3Znejl1czd4OGxzYms5eXZocyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fdOA43sHFE6Pu/giphy.gif" alt="GIF" style="width: 100%; max-width: 100%; height: auto;" />
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3I2eXI1cmpwZXpyZHJxeGtkNTV3a3Znejl1czd4OGxzYms5eXZocyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fdOA43sHFE6Pu/giphy.gif" alt="GIF" style="width: 100%; max-width: 100%;" />
 </p>
 
 ## About
 
-I am an Application Security Specialist and DevSecOps Engineer with 5+ years of experience integrating security into software development lifecycles without compromising agility. I deliver security controls throughout SDLC and CI/CD pipelines, reducing risk through automation, secure design, and proactive threat mitigation.
+I am an application security specialist and DevSecOps engineer with over 5 years of experience integrating security into software development lifecycles without compromising agility. I provide security controls across the SDLC and CI/CD pipelines, reducing risk through automation, secure design, and proactive threat mitigation.
 
-I work cross-functionally with development, architecture, infrastructure, and product teams to embed security in an automated, scalable manner aligned with business goals. My approach focuses on risk-based governance, enabling security as an accelerator rather than a blocker.
+I work directly with development, architecture, infrastructure, and product teams to embed security directly into the SDLC and CI/CD through automation and protections aligned with business objectives. My approach focuses on risk-based decisions, creating controls that reduce exposure upfront and help teams deliver faster, enabling security to be an accelerator rather than a blocker.
 
-I have led and implemented Application Security & DevSecOps strategies across finance, aviation, telecommunications, and healthcare sectors, translating security requirements into practical solutions that strengthen the delivery of resilient, scalable, and reliable products.
+I have led and implemented application security and DevSecOps strategies in the financial, aviation, telecommunications, and healthcare industries, translating security requirements into practical solutions that strengthen the delivery of resilient, scalable, and reliable products.
 
-*Security as an accelerator, not a blocker.*
+## *My motto is: Security as an accelerator and business partner, not a blocker/impediment.*
 
 ## 🛡️ Core Strengths
 
@@ -79,14 +79,23 @@ Framework-aligned strategies (OWASP SAMM, NIST, ISO 27001) with metrics-driven m
 
 ### Impact Highlights
 
-- Built CI/CD security gates with risk-based severity enforcement, reducing vulnerability remediation time
-- Standardized vulnerability triage and reporting workflows with automated dashboards
-- Implemented security practices with high automated coverage in development pipelines
-- Mitigated fraud and data leakage risks through threat modeling and critical code reviews
-- Structured Security Champions and Security-by-Design programs fostering security mindset in teams
-- Led strategies aligned with OWASP SAMM, ASVS, NIST SP 800-53, PCI DSS, and ISO 27001
-- Reduced development rework costs by integrating security from early SDLC stages
-- Transformed security role from control area to strategic partner of product and technology
+- Built hands-on CI/CD security gates with risk-based enforcement (severity, context, and release criticality), accelerating remediation and preventing high-risk issues from reaching production.
+
+- Standardized end-to-end vulnerability triage and reporting with automated dashboards, improving visibility, ownership, and SLA-driven execution across squads.
+
+- Implemented high-coverage security automation in pipelines (SAST/SCA/DAST and secrets detection), reducing manual effort and creating a repeatable secure delivery path.
+
+- Reduced fraud and data leakage exposure through practical threat modeling and targeted secure code reviews focused on critical flows, APIs, and sensitive data paths.
+
+- Established structured Security Champions and Security by Design programs, enabling engineering teams with playbooks, guardrails, and scalable security enablement.
+
+- Led security strategy and governance aligned with OWASP SAMM, OWASP ASVS, NIST SP 800-53, PCI DSS, and ISO 27001, translating frameworks into actionable engineering controls.
+
+- Reduced rework and delivery friction by integrating security early in the SDLC with clear standards, automation, and risk-based prioritization.
+
+- Shifted security from a gatekeeping function to a strategic product and technology partner by embedding security into engineering workflows and decision-making.
+
+- Automated the vulnerability management lifecycle (identify → triage → prioritize → remediate → verify → report), improving consistency, traceability, and operational maturity.
 
 ## 🚀 Now Building
 
@@ -98,12 +107,11 @@ Framework-aligned strategies (OWASP SAMM, NIST, ISO 27001) with metrics-driven m
   <img src="https://raw.githubusercontent.com/lucashgrifoni/lucashgrifoni/main/assets/appsec-express-logo.png" alt="AppSec Express Logo" style="max-width: 100%; height: auto; max-height: 120px;" />
 </div>
 
-<p align="center">
-  <strong style="font-size: 1.9em; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; font-weight: 700; letter-spacing: 0.5px;">AppSec Express</strong>
-</p>
+## AppSec Express
 
-I built AppSec Express to make high-quality Application Security and DevSecOps accessible without slowing delivery. The site is where I offer practical, engineering-first services that help teams reduce risk and ship with confidence through secure SDLC enablement, CI/CD security controls, threat modeling, secure code review, and vulnerability management that actually fits real workflows. The goal is simple: turn security into a delivery accelerator with clear priorities, measurable outcomes, and a path teams can repeat at scale.
-</div>
+I created AppSec Express to make high-quality application security and DevSecOps accessible without slowing down delivery. On my website, I offer practical, engineering-focused services that help teams reduce risk and deliver with confidence by enabling secure SDLC, CI/CD security controls, threat modeling, secure code review, and vulnerability management that truly fit into real workflows. 
+
+*My goal is simple: to transform security into a delivery accelerator with clear priorities, measurable results, and a path for teams to evolve and scale.*
 
 </td>
 <td width="50%" valign="top" style="padding: 20px; border: 1px solid #30363d; border-radius: 8px; background-color: #0d1117; text-align: center;">
@@ -112,12 +120,11 @@ I built AppSec Express to make high-quality Application Security and DevSecOps a
   <img src="https://raw.githubusercontent.com/lucashgrifoni/lucashgrifoni/main/assets/security-suite-logo.png" alt="Security Suite Logo" style="max-width: 100%; height: auto; max-height: 120px;" />
 </div>
 
-<p align="center">
-  <strong style="font-size: 1.2em; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; font-weight: 700; letter-spacing: 0.5px;">Security Suite</strong>
-</p>
+## Security Suite
 
-I started Security Suite because most teams still struggle with fragmented tools, noisy findings, and inconsistent remediation workflows. Security Suite is designed to unify the vulnerability lifecycle end-to-end: ingest and normalize findings across scanners, deduplicate, enforce consistent severity and status, and produce audit-ready reporting. What makes it different is the focus on standardization and operational clarity so teams can move from “more scans” to real risk reduction, faster triage, and verified fixes with traceability.
-</div>
+I started Security Suite because most teams still struggle with fragmented tools, confusing findings, and inconsistent remediation workflows. Security Suite is designed to unify the vulnerability lifecycle from end to end: ingesting and normalizing scanner findings, deduplicating, applying consistent severity and status, and producing audit-ready reports. 
+
+*What sets it apart is its focus on standardization and operational clarity, so teams can move from “more scans” to real risk reduction, faster triage, and verified fixes with traceability.*
 
 </td>
 </tr>
@@ -125,6 +132,7 @@ I started Security Suite because most teams still struggle with fragmented tools
 
 <p align="center">
   <strong style="font-size: 1.8em; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; font-weight: 700; letter-spacing: 0.5px;">Where You Can Find Me</strong>
+
 </p>
 <p align="center">
 <a href="https://www.linkedin.com/in/lucas-henrique-grifoni/" target="_blank">
