@@ -1,6 +1,6 @@
 <p align="center">
   <h1 align="center">Lucas Henrique Grifoni</h1>
-  <h2 align="center" style="font-size: 1.0em;">Application Security & DevSecOps Engineer</h2>
+  <h2 align="center" style="font-size: 1.0em;">Applicationa Security & DevSecOps Engineer</h2>
 </p>
 
 <p align="center">
