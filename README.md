@@ -1,13 +1,11 @@
 <p align="center">
   <h1 align="center">Lucas Henrique Grifoni</h1>
-  <h2 align="center">Application Security & DevSecOps Engineer</h2>
+  <h2 align="center" style="font-size: 0.9em;">Application Security & DevSecOps Engineer</h2>
 </p>
 
 <p align="center">
-  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3I2eXI1cmpwZXpyZHJxeGtkNTV3a3Znejl1czd4OGxzYms5eXZocyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fdOA43sHFE6Pu/giphy.gif" alt="GIF" style="width: 120%; max-width: 120%;" />
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3I2eXI1cmpwZXpyZHJxeGtkNTV3a3Znejl1czd4OGxzYms5eXZocyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fdOA43sHFE6Pu/giphy.gif" alt="GIF" style="width: 100%; max-width: 100%;" />
 </p>
-
----
 
 ## About
 
@@ -18,8 +16,6 @@ I work cross-functionally with development, architecture, infrastructure, and pr
 I have led and implemented Application Security & DevSecOps strategies across finance, aviation, telecommunications, and healthcare sectors, translating security requirements into practical solutions that strengthen the delivery of resilient, scalable, and reliable products.
 
 *Security as an accelerator, not a blocker.*
-
----
 
 ## 🛡️ Core Strengths
 
@@ -73,15 +69,11 @@ Framework-aligned strategies (OWASP SAMM, NIST, ISO 27001) with metrics-driven m
 </tr>
 </table>
 
----
-
 ## ⚙️ Tech Stack
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=python,java,js,ts,react,nodejs,docker,kubernetes,terraform,azure,aws,gcp,github,git,linux,go,bash,githubactions,jenkins,gitlab,postgresql,mongodb,prometheus,grafana" alt="Tech Stack" />
 </p>
-
----
 
 ## 🏆 Achievements
 
@@ -95,8 +87,6 @@ Framework-aligned strategies (OWASP SAMM, NIST, ISO 27001) with metrics-driven m
 - Led strategies aligned with OWASP SAMM, ASVS, NIST SP 800-53, PCI DSS, and ISO 27001
 - Reduced development rework costs by integrating security from early SDLC stages
 - Transformed security role from control area to strategic partner of product and technology
-
----
 
 ## 🚀 Now Building
 
@@ -133,8 +123,6 @@ I started Security Suite because most teams still struggle with fragmented tools
 </tr>
 </table>
 
----
-
 <p align="center">
   <strong style="font-size: 1.8em; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; font-weight: 700; letter-spacing: 0.5px;">Where You Can Find Me</strong>
 </p>
@@ -156,8 +144,6 @@ I started Security Suite because most teams still struggle with fragmented tools
 </a>
 
 </div>
-
----
 
 <p align="center">
   <strong style="font-size: 1.2em; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; font-weight: 700; letter-spacing: 0.5px;">Built with focus on security, automation, and impact.</strong>
