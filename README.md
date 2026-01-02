@@ -7,7 +7,7 @@
   <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3I2eXI1cmpwZXpyZHJxeGtkNTV3a3Znejl1czd4OGxzYms5eXZocyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fdOA43sHFE6Pu/giphy.gif" alt="GIF" style="width: 100%; max-width: 100%;" />
 </p>
 
-## About
+## About Me:
 
 I am an application security specialist and DevSecOps engineer with over 5 years of experience integrating security into software development lifecycles without compromising agility. I provide security controls across the SDLC and CI/CD pipelines, reducing risk through automation, secure design, and proactive threat mitigation.
 
