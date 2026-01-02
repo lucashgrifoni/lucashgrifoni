@@ -1,9 +1,11 @@
 <p align="center">
+  <img src="https://raw.githubusercontent.com/lucashgrifoni/lucashgrifoni/main/assets/LinkedIn%20Profile%20Light%20Blue%204.png" alt="Lucas Henrique Grifoni" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #08b98b; box-shadow: 0 4px 8px rgba(0, 253, 185, 0.3);" />
+
+<p align="center">
   <img src="./assets/banner.svg" alt="Lucas Henrique Grifoni - Application Security Specialist" />
 </p>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/lucashgrifoni/lucashgrifoni/main/assets/LinkedIn%20Profile%20Light%20Blue%204.png" alt="Lucas Henrique Grifoni" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #08b98b; box-shadow: 0 4px 8px rgba(0, 253, 185, 0.3);" />
+
 </p>
 
 <p align="center">
@@ -30,30 +32,28 @@ I have led and implemented Application Security & DevSecOps strategies across fi
 <tr>
 <td width="50%" valign="top">
 
-### CI/CD Security Gates
+### 🔒 CI/CD Security Gates
 Automated security enforcement in pipelines with risk-based break-the-build policies and continuous validation.
-
 
 </td>
 <td width="50%" valign="top">
 
-### SAST/SCA/DAST + Secrets
+### 🔍 SAST/SCA/DAST + Secrets
 Static, dynamic, and dependency scanning integrated with secrets detection for comprehensive code security.
-
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### Threat Modeling & Code Review
+### 🎯 Threat Modeling & Code Review
 Secure architecture analysis and code review aligned with OWASP standards and risk-based prioritization.
 
 
 </td>
 <td width="50%" valign="top">
 
-### Vulnerability Management
+### 📊 Vulnerability Management
 Triage workflows, SLA-driven remediation, and strategic dashboards for risk visibility and compliance.
 
 
@@ -62,15 +62,16 @@ Triage workflows, SLA-driven remediation, and strategic dashboards for risk visi
 <tr>
 <td width="50%" valign="top">
 
-### Cloud & Container Security
+### ☁️ Cloud & Container Security
 Infrastructure security for multi-cloud environments with container scanning and policy enforcement.
 
 
 </td>
 <td width="50%" valign="top">
 
-### Security Strategy & Governance
+### 📜 Security Strategy & Governance
 Framework-aligned strategies (OWASP SAMM, NIST, ISO 27001) with metrics-driven maturity programs.
+
 
 
 </td>
@@ -112,9 +113,11 @@ Framework-aligned strategies (OWASP SAMM, NIST, ISO 27001) with metrics-driven m
   <img src="https://raw.githubusercontent.com/lucashgrifoni/lucashgrifoni/main/assets/appsec-express-logo.png" alt="AppSec Express Logo" style="max-width: 100%; height: auto; max-height: 120px;" />
 </div>
 
-<div align="center">
-AppSec Express
-Security automation platform for rapid integration of security controls into development workflows. Simplifies SAST/SCA/DAST setup and policy enforcement.
+<p align="center">
+  <strong style="font-size: 1.2em; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; font-weight: 700; letter-spacing: 0.5px;">AppSec Express</strong>
+</p>
+
+I built AppSec Express to make high-quality Application Security and DevSecOps accessible without slowing delivery. The site is where I offer practical, engineering-first services that help teams reduce risk and ship with confidence through secure SDLC enablement, CI/CD security controls, threat modeling, secure code review, and vulnerability management that actually fits real workflows. The goal is simple: turn security into a delivery accelerator with clear priorities, measurable outcomes, and a path teams can repeat at scale.
 </div>
 
 </td>
@@ -124,9 +127,11 @@ Security automation platform for rapid integration of security controls into dev
   <img src="https://raw.githubusercontent.com/lucashgrifoni/lucashgrifoni/main/assets/security-suite-logo.png" alt="Security Suite Logo" style="max-width: 100%; height: auto; max-height: 120px;" />
 </div>
 
-<div align="center">
-Security Suite
-Comprehensive security toolkit for vulnerability management, threat modeling automation, and compliance reporting. Designed for DevSecOps teams.
+<p align="center">
+  <strong style="font-size: 1.2em; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; font-weight: 700; letter-spacing: 0.5px;">Security Suite</strong>
+</p>
+
+I started Security Suite because most teams still struggle with fragmented tools, noisy findings, and inconsistent remediation workflows. Security Suite is designed to unify the vulnerability lifecycle end-to-end: ingest and normalize findings across scanners, deduplicate, enforce consistent severity and status, and produce audit-ready reporting. What makes it different is the focus on standardization and operational clarity so teams can move from “more scans” to real risk reduction, faster triage, and verified fixes with traceability.
 </div>
 
 </td>
@@ -135,10 +140,10 @@ Comprehensive security toolkit for vulnerability management, threat modeling aut
 
 ---
 
-## Where You Can Find Me
-
-<div align="center">
-
+<p align="center">
+  <strong style="font-size: 1.8em; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; font-weight: 700; letter-spacing: 0.5px;">Where You Can Find Me</strong>
+</p>
+<p align="center">
 <a href="https://www.linkedin.com/in/lucas-henrique-grifoni/" target="_blank">
   <img src="https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0, 119, 181, 0.3); margin: 0 6px;" />
 </a>
