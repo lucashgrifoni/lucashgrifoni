@@ -1,15 +1,10 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/lucashgrifoni/lucashgrifoni/main/assets/LinkedIn%20Profile%20Light%20Blue%204.png" alt="Lucas Henrique Grifoni" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #08b98b; box-shadow: 0 4px 8px rgba(0, 253, 185, 0.3);" />
-
-<p align="center">
-  <img src="./assets/banner.svg" alt="Lucas Henrique Grifoni - Application Security Specialist" />
-</p>
-
-
+  <h1 align="center">Lucas Henrique Grifoni</h1>
+  <h2 align="center">Application Security & DevSecOps Engineer</h2>
 </p>
 
 <p align="center">
-  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3I2eXI1cmpwZXpyZHJxeGtkNTV3a3Znejl1czd4OGxzYms5eXZocyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fdOA43sHFE6Pu/giphy.gif" alt="GIF" style="width: 100%; max-width: 100%;" />
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3I2eXI1cmpwZXpyZHJxeGtkNTV3a3Znejl1czd4OGxzYms5eXZocyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fdOA43sHFE6Pu/giphy.gif" alt="GIF" style="width: 200%; max-width: 200%;" />
 </p>
 
 ---
@@ -114,7 +109,7 @@ Framework-aligned strategies (OWASP SAMM, NIST, ISO 27001) with metrics-driven m
 </div>
 
 <p align="center">
-  <strong style="font-size: 1.2em; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; font-weight: 700; letter-spacing: 0.5px;">AppSec Express</strong>
+  <strong style="font-size: 1.9em; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; font-weight: 700; letter-spacing: 0.5px;">AppSec Express</strong>
 </p>
 
 I built AppSec Express to make high-quality Application Security and DevSecOps accessible without slowing delivery. The site is where I offer practical, engineering-first services that help teams reduce risk and ship with confidence through secure SDLC enablement, CI/CD security controls, threat modeling, secure code review, and vulnerability management that actually fits real workflows. The goal is simple: turn security into a delivery accelerator with clear priorities, measurable outcomes, and a path teams can repeat at scale.
