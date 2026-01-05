@@ -17,86 +17,6 @@ I have led and implemented application security and DevSecOps strategies in the 
 
 ## *My motto is: Security as an accelerator and business partner, not a blocker/impediment.*
 
-## 🛡️ Core Strengths
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### 🔒 CI/CD Security Gates
-Automated security enforcement in pipelines with risk-based break-the-build policies and continuous validation.
-
-</td>
-<td width="50%" valign="top">
-
-### 🔍 SAST/SCA/DAST + Secrets
-Static, dynamic, and dependency scanning integrated with secrets detection for comprehensive code security.
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🎯 Threat Modeling & Code Review
-Secure architecture analysis and code review aligned with OWASP standards and risk-based prioritization.
-
-
-</td>
-<td width="50%" valign="top">
-
-### 📊 Vulnerability Management
-Triage workflows, SLA-driven remediation, and strategic dashboards for risk visibility and compliance.
-
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### ☁️ Cloud & Container Security
-Infrastructure security for multi-cloud environments with container scanning and policy enforcement.
-
-
-</td>
-<td width="50%" valign="top">
-
-### 📜 Security Strategy & Governance
-Framework-aligned strategies (OWASP SAMM, NIST, ISO 27001) with metrics-driven maturity programs.
-
-
-
-</td>
-</tr>
-</table>
-
-## ⚙️ Tech Stack
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=dynamodb,elasticsearch,kafka,mongodb,mysql,postgres,redis,sqlite,planetscale,rabbitmq,alpinejs,angular,astro,bootstrap,htmx,jquery,lit,materialui,nextjs,nuxtjs,react,vuetify,webpack,windicss,actix,adonis,django,dotnet,electron,elysia,express,fastapi,ktor,laravel,nestjs,nodejs,spring,c,cs,cpp,crystal,clojure,coffeescript,css,dart,go,haxe,java,kotlin,lua,md,ocaml,perl,php,pkl,powershell,py,ruby,scala,solidity,swift,js,ts,codepen,devto,mastodon,misskey,notion,stackoverflow,cloudflare,firebase,flutter,netlify,vercel,openstack,openshift,workers,postman,regex,sentry,androidstudio,vim,atom,eclipse,emacs,neovim,obsidian,clion,idea,phpstorm,pycharm,rider,visualstudio,vscode,vscodium,babel,bun,cmake,gradle,gulp,maven,npm,pnpm,yarn,ansible,docker,kubernetes,githubactions,jenkins,terraform,gcp,aws,azure,bitbucket,git,github,gitlab,arch,debian,kali,linux,redhat,apple,ubuntu,windows" alt="Tech Stack" />
-</p>
-
-## 🏆 Achievements
-
-### Impact Highlights
-
-- Built hands-on CI/CD security gates with risk-based enforcement (severity, context, and release criticality), accelerating remediation and preventing high-risk issues from reaching production.
-
-- Standardized end-to-end vulnerability triage and reporting with automated dashboards, improving visibility, ownership, and SLA-driven execution across squads.
-
-- Implemented high-coverage security automation in pipelines (SAST/SCA/DAST and secrets detection), reducing manual effort and creating a repeatable secure delivery path.
-
-- Reduced fraud and data leakage exposure through practical threat modeling and targeted secure code reviews focused on critical flows, APIs, and sensitive data paths.
-
-- Established structured Security Champions and Security by Design programs, enabling engineering teams with playbooks, guardrails, and scalable security enablement.
-
-- Led security strategy and governance aligned with OWASP SAMM, OWASP ASVS, NIST SP 800-53, PCI DSS, and ISO 27001, translating frameworks into actionable engineering controls.
-
-- Reduced rework and delivery friction by integrating security early in the SDLC with clear standards, automation, and risk-based prioritization.
-
-- Shifted security from a gatekeeping function to a strategic product and technology partner by embedding security into engineering workflows and decision-making.
-
-- Automated the vulnerability management lifecycle (identify → triage → prioritize → remediate → verify → report), improving consistency, traceability, and operational maturity.
-
 ## 🚀 Now Building
 
 <table>
@@ -130,28 +50,27 @@ I started Security Suite because most teams still struggle with fragmented tools
 </tr>
 </table>
 
+</div>
 <p align="center">
   <strong style="font-size: 1.8em; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; font-weight: 700; letter-spacing: 0.5px;">Where You Can Find Me</strong>
 
 </p>
 <p align="center">
 <a href="https://www.linkedin.com/in/lucas-henrique-grifoni/" target="_blank">
-  <img src="https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0, 119, 181, 0.3); margin: 0 6px;" />
+  <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0, 119, 181, 0.3); margin: 0 6px;" />
 </a>
 
 <a href="https://github.com/lucashgrifoni/MyPortfolio-LucasGrifoni/blob/main/RESUME.md" target="_blank">
-  <img src="https://img.shields.io/badge/Portfolio-181717?style=for-the-badge&logo=github&logoColor=white" alt="Portfolio" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(24, 23, 23, 0.3); margin: 0 6px;" />
+  <img src="https://skillicons.dev/icons?i=github" alt="Portfolio" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(24, 23, 23, 0.3); margin: 0 6px;" />
 </a>
 
 <a href="https://gitlab.com/lucas.henriquegrifoni" target="_blank">
-  <img src="https://img.shields.io/badge/GitLab-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white" alt="GitLab" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(252, 109, 38, 0.3); margin: 0 6px;" />
+  <img src="https://skillicons.dev/icons?i=gitlab" alt="GitLab" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(252, 109, 38, 0.3); margin: 0 6px;" />
 </a>
 
 <a href="mailto:lucas.henriquegrifoni@gmail.com" target="_blank">
-  <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(209, 72, 54, 0.3); margin: 0 6px;" />
+  <img src="https://skillicons.dev/icons?i=gmail" alt="Gmail" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(209, 72, 54, 0.3); margin: 0 6px;" />
 </a>
-
-</div>
 
 <p align="center">
   <strong style="font-size: 1.2em; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; font-weight: 700; letter-spacing: 0.5px;">Built with focus on security, automation, and impact.</strong>
