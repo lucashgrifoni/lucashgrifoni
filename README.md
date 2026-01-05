@@ -72,7 +72,7 @@ Framework-aligned strategies (OWASP SAMM, NIST, ISO 27001) with metrics-driven m
 ## ⚙️ Tech Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,java,js,ts,react,nodejs,docker,kubernetes,terraform,azure,aws,gcp,github,git,linux,go,bash,githubactions,jenkins,gitlab,postgresql,mongodb,prometheus,grafana" alt="Tech Stack" />
+  <img src="[https://skillicons.dev/icons?i=python,java,js,ts,react,nodejs,docker,kubernetes,terraform,azure,aws,gcp,github,git,linux,go,bash,githubactions,jenkins,gitlab,postgresql,mongodb,prometheus,grafana](https://skillicons.dev/icons?i=dynamodb,elasticsearch,kafka,mongodb,mysql,postgres,redis,sqlite,planetscale,rabbitmq,alpinejs,angular,astro,bootstrap,htmx,jquery,lit,materialui,nextjs,nuxtjs,react,vuetify,webpack,windicss,actix,adonis,django,dotnet,electron,elysia,express,fastapi,ktor,laravel,nestjs,nodejs,spring,c,cs,cpp,crystal,clojure,coffeescript,css,dart,go,haxe,java,kotlin,lua,md,ocaml,perl,php,pkl,powershell,py,ruby,scala,solidity,swift,js,ts,codepen,devto,mastodon,misskey,notion,stackoverflow,cloudflare,firebase,flutter,netlify,vercel,openstack,openshift,workers,postman,regex,sentry,androidstudio,vim,atom,eclipse,emacs,neovim,obsidian,clion,idea,phpstorm,pycharm,rider,visualstudio,vscode,vscodium,babel,bun,cmake,gradle,gulp,maven,npm,pnpm,yarn,ansible,docker,kubernetes,githubactions,jenkins,terraform,gcp,aws,azure,bitbucket,git,github,gitlab,arch,debian,kali,linux,redhat,apple,ubuntu,windows)" alt="Tech Stack" />
 </p>
 
 ## 🏆 Achievements
