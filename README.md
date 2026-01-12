@@ -17,6 +17,39 @@ I have led and implemented application security and DevSecOps strategies in the 
 
 ## *My motto is: Security as an accelerator and business partner, not a blocker/impediment.*
 
+## ✅ Ready Projects
+
+<div align="center" style="margin: 14px 0 0 0; padding: 26px 22px; border: 1px solid #30363d; border-radius: 14px; background: linear-gradient(180deg, #0d1117 0%, #0b1220 100%); box-shadow: 0 12px 30px rgba(0,0,0,0.35);">
+  <div align="center" style="margin-bottom: 18px; padding: 18px; background: radial-gradient(circle at top, #0c142c 0%, #0b1020 65%); border-radius: 12px; border: 1px solid rgba(8, 185, 139, 0.7);">
+    <a href="https://github.com/lucashgrifoni/AppSec_DevSecOps-Training-Labs" target="_blank" style="text-decoration: none;">
+      <img src="https://skillicons.dev/icons?i=github" alt="GitHub" width="72" height="72" />
+    </a>
+  </div>
+
+  <h3 style="margin: 0 0 10px 0; font-size: 1.7em; letter-spacing: 0.3px; color: #e6edf3;">
+    Application Security & DevSecOps - Training Labs
+  </h3>
+
+  <p style="margin: 0 auto; max-width: 860px; color: #c9d1d9; font-size: 1.05em; line-height: 1.6;">
+    Ready to use project: Hands-on labs to practice AppSec and DevSecOps. 
+    Just clone it and follow the README to get started.
+  </p>
+
+  <div style="margin-top: 16px;">
+    <span style="display: inline-block; padding: 6px 12px; margin: 4px; border-radius: 999px; background: rgba(34, 197, 94, 0.14); border: 1px solid rgba(34, 197, 94, 0.45); color: #c9d1d9; font-weight: 700;">✅ Ready to use</span>
+    <span style="display: inline-block; padding: 6px 12px; margin: 4px; border-radius: 999px; background: rgba(56, 139, 253, 0.14); border: 1px solid rgba(56, 139, 253, 0.45); color: #c9d1d9; font-weight: 700;">AppSec</span>
+    <span style="display: inline-block; padding: 6px 12px; margin: 4px; border-radius: 999px; background: rgba(163, 113, 247, 0.14); border: 1px solid rgba(163, 113, 247, 0.45); color: #c9d1d9; font-weight: 700;">DevSecOps</span>
+    <span style="display: inline-block; padding: 6px 12px; margin: 4px; border-radius: 999px; background: rgba(245, 158, 11, 0.14); border: 1px solid rgba(245, 158, 11, 0.45); color: #c9d1d9; font-weight: 700;">Hands-on</span>
+  </div>
+
+  <div style="margin-top: 18px;">
+    <a href="https://github.com/lucashgrifoni/AppSec_DevSecOps-Training-Labs" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 12px; background: #238636; border: 1px solid rgba(35, 134, 54, 0.55); color: #ffffff; text-decoration: none; font-weight: 800; box-shadow: 0 10px 22px rgba(35, 134, 54, 0.22);">
+      <img src="https://skillicons.dev/icons?i=github" alt="GitHub" width="20" height="20" style="vertical-align: middle;" />
+      View repository
+    </a>
+  </div>
+</div>
+
 ## 🚀 Now Building
 
 <table>
@@ -29,7 +62,7 @@ I have led and implemented application security and DevSecOps strategies in the 
 
 ## AppSec Express
 
-I created AppSec Express to make high-quality application security and DevSecOps accessible without slowing down delivery. On my website, I offer practical, engineering-focused services that help teams reduce risk and deliver with confidence by enabling secure SDLC, CI/CD security controls, threat modeling, secure code review, and vulnerability management that truly fit into real workflows. 
+I created AppSec Express to make high-quality application security and DevSecOps accessible without slowing down delivery. On my website, I offer practical, engineering-focused services that help teams reduce risk and deliver with confidence by enabling secure SDLC, CI/CD security controls, threat modeling, secure code review, and vulnerability management that truly fit into real workflows.
 
 *My goal is simple: to transform security into a delivery accelerator with clear priorities, measurable results, and a path for teams to evolve and scale.*
 
@@ -42,7 +75,7 @@ I created AppSec Express to make high-quality application security and DevSecOps
 
 ## Security Suite
 
-I started Security Suite because most teams still struggle with fragmented tools, confusing findings, and inconsistent remediation workflows. Security Suite is designed to unify the vulnerability lifecycle from end to end: ingesting and normalizing scanner findings, deduplicating, applying consistent severity and status, and producing audit-ready reports. 
+I started Security Suite because most teams still struggle with fragmented tools, confusing findings, and inconsistent remediation workflows. Security Suite is designed to unify the vulnerability lifecycle from end to end: ingesting and normalizing scanner findings, deduplicating, applying consistent severity and status, and producing audit-ready reports.
 
 *What sets it apart is its focus on standardization and operational clarity, so teams can move from “more scans” to real risk reduction, faster triage, and verified fixes with traceability.*
 
@@ -50,27 +83,27 @@ I started Security Suite because most teams still struggle with fragmented tools
 </tr>
 </table>
 
-</div>
 <p align="center">
   <strong style="font-size: 1.8em; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; font-weight: 700; letter-spacing: 0.5px;">Where You Can Find Me</strong>
-
 </p>
+
 <p align="center">
-<a href="https://www.linkedin.com/in/lucas-henrique-grifoni/" target="_blank">
-  <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0, 119, 181, 0.3); margin: 0 6px;" />
-</a>
+  <a href="https://www.linkedin.com/in/lucas-henrique-grifoni/" target="_blank">
+    <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0, 119, 181, 0.3); margin: 0 6px;" />
+  </a>
 
-<a href="https://github.com/lucashgrifoni/MyPortfolio-LucasGrifoni/blob/main/RESUME.md" target="_blank">
-  <img src="https://skillicons.dev/icons?i=github" alt="Portfolio" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(24, 23, 23, 0.3); margin: 0 6px;" />
-</a>
+  <a href="https://github.com/lucashgrifoni/MyPortfolio-LucasGrifoni/blob/main/RESUME.md" target="_blank">
+    <img src="https://skillicons.dev/icons?i=github" alt="Portfolio" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(24, 23, 23, 0.3); margin: 0 6px;" />
+  </a>
 
-<a href="https://gitlab.com/lucas.henriquegrifoni" target="_blank">
-  <img src="https://skillicons.dev/icons?i=gitlab" alt="GitLab" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(252, 109, 38, 0.3); margin: 0 6px;" />
-</a>
+  <a href="https://gitlab.com/lucas.henriquegrifoni" target="_blank">
+    <img src="https://skillicons.dev/icons?i=gitlab" alt="GitLab" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(252, 109, 38, 0.3); margin: 0 6px;" />
+  </a>
 
-<a href="mailto:lucas.henriquegrifoni@gmail.com" target="_blank">
-  <img src="https://skillicons.dev/icons?i=gmail" alt="Gmail" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(209, 72, 54, 0.3); margin: 0 6px;" />
-</a>
+  <a href="mailto:lucas.henriquegrifoni@gmail.com" target="_blank">
+    <img src="https://skillicons.dev/icons?i=gmail" alt="Gmail" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(209, 72, 54, 0.3); margin: 0 6px;" />
+  </a>
+</p>
 
 <p align="center">
   <strong style="font-size: 1.2em; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; font-weight: 700; letter-spacing: 0.5px;">Built with focus on security, automation, and impact.</strong>
