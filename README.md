@@ -32,15 +32,8 @@ I have led and implemented application security and DevSecOps strategies in the 
 
   <p style="margin: 0 auto; max-width: 860px; color: #c9d1d9; font-size: 1.05em; line-height: 1.6;">
     Ready to use project: Hands-on labs to practice AppSec and DevSecOps. 
-    Just clone it and follow the README to get started.
+    Just clone it and follow the README to get started. 
   </p>
-
-  <div style="margin-top: 16px;">
-    <span style="display: inline-block; padding: 6px 12px; margin: 4px; border-radius: 999px; background: rgba(34, 197, 94, 0.14); border: 1px solid rgba(34, 197, 94, 0.45); color: #c9d1d9; font-weight: 700;">✅ Ready to use</span>
-    <span style="display: inline-block; padding: 6px 12px; margin: 4px; border-radius: 999px; background: rgba(56, 139, 253, 0.14); border: 1px solid rgba(56, 139, 253, 0.45); color: #c9d1d9; font-weight: 700;">AppSec</span>
-    <span style="display: inline-block; padding: 6px 12px; margin: 4px; border-radius: 999px; background: rgba(163, 113, 247, 0.14); border: 1px solid rgba(163, 113, 247, 0.45); color: #c9d1d9; font-weight: 700;">DevSecOps</span>
-    <span style="display: inline-block; padding: 6px 12px; margin: 4px; border-radius: 999px; background: rgba(245, 158, 11, 0.14); border: 1px solid rgba(245, 158, 11, 0.45); color: #c9d1d9; font-weight: 700;">Hands-on</span>
-  </div>
 
   <div style="margin-top: 18px;">
     <a href="https://github.com/lucashgrifoni/AppSec_DevSecOps-Training-Labs" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 12px; background: #238636; border: 1px solid rgba(35, 134, 54, 0.55); color: #ffffff; text-decoration: none; font-weight: 800; box-shadow: 0 10px 22px rgba(35, 134, 54, 0.22);">
