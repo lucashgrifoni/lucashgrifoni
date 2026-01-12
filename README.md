@@ -17,7 +17,7 @@ I have led and implemented application security and DevSecOps strategies in the 
 
 ## *My motto is: Security as an accelerator and business partner, not a blocker/impediment.*
 
-## ✅ Ready Projects
+## Projects:
 
 <div align="center" style="margin: 14px 0 0 0; padding: 26px 22px; border: 1px solid #30363d; border-radius: 14px; background: linear-gradient(180deg, #0d1117 0%, #0b1220 100%); box-shadow: 0 12px 30px rgba(0,0,0,0.35);">
   <div align="center" style="margin-bottom: 18px; padding: 18px; background: radial-gradient(circle at top, #0c142c 0%, #0b1020 65%); border-radius: 12px; border: 1px solid rgba(8, 185, 139, 0.7);">
