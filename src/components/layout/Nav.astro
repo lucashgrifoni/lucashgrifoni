@@ -1,0 +1,148 @@
+---
+const links = [
+  { href: '#projects', label: 'Projects' },
+  { href: '#about', label: 'About' },
+  { href: '#experiences', label: 'Experiences' },
+  { href: '#stack', label: 'Stack' },
+  { href: '#contact', label: 'Contact' },
+];
+---
+
+<nav
+  id="site-nav"
+  class="fixed left-0 right-0 top-0 z-50 h-16 border-b border-transparent transition-[background-color,backdrop-filter,border-color,box-shadow] duration-300"
+>
+  <div class="mx-auto flex h-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <a
+      href="#"
+      class="mono group flex items-center gap-2 text-lg font-bold tracking-tight text-accent transition-opacity hover:opacity-90"
+      aria-label="Home"
+    >
+      <span
+        class="flex h-9 w-9 items-center justify-center rounded-lg border border-[color-mix(in_srgb,var(--color-accent)_35%,var(--color-border))] bg-[color-mix(in_srgb,var(--color-accent)_8%,transparent)] text-[15px] shadow-inner-soft"
+        >LG</span
+      >
+    </a>
+
+    <button
+      type="button"
+      id="nav-toggle"
+      class="mono inline-flex h-10 w-10 items-center justify-center rounded-lg border border-[color-mix(in_srgb,var(--color-accent)_18%,var(--color-border))] bg-[color-mix(in_srgb,var(--color-surface)_80%,transparent)] text-text-primary backdrop-blur-sm transition-colors hover:border-accent/35 md:hidden"
+      aria-expanded="false"
+      aria-controls="nav-menu"
+      aria-label="Open menu"
+    >
+      <span class="sr-only">Menu</span>
+      <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <ul
+      id="nav-menu"
+      class="mono absolute left-0 right-0 top-16 hidden flex-col gap-1 border-b border-[color-mix(in_srgb,var(--color-accent)_12%,var(--color-border))] bg-[color-mix(in_srgb,var(--color-bg)_96%,transparent)] px-4 py-3 text-[13px] font-medium uppercase tracking-[0.12em] backdrop-blur-xl md:static md:flex md:flex-row md:gap-10 md:border-0 md:bg-transparent md:px-0 md:py-0 md:backdrop-blur-none"
+    >
+      {
+        links.map(({ href, label }) => (
+          <li>
+            <a
+              data-nav-link={href.slice(1)}
+              class="nav-link nav-link-focus block rounded-md py-3 text-text-muted transition-colors duration-200 hover:text-accent md:inline-block md:py-1"
+              href={href}
+            >
+              {label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</nav>
+
+<script>
+  const nav = document.getElementById('site-nav');
+  const toggle = document.getElementById('nav-toggle');
+  const menu = document.getElementById('nav-menu');
+  const navLinks = document.querySelectorAll<HTMLAnchorElement>('.nav-link');
+
+  function setScrolled() {
+    if (!nav) return;
+    const y = window.scrollY;
+    if (y > 48) {
+      nav.classList.add('nav-scrolled');
+    } else {
+      nav.classList.remove('nav-scrolled');
+    }
+  }
+
+  function setActiveSection() {
+    const sectionIds = ['about', 'experiences', 'projects', 'stack', 'contact'];
+    const scrollY = window.scrollY + 100;
+    let current = '';
+    for (const id of sectionIds) {
+      const el = document.getElementById(id);
+      if (!el) continue;
+      if (el.offsetTop <= scrollY) current = id;
+    }
+    navLinks.forEach((link) => {
+      const id = link.dataset.navLink ?? '';
+      const active = id === current && current !== '';
+      link.classList.toggle('text-accent', active);
+      link.classList.toggle('text-text-muted', !active);
+      link.classList.toggle('is-active', active);
+    });
+  }
+
+  function onScroll() {
+    setScrolled();
+    setActiveSection();
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  toggle?.addEventListener('click', () => {
+    const open = menu?.classList.toggle('hidden') === false;
+    toggle?.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle?.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      if (window.matchMedia('(max-width: 767px)').matches) {
+        menu?.classList.add('hidden');
+        toggle?.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+</script>
+
+<style>
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  #site-nav.nav-scrolled {
+    background-color: var(--color-nav-scrolled-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom-color: color-mix(in srgb, var(--color-accent) 12%, var(--color-border));
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  }
+
+  .nav-link.is-active {
+    color: var(--color-accent);
+  }
+</style>

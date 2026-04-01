@@ -1,0 +1,90 @@
+---
+---
+
+<section
+  class="relative z-10 flex min-h-[100svh] flex-col items-center justify-center overflow-hidden px-4 pt-20 pb-16 text-center sm:px-6 sm:pt-24"
+  aria-label="Introduction"
+>
+  <!-- Camadas de profundidade + glow ambiental -->
+  <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+    <div
+      class="hero-glow-pulse absolute -top-32 left-1/2 h-[min(70vw,520px)] w-[min(90vw,720px)] -translate-x-1/2 rounded-full opacity-70"
+      style="background: radial-gradient(ellipse at center, color-mix(in srgb, var(--color-accent) 22%, transparent) 0%, transparent 68%); filter: blur(48px);"
+    >
+    </div>
+    <div
+      class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-canvas via-transparent to-transparent"
+    >
+    </div>
+    <!-- Grade técnica discreta -->
+    <div
+      class="absolute inset-0 opacity-[0.07]"
+      style="background-image: linear-gradient(color-mix(in srgb, var(--color-accent) 40%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--color-accent) 40%, transparent) 1px, transparent 1px); background-size: 56px 56px; mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 20%, transparent 100%);"
+    >
+    </div>
+  </div>
+
+  <div class="animate-hero-deco relative mx-auto max-w-[720px] px-1">
+    <!-- Moldura / vidro sutil -->
+    <div
+      class="rounded-2xl border border-[color-mix(in_srgb,var(--color-accent)_14%,var(--color-border))] bg-[color-mix(in_srgb,var(--color-surface)_72%,transparent)] px-6 py-10 shadow-float backdrop-blur-md sm:px-10 sm:py-12 md:px-14 md:py-14"
+      style="box-shadow: var(--shadow-float), 0 0 80px color-mix(in srgb, var(--color-accent) 8%, transparent);"
+    >
+      <div
+        class="pointer-events-none absolute -left-px -top-px h-16 w-16 rounded-tl-2xl border-l border-t border-accent/25"
+      >
+      </div>
+      <div
+        class="pointer-events-none absolute -bottom-px -right-px h-16 w-16 rounded-br-2xl border-b border-r border-accent/20"
+      >
+      </div>
+
+      <p
+        class="mono animate-hero-label mb-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-accent/95 sm:text-[12px]"
+      >
+        Portfolio · Application Security & DevSecOps
+      </p>
+      <h1
+        class="animate-hero-name text-balance font-bold tracking-[-0.03em] text-text-primary"
+        style="font-size: clamp(1.85rem, 4vw + 0.75rem, 3.25rem); line-height: 1.12;"
+      >
+        Lucas Henrique{' '}
+        <span
+          class="bg-gradient-to-br from-text-primary via-[color-mix(in_srgb,var(--color-accent)_35%,var(--color-text))] to-text-muted/75 bg-clip-text text-transparent"
+          >Grifoni</span
+        >
+      </h1>
+      <p
+        class="animate-hero-lead mx-auto mt-6 max-w-[36rem] text-[15px] leading-relaxed text-text-primary/92 sm:text-[15.5px] md:text-base md:leading-relaxed"
+      >
+        This page is my technical portfolio — a single place for projects and initiatives that show how I design, build,
+        and ship security in real delivery pipelines: automation, visibility, and outcomes you can trace from code to
+        production.
+      </p>
+      <p
+        class="animate-hero-tagline mx-auto mt-5 max-w-[34rem] text-[14px] leading-relaxed text-text-muted sm:text-[15px] md:mt-6 md:text-base md:leading-relaxed"
+      >
+        <span class="text-text-primary/88"
+          >The work below reflects my execution and point of view — security as an accelerator for teams, not a late-stage
+          gate.</span
+        >
+        <span class="mt-3 block text-[13px] font-medium leading-snug text-accent/90 sm:text-sm md:text-[15px]"
+          >Security as an accelerator and business partner — not a blocker.</span
+        >
+      </p>
+      <div
+        class="animate-hero-cta mt-10 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center sm:gap-4"
+      >
+        <a class="btn-primary w-full sm:w-auto" href="#projects">See My Projects</a>
+        <a
+          class="btn-secondary w-full sm:w-auto"
+          href="https://github.com/lucashgrifoni"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub Profile
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

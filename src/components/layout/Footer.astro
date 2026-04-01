@@ -1,0 +1,240 @@
+---
+const email = 'lucas.henriquegrifoni@gmail.com';
+---
+
+<footer
+  id="contact"
+  class="contact-footer relative z-10 overflow-hidden border-t border-[color-mix(in_srgb,var(--color-accent)_10%,var(--color-border))] bg-footer py-16 md:py-20 lg:py-24"
+  aria-labelledby="contact-heading"
+>
+  <div
+    class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[color-mix(in_srgb,var(--color-accent)_40%,transparent)] to-transparent"
+    aria-hidden="true"
+  >
+  </div>
+  <div
+    class="pointer-events-none absolute left-1/2 top-0 h-[min(70vw,480px)] w-[min(90vw,640px)] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-20 blur-3xl md:opacity-25"
+    style="background: radial-gradient(ellipse at center, color-mix(in srgb, var(--color-accent) 20%, transparent) 0%, transparent 65%);"
+    aria-hidden="true"
+  >
+  </div>
+
+  <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <header
+      class="contact-animate mx-auto mb-12 max-w-2xl text-center md:mb-14"
+      data-contact-animate
+      style="--delay: 0s"
+    >
+      <p
+        class="mono mb-4 text-[11px] font-semibold uppercase tracking-[0.28em] text-accent/90 md:text-xs"
+      >
+        Contact
+      </p>
+      <h2
+        id="contact-heading"
+        class="text-balance text-3xl font-bold tracking-[-0.03em] text-text-primary md:text-[2.15rem] md:leading-tight"
+      >
+        Let’s connect
+      </h2>
+    </header>
+
+    <div
+      class="contact-animate grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-4 md:gap-5"
+      data-contact-animate
+      style="--delay: 0.1s"
+    >
+      <a
+        href="https://github.com/lucashgrifoni"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contact-card group"
+        style="--delay: 0.12s"
+      >
+        <span class="contact-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </span>
+        <span class="contact-card-label">GitHub</span>
+        <span class="contact-card-value mono">@lucashgrifoni</span>
+        <span class="contact-card-cta">View profile →</span>
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/lucas-henrique-grifoni"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contact-card group"
+        style="--delay: 0.18s"
+      >
+        <span class="contact-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+            ></path>
+          </svg>
+        </span>
+        <span class="contact-card-label">LinkedIn</span>
+        <span class="contact-card-value mono">/in/lucas-henrique-grifoni</span>
+        <span class="contact-card-cta">Open profile →</span>
+      </a>
+
+      <a href={`mailto:${email}`} class="contact-card group" style="--delay: 0.24s">
+        <span class="contact-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5">
+            <path d="M4 6h16v12H4z" stroke-linejoin="round"></path>
+            <path d="m4 7 8 6 8-6" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </span>
+        <span class="contact-card-label">Email</span>
+        <span class="contact-card-value mono break-all text-[11px] leading-snug sm:text-xs">{email}</span>
+        <span class="contact-card-cta">Send message →</span>
+      </a>
+    </div>
+
+    <p
+      class="contact-animate mt-12 text-center text-[12px] text-text-muted/80 md:mt-14"
+      data-contact-animate
+      style="--delay: 0.32s"
+    >
+      Built with focus on security, automation, and impact.
+    </p>
+  </div>
+</footer>
+
+<script>
+  function initContactSection() {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const els = document.querySelectorAll('#contact [data-contact-animate]');
+    if (reduce) {
+      els.forEach((el) => el.classList.add('contact-animate--instant'));
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('contact-animate--inview');
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -8% 0px' },
+    );
+    els.forEach((el) => io.observe(el));
+  }
+  initContactSection();
+</script>
+
+<style>
+  .contact-animate {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+    transition:
+      opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: var(--delay, 0s);
+  }
+
+  .contact-animate--inview,
+  .contact-animate--instant {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .contact-animate {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  .contact-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+    padding: 1.25rem 1.35rem;
+    text-align: left;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 14px;
+    border: 1px solid color-mix(in srgb, var(--color-accent) 14%, var(--color-border));
+    background: linear-gradient(
+      165deg,
+      color-mix(in srgb, var(--color-bg) 90%, transparent) 0%,
+      color-mix(in srgb, var(--color-surface) 55%, transparent) 100%
+    );
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+    transition:
+      transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+      border-color 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .contact-card:hover {
+      transform: translateY(-4px);
+      border-color: color-mix(in srgb, var(--color-accent) 38%, var(--color-border));
+      box-shadow:
+        0 20px 48px rgba(0, 0, 0, 0.45),
+        0 0 0 1px color-mix(in srgb, var(--color-accent) 12%, transparent),
+        0 0 32px color-mix(in srgb, var(--color-accent) 10%, transparent);
+    }
+  }
+
+  .contact-card:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  .contact-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.25rem;
+    color: color-mix(in srgb, var(--color-accent) 95%, white);
+    opacity: 0.92;
+  }
+
+  .contact-card-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, var(--color-accent) 88%, var(--color-text));
+  }
+
+  .contact-card-value {
+    font-size: 12px;
+    color: color-mix(in srgb, var(--color-text) 88%, var(--color-muted));
+    word-break: break-word;
+  }
+
+  .contact-card-cta {
+    margin-top: 0.5rem;
+    font-size: 12px;
+    font-weight: 600;
+    color: color-mix(in srgb, var(--color-accent) 75%, var(--color-text));
+    transition: transform 0.25s ease;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .contact-card:hover .contact-card-cta {
+      transform: translateX(3px);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .contact-card:hover {
+      transform: none;
+    }
+    .contact-card:hover .contact-card-cta {
+      transform: none;
+    }
+  }
+</style>

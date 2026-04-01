@@ -1,0 +1,252 @@
+---
+import type { Experience } from '../../data/experiences';
+
+interface Props {
+  experience: Experience;
+}
+
+const { experience: exp } = Astro.props;
+const logoUrl = exp.logoSrc ? `${import.meta.env.BASE_URL}${exp.logoSrc}` : null;
+---
+
+<div class="exp-card-outer" data-tilt-card>
+  <article
+    class="exp-card-inner group relative overflow-hidden rounded-2xl border border-[color-mix(in_srgb,var(--color-accent)_12%,var(--color-border))] bg-gradient-to-b from-[color-mix(in_srgb,var(--color-surface)_95%,transparent)] to-surface p-6 shadow-float transition-[box-shadow,transform] duration-300 ease-out md:p-8 lg:p-10"
+  >
+    <div
+      class="pointer-events-none absolute -right-16 -top-20 h-56 w-56 rounded-full opacity-35 blur-3xl"
+      style="background: radial-gradient(circle, color-mix(in srgb, var(--color-accent) 24%, transparent) 0%, transparent 70%);"
+      aria-hidden="true"
+    >
+    </div>
+    <div
+      class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[color-mix(in_srgb,var(--color-accent)_40%,transparent)] to-transparent opacity-80"
+      aria-hidden="true"
+    >
+    </div>
+
+    <div class="relative flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-8">
+      <div class="exp-logo-frame shrink-0">
+        <div class="exp-logo-inner">
+          {
+            logoUrl ? (
+              <img
+                src={logoUrl}
+                alt={`${exp.company} logo`}
+                width="1024"
+                height="1024"
+                class="exp-logo-img"
+                loading="lazy"
+                decoding="async"
+              />
+            ) : (
+              <span class="exp-logo-fallback mono" aria-hidden="true">
+                {exp.logoAbbr}
+              </span>
+            )
+          }
+        </div>
+      </div>
+
+      <div class="min-w-0 flex-1 space-y-4">
+        <div class="flex flex-wrap items-start justify-between gap-3">
+          <div class="min-w-0">
+            <h3 class="text-xl font-bold tracking-tight text-text-primary md:text-[1.45rem]">
+              {exp.company}
+            </h3>
+            <p class="mt-1 text-[15px] font-semibold text-accent/95 md:text-base">
+              {exp.role}
+            </p>
+            <p class="mono mt-2 text-[12px] uppercase tracking-[0.14em] text-text-muted md:text-[13px]">
+              {exp.location}
+              <span class="text-text-muted/50"> · </span>
+              {exp.arrangement}
+            </p>
+          </div>
+          <span
+            class:list={[
+              'mono shrink-0 inline-flex items-center rounded-full px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] ring-1',
+              exp.status === 'present'
+                ? 'text-accent ring-[color-mix(in_srgb,var(--color-accent)_55%,transparent)] bg-[color-mix(in_srgb,var(--color-accent)_10%,transparent)]'
+                : 'text-text-muted ring-border-custom bg-[color-mix(in_srgb,var(--color-muted)_12%,transparent)]',
+            ]}
+          >
+            {exp.statusLabel}
+          </span>
+        </div>
+
+        <div class="h-px w-full bg-gradient-to-r from-transparent via-border-custom to-transparent" aria-hidden="true">
+        </div>
+
+        <ul
+          class="exp-body-list m-0 list-none space-y-4 p-0 text-[15px] leading-[1.78] text-text-primary/95 md:text-[15.5px] md:leading-[1.82]"
+        >
+          {
+            exp.paragraphs.map((p) => (
+              <li class="exp-body-item flex gap-3.5">
+                <span class="exp-body-bullet shrink-0" aria-hidden="true" />
+                <span class="min-w-0 flex-1">{p}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </article>
+</div>
+
+<style>
+  /* Bullet estilo “lista” (Word), na paleta accent */
+  .exp-body-bullet {
+    width: 0.4rem;
+    height: 0.4rem;
+    margin-top: 0.58em;
+    border-radius: 9999px;
+    background: var(--color-accent);
+    box-shadow: 0 0 12px color-mix(in srgb, var(--color-accent) 55%, transparent);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .exp-body-bullet {
+      box-shadow: none;
+    }
+  }
+
+  /* Moldura de logo espelhada dos cards de projeto (1:1, premium) */
+  .exp-logo-frame {
+    --logo-frame-size: 5.35rem;
+    --logo-frame-pad: 0.45rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: var(--logo-frame-size);
+    height: var(--logo-frame-size);
+    padding: var(--logo-frame-pad);
+    border-radius: 1rem;
+    border: 1px solid color-mix(in srgb, var(--color-accent) 28%, var(--color-border));
+    background: linear-gradient(
+      165deg,
+      color-mix(in srgb, var(--color-surface) 94%, var(--color-accent)) 0%,
+      color-mix(in srgb, var(--color-bg) 92%, transparent) 100%
+    );
+    box-shadow:
+      inset 0 1px 0 color-mix(in srgb, var(--color-accent) 16%, transparent),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.35),
+      0 6px 20px rgba(0, 0, 0, 0.42),
+      0 0 0 1px color-mix(in srgb, var(--color-accent) 9%, transparent),
+      0 0 32px color-mix(in srgb, var(--color-accent) 11%, transparent);
+  }
+
+  .exp-logo-frame::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(
+      145deg,
+      color-mix(in srgb, var(--color-accent) 8%, transparent) 0%,
+      transparent 42%
+    );
+  }
+
+  .exp-logo-inner {
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    background: radial-gradient(
+      70% 70% at 50% 50%,
+      color-mix(in srgb, var(--color-bg) 28%, transparent) 0%,
+      transparent 78%
+    );
+  }
+
+  .exp-logo-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.45));
+  }
+
+  .exp-logo-fallback {
+    font-size: clamp(0.95rem, 0.35vw + 0.85rem, 1.05rem);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: color-mix(in srgb, var(--color-accent) 82%, var(--color-text));
+    text-shadow: 0 0 24px color-mix(in srgb, var(--color-accent) 25%, transparent);
+  }
+
+  @media (min-width: 768px) {
+    .exp-logo-frame {
+      --logo-frame-size: 6rem;
+      --logo-frame-pad: 0.5rem;
+      border-radius: 1.125rem;
+    }
+
+    .exp-logo-inner {
+      border-radius: 0.625rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .exp-logo-frame {
+      box-shadow:
+        inset 0 1px 0 color-mix(in srgb, var(--color-accent) 12%, transparent),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.3),
+        0 4px 14px rgba(0, 0, 0, 0.38),
+        0 0 0 1px color-mix(in srgb, var(--color-accent) 8%, transparent);
+    }
+    .exp-logo-fallback {
+      text-shadow: none;
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .exp-card-outer:hover .exp-card-inner {
+      box-shadow:
+        0 24px 56px rgba(0, 0, 0, 0.45),
+        0 0 0 1px color-mix(in srgb, var(--color-accent) 18%, transparent),
+        0 0 40px color-mix(in srgb, var(--color-accent) 10%, transparent);
+    }
+
+    .exp-card-outer:hover .exp-logo-frame {
+      border-color: color-mix(in srgb, var(--color-accent) 38%, var(--color-border));
+      box-shadow:
+        inset 0 1px 0 color-mix(in srgb, var(--color-accent) 20%, transparent),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.35),
+        0 8px 24px rgba(0, 0, 0, 0.45),
+        0 0 0 1px color-mix(in srgb, var(--color-accent) 14%, transparent),
+        0 0 40px color-mix(in srgb, var(--color-accent) 14%, transparent);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .exp-card-outer:hover .exp-card-inner {
+      box-shadow: var(--shadow-float);
+    }
+    .exp-card-outer:hover .exp-logo-frame {
+      border-color: color-mix(in srgb, var(--color-accent) 28%, var(--color-border));
+      box-shadow:
+        inset 0 1px 0 color-mix(in srgb, var(--color-accent) 12%, transparent),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.3),
+        0 4px 14px rgba(0, 0, 0, 0.38),
+        0 0 0 1px color-mix(in srgb, var(--color-accent) 8%, transparent);
+    }
+  }
+</style>

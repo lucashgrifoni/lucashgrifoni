@@ -1,0 +1,108 @@
+---
+import type { TelemetryGlyph as Glyph } from '../../data/telemetry';
+
+interface Props {
+  kind: Glyph;
+}
+
+const { kind } = Astro.props;
+const cls = 'h-3 w-3 shrink-0 opacity-90';
+---
+
+{
+  kind === 'shield' && (
+    <svg class={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <path d="M12 3 5 6v6c0 5 3.5 9 7 10 3.5-1 7-5 7-10V6l-7-3Z" stroke-linejoin="round" />
+      <path d="M9 12h6" stroke-linecap="round" />
+    </svg>
+  )
+}
+{
+  kind === 'scan' && (
+    <svg class={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <circle cx="11" cy="11" r="7" />
+      <path d="m20 20-3-3" stroke-linecap="round" />
+      <path d="M11 8v4l2 1" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  )
+}
+{
+  kind === 'terminal' && (
+    <svg class={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <path d="M7 10h.01M10 10h.01" stroke-linecap="round" />
+      <path d="m8 14 2 1.5L8 17" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  )
+}
+{
+  kind === 'pipeline' && (
+    <svg class={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <circle cx="6" cy="8" r="2" />
+      <circle cx="12" cy="16" r="2" />
+      <circle cx="18" cy="8" r="2" />
+      <path d="M8 9.5 10 14M14 14l4-4.5" stroke-linecap="round" />
+    </svg>
+  )
+}
+{
+  kind === 'container' && (
+    <svg class={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <path d="M4 9h16v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9Z" />
+      <path d="M8 9V7a4 4 0 0 1 8 0v2" stroke-linecap="round" />
+      <path d="M4 13h16" />
+    </svg>
+  )
+}
+{
+  kind === 'lock' && (
+    <svg class={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <rect x="5" y="11" width="14" height="10" rx="2" />
+      <path d="M8 11V8a4 4 0 0 1 8 0v3" stroke-linecap="round" />
+      <circle cx="12" cy="15" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  )
+}
+{
+  kind === 'alert' && (
+    <svg class={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <path d="M12 4 3 19h18L12 4Z" stroke-linejoin="round" />
+      <path d="M12 10v4" stroke-linecap="round" />
+      <circle cx="12" cy="17" r="0.5" fill="currentColor" />
+    </svg>
+  )
+}
+{
+  kind === 'check' && (
+    <svg class={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" opacity="0.4" />
+      <path d="M8 12.5 11 15 16 9" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  )
+}
+{
+  kind === 'git' && (
+    <svg class={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <circle cx="8" cy="8" r="2" />
+      <circle cx="16" cy="8" r="2" />
+      <circle cx="8" cy="16" r="2" />
+      <path d="M10 8h4M8 10v4M10 16h4.5a2 2 0 0 0 1.6-.8l1-1.3" stroke-linecap="round" />
+    </svg>
+  )
+}
+{
+  kind === 'cloud' && (
+    <svg class={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <path d="M7 18h11a4 4 0 0 0 0-8 1 1 0 0 0-1-1 5 5 0 0 0-9.7 1.5A3 3 0 0 0 7 18Z" stroke-linejoin="round" />
+    </svg>
+  )
+}
+{
+  kind === 'policy' && (
+    <svg class={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <path d="M4 6h16v12H4z" />
+      <path d="M8 10h8M8 14h5" stroke-linecap="round" />
+      <path d="m9 18 2 2 4-4" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  )
+}

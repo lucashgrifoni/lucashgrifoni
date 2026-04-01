@@ -1,0 +1,24 @@
+{
+  "name": "lucashgrifoni-github-io",
+  "type": "module",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node ./node_modules/astro/astro.js dev",
+    "build": "node ./node_modules/astro/astro.js build",
+    "preview": "node ./node_modules/astro/astro.js preview",
+    "astro": "node ./node_modules/astro/astro.js",
+    "lighthouse:desktop": "npx --yes lighthouse http://127.0.0.1:4321/ --preset=desktop --only-categories=performance --view",
+    "lighthouse:mobile": "npx --yes lighthouse http://127.0.0.1:4321/ --form-factor=mobile --only-categories=performance --view"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.1.4",
+    "astro": "^5.13.0",
+    "tailwindcss": "^3.4.17"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}

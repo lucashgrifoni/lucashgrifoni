@@ -1,0 +1,143 @@
+---
+import { telemetryLines } from '../../data/telemetry';
+import TelemetryGlyph from './TelemetryGlyph.astro';
+
+const mobileMax = 6;
+
+const rows = telemetryLines.map((line, i) => ({
+  ...line,
+  i,
+  topPct: 6 + (i * 3.7) % 72,
+  durationSec: 28 + (i % 7) * 3.5,
+  delaySec: -(i * 2.1),
+  depth: 0.85 + (i % 4) * 0.04,
+  blurPx: i % 3 === 0 ? 0.4 : 0,
+  reverse: i % 2 === 1,
+}));
+---
+
+<div class="floating-telemetry" data-telemetry-layer aria-hidden="true">
+  {
+    rows.map((row) => (
+      <div
+        class:list={['ft-line', row.i >= mobileMax && 'ft-line--desktop-only']}
+        style={{
+          '--ft-top': `${row.topPct}%`,
+          '--ft-dur': `${row.durationSec}s`,
+          '--ft-delay': `${row.delaySec}s`,
+          '--ft-depth': String(row.depth),
+          '--ft-blur': `${row.blurPx}px`,
+          animationDirection: row.reverse ? 'reverse' : 'normal',
+        }}
+      >
+        <span class="ft-chip mono">
+          <span class="ft-glyph">
+            <TelemetryGlyph kind={row.glyph} />
+          </span>
+          <span class="ft-text">{row.text}</span>
+        </span>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .floating-telemetry {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .floating-telemetry {
+      display: none;
+    }
+  }
+
+  @keyframes ft-drift {
+    0% {
+      transform: translate3d(105vw, 0, 0) scale(var(--ft-depth)) translateZ(0);
+    }
+    100% {
+      transform: translate3d(calc(-100% - 15vw), 0, 0) scale(var(--ft-depth)) translateZ(0);
+    }
+  }
+
+  .ft-line {
+    position: absolute;
+    top: var(--ft-top);
+    left: 0;
+    opacity: 0.38;
+    filter: blur(var(--ft-blur));
+    animation: ft-drift var(--ft-dur) linear infinite;
+    animation-delay: var(--ft-delay);
+    will-change: transform;
+  }
+
+  @media (min-width: 768px) {
+    .ft-line {
+      opacity: 0.42;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .ft-line--desktop-only {
+      display: none;
+    }
+    .ft-line {
+      opacity: 0.28;
+    }
+    .ft-chip {
+      font-size: 9px !important;
+      padding: 0.2rem 0.5rem !important;
+    }
+  }
+
+  .ft-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.28rem 0.65rem;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    white-space: nowrap;
+    color: color-mix(in srgb, var(--color-accent) 88%, var(--color-text));
+    border: 1px solid color-mix(in srgb, var(--color-accent) 28%, var(--color-border));
+    background: color-mix(in srgb, var(--color-bg) 72%, transparent);
+    box-shadow:
+      0 0 0 1px color-mix(in srgb, var(--color-accent) 6%, transparent),
+      0 4px 24px color-mix(in srgb, var(--color-accent) 8%, transparent);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  @media (max-width: 767px) {
+    .ft-chip {
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+  }
+
+  .ft-glyph {
+    display: flex;
+    color: color-mix(in srgb, var(--color-accent) 95%, white);
+    opacity: 0.95;
+  }
+
+  .ft-text {
+    max-width: min(70vw, 420px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @media (min-width: 768px) {
+    .ft-text {
+      max-width: none;
+    }
+  }
+</style>

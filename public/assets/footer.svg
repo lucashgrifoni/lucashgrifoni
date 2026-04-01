@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="60" viewBox="0 0 900 60">
+  <rect width="900" height="60" fill="#0c142c"/>
+  <line x1="0" y1="0.5" x2="900" y2="0.5" stroke="#5a6876" stroke-width="1"/>
+  <text x="450" y="28" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400" fill="#d5d8dd" text-anchor="middle">See the full portfolio and project details</text>
+  <text x="450" y="50" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#08b98b" text-anchor="middle">lucashgrifoni.github.io</text>
+</svg>

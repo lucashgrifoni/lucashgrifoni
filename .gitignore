@@ -1,0 +1,37 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+*.tmp
+*.temp
+
+# Legacy Jekyll (replaced by Astro)
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Node / Astro
+node_modules/
+dist/
+.astro/
+
+# Lighthouse (local audits)
+lighthouse-desktop.json
+lighthouse-mobile.json
+lighthouse-*.json
+
+# Local tooling
+.cursor/

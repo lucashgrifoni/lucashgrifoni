@@ -1,0 +1,114 @@
+---
+import { experiences } from '../../data/experiences';
+import ExperienceCard from './ExperienceCard.astro';
+---
+
+<section
+  id="experiences"
+  class="exp-section relative z-10 overflow-hidden border-t border-[color-mix(in_srgb,var(--color-accent)_8%,var(--color-border))] bg-surface py-20 md:py-28 lg:py-32"
+  aria-labelledby="experiences-heading"
+>
+  <div
+    class="pointer-events-none absolute left-1/2 top-0 h-[min(75vw,480px)] w-[min(95vw,720px)] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-25 blur-3xl md:opacity-32"
+    style="background: radial-gradient(ellipse at center, color-mix(in srgb, var(--color-accent) 20%, transparent) 0%, transparent 65%);"
+    aria-hidden="true"
+  >
+  </div>
+  <div
+    class="pointer-events-none absolute bottom-0 right-0 h-80 w-80 rounded-full opacity-20 blur-3xl"
+    style="background: radial-gradient(circle, color-mix(in srgb, var(--color-accent) 14%, transparent) 0%, transparent 72%);"
+    aria-hidden="true"
+  >
+  </div>
+
+  <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <header
+      class="exp-animate mx-auto mb-12 max-w-2xl text-center md:mb-16"
+      data-exp-animate
+      style="--delay: 0s"
+    >
+      <p class="mono mb-4 text-[11px] font-semibold uppercase tracking-[0.28em] text-accent/90 md:text-xs">
+        Experiences
+      </p>
+      <h2
+        id="experiences-heading"
+        class="text-balance text-3xl font-bold tracking-[-0.03em] text-text-primary md:text-4xl lg:text-[2.5rem] lg:leading-[1.12]"
+      >
+        <span class="block">Roles that shaped</span>
+        <span
+          class="mt-1 block bg-gradient-to-br from-text-primary via-[color-mix(in_srgb,var(--color-accent)_42%,var(--color-text))] to-text-muted/78 bg-clip-text md:mt-2"
+          style="-webkit-background-clip: text; color: transparent;"
+        >
+          how I build AppSec & DevSecOps
+        </span>
+      </h2>
+      <p class="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-text-muted md:mt-6 md:text-base">
+        A concise walk through organizations where I embedded security in delivery—from pipeline automation and cloud-native
+        workloads to governance, enablement, and measurable risk reduction.
+      </p>
+      <div class="mx-auto mt-6 h-px w-16 bg-gradient-to-r from-accent/80 to-transparent md:mt-8" aria-hidden="true"></div>
+    </header>
+
+    <div class="flex flex-col gap-8 md:gap-10 lg:gap-12">
+      {
+        experiences.map((exp, i) => (
+          <div
+            class="exp-animate will-change-transform"
+            data-exp-animate
+            style={`--delay: ${0.06 + i * 0.055}s`}
+          >
+            <ExperienceCard experience={exp} />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<script>
+  function initExperiencesSection() {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const els = document.querySelectorAll('#experiences [data-exp-animate]');
+    if (reduce) {
+      els.forEach((el) => el.classList.add('exp-animate--instant'));
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('exp-animate--inview');
+          }
+        });
+      },
+      { threshold: 0.08, rootMargin: '0px 0px -7% 0px' },
+    );
+    els.forEach((el) => io.observe(el));
+  }
+  initExperiencesSection();
+</script>
+
+<style>
+  .exp-animate {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+    transition:
+      opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: var(--delay, 0s);
+  }
+
+  .exp-animate--inview,
+  .exp-animate--instant {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .exp-animate {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+</style>

@@ -1,0 +1,58 @@
+/**
+ * Pool de tokens para o fundo “security streams” (canvas).
+ * Edite aqui para ajustar vocabulário sem alterar o renderer.
+ */
+export const SECURITY_STREAM_TOKENS: readonly string[] = [
+  'SAST',
+  'DAST',
+  'SCA',
+  'IaC',
+  'IAM',
+  'RBAC',
+  'K8s',
+  'CVE',
+  'JWT',
+  'AST',
+  'ASVS',
+  'Policy',
+  'Threat',
+  'Secrets',
+  'Pipeline',
+  'Zero Trust',
+  'Semgrep',
+  'Trivy',
+  'Shield',
+  'Gate',
+  'Scan',
+  'Verify',
+  'Harden',
+  'Risk',
+  'Audit',
+  'Token',
+  'OCI',
+  'OWASP',
+  'SBOM',
+  'Sign',
+  'Provenance',
+  'SLSA',
+  'OPA',
+  'mTLS',
+  'SSDF',
+  'DevSecOps',
+  'AppSec',
+];
+
+/** Separadores e glifos leves (baixa frequência no renderer). */
+export const STREAM_GLYPHS: readonly string[] = [
+  '·',
+  '—',
+  '::',
+  '▸',
+  '│',
+  '⟨⟩',
+  '[]',
+  '⟨',
+  '⟩',
+  '▫',
+  '···',
+];

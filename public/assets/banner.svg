@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="160" viewBox="0 0 900 160">
+  <rect width="900" height="160" fill="#0c142c"/>
+  <text x="32" y="52" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#d5d8dd">Lucas Henrique Grifoni</text>
+  <text x="32" y="82" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#08b98b">Application Security &amp; DevSecOps Engineer</text>
+  <line x1="532" y1="28" x2="532" y2="108" stroke="#08b98b" stroke-width="2"/>
+  <line x1="548" y1="68" x2="868" y2="68" stroke="#5a6876" stroke-width="1"/>
+  <text x="450" y="140" font-family="Arial, Helvetica, sans-serif" font-size="13" font-style="italic" font-weight="400" fill="#7c8394" text-anchor="middle">Security as an accelerator, not a blocker.</text>
+</svg>

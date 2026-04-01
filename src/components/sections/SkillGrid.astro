@@ -1,0 +1,295 @@
+---
+import { stackCategories } from '../../data/stack';
+---
+
+<section
+  id="stack"
+  class="stack-section relative z-10 overflow-hidden border-t border-[color-mix(in_srgb,var(--color-accent)_8%,var(--color-border))] bg-surface py-20 md:py-28 lg:py-32"
+  aria-labelledby="stack-heading"
+>
+  <div
+    class="pointer-events-none absolute -left-32 top-0 h-[min(80vw,520px)] w-[min(80vw,520px)] rounded-full opacity-25 blur-3xl md:opacity-35"
+    style="background: radial-gradient(circle, color-mix(in srgb, var(--color-accent) 22%, transparent) 0%, transparent 62%);"
+    aria-hidden="true"
+  >
+  </div>
+  <div
+    class="pointer-events-none absolute -right-24 bottom-0 h-[380px] w-[380px] rounded-full opacity-20 blur-3xl"
+    style="background: radial-gradient(circle, color-mix(in srgb, var(--color-accent) 14%, transparent) 0%, transparent 70%);"
+    aria-hidden="true"
+  >
+  </div>
+
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+    <header class="stack-header stack-animate mx-auto mb-14 max-w-3xl text-center md:mb-16 lg:mb-20" data-stack-animate style="--delay: 0s">
+      <p class="mono mb-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-accent/90 md:text-xs">
+        Stack
+      </p>
+      <h2
+        id="stack-heading"
+        class="stack-title text-balance text-3xl font-bold tracking-[-0.03em] text-text-primary md:text-4xl lg:text-[2.65rem] lg:leading-[1.15]"
+      >
+        <span class="stack-title-block">Capabilities</span>
+        <span
+          class="stack-title-gradient mt-1 block bg-gradient-to-br from-text-primary via-[color-mix(in_srgb,var(--color-accent)_45%,var(--color-text))] to-text-muted/80 bg-clip-text md:mt-2"
+          style="-webkit-background-clip: text; color: transparent;"
+        >
+          across AppSec & delivery
+        </span>
+      </h2>
+      <p
+        class="mx-auto mt-5 max-w-2xl text-[15px] leading-relaxed text-text-muted md:mt-6 md:text-base"
+      >
+        Technologies, platforms, and security practices I have worked with throughout my career across Application Security, DevSecOps, cloud security, and secure software delivery supporting the implementation of scalable controls, stronger engineering standards, and more resilient development pipelines.
+      </p>
+    </header>
+
+    <div
+      class="grid grid-cols-1 gap-6 sm:gap-7 md:grid-cols-2 xl:grid-cols-3 xl:gap-8"
+    >
+      {
+        stackCategories.map((cat, i) => (
+          <div
+            class="stack-animate h-full min-h-0"
+            data-stack-animate
+            style={`--delay: ${0.08 + i * 0.07}s`}
+          >
+            <div class="stack-tilt h-full" data-tilt-card>
+              <article class="stack-card group relative flex h-full min-h-[280px] flex-col md:min-h-[300px]">
+                <div
+                  class="stack-card-glow pointer-events-none absolute inset-px rounded-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                  aria-hidden="true"
+                />
+                <div class="relative flex h-full flex-col rounded-2xl border border-[color-mix(in_srgb,var(--color-accent)_12%,var(--color-border))] bg-gradient-to-b from-[color-mix(in_srgb,var(--color-bg)_88%,transparent)] to-[color-mix(in_srgb,var(--color-surface)_95%,transparent)] p-6 shadow-[0_16px_48px_rgba(0,0,0,0.38)] md:p-7 lg:p-8">
+                  <div
+                    class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[color-mix(in_srgb,var(--color-accent)_35%,transparent)] to-transparent opacity-70"
+                    aria-hidden="true"
+                  />
+                  <div class="stack-card-title-block">
+                    <h3 class="mono stack-card-heading">{cat.title}</h3>
+                  </div>
+                  <div class="stack-chips flex flex-wrap content-start gap-2">
+                    {cat.items.map((item) => (
+                      <span class="stack-chip mono">{item}</span>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<script>
+  function initStackSection() {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const els = document.querySelectorAll('#stack [data-stack-animate]');
+    if (reduce) {
+      els.forEach((el) => el.classList.add('stack-animate--instant'));
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('stack-animate--inview');
+          }
+        });
+      },
+      { threshold: 0.08, rootMargin: '0px 0px -6% 0px' },
+    );
+    els.forEach((el) => io.observe(el));
+  }
+  initStackSection();
+</script>
+
+<style>
+  .stack-animate {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0);
+    transition:
+      opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: var(--delay, 0s);
+  }
+
+  .stack-animate--inview,
+  .stack-animate--instant {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .stack-animate {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  .stack-card-title-block {
+    margin-bottom: 1.25rem;
+  }
+
+  /* Títulos: gradiente premium (#e8e8e8 → misturas mint → #99FFCC), alinhado ao token --color-accent */
+  .stack-card-heading {
+    margin: 0;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.38;
+    letter-spacing: 0.16em;
+    font-size: clamp(0.78rem, 0.2vw + 0.72rem, 0.875rem);
+    position: relative;
+    padding-bottom: 0.7rem;
+    background-image: linear-gradient(
+      118deg,
+      var(--color-text) 0%,
+      color-mix(in srgb, var(--color-accent) 32%, var(--color-text)) 34%,
+      color-mix(in srgb, var(--color-accent) 78%, var(--color-text)) 78%,
+      var(--color-accent) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    filter: drop-shadow(0 0 18px color-mix(in srgb, var(--color-accent) 18%, transparent));
+  }
+
+  @supports not (background-clip: text) {
+    .stack-card-heading {
+      background-image: none;
+      -webkit-text-fill-color: unset;
+      color: color-mix(in srgb, var(--color-accent) 48%, var(--color-text));
+      filter: none;
+    }
+  }
+
+  .stack-card-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 3.25rem;
+    height: 2px;
+    border-radius: 9999px;
+    background: linear-gradient(
+      90deg,
+      var(--color-accent) 0%,
+      color-mix(in srgb, var(--color-accent) 42%, transparent) 65%,
+      transparent 100%
+    );
+    opacity: 0.95;
+    box-shadow: 0 0 16px color-mix(in srgb, var(--color-accent) 32%, transparent);
+  }
+
+  @media (min-width: 768px) {
+    .stack-card-heading {
+      letter-spacing: 0.17em;
+      font-size: 0.875rem;
+      padding-bottom: 0.75rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .stack-card-heading {
+      background-image: none;
+      -webkit-text-fill-color: unset;
+      color: color-mix(in srgb, var(--color-accent) 52%, var(--color-text));
+      filter: none;
+    }
+    .stack-card-heading::after {
+      box-shadow: none;
+    }
+  }
+
+  .stack-card-glow {
+    background: radial-gradient(
+      120% 80% at 50% 0%,
+      color-mix(in srgb, var(--color-accent) 18%, transparent),
+      transparent 70%
+    );
+    border-radius: inherit;
+  }
+
+  .stack-card {
+    transform-style: preserve-3d;
+    transition:
+      transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+      box-shadow 0.35s ease;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .stack-tilt:hover .stack-card > div:last-child {
+      box-shadow:
+        0 24px 56px rgba(0, 0, 0, 0.45),
+        0 0 0 1px color-mix(in srgb, var(--color-accent) 18%, transparent),
+        0 0 40px color-mix(in srgb, var(--color-accent) 10%, transparent);
+    }
+  }
+
+  .stack-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.65rem;
+    font-size: 10.5px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: color-mix(in srgb, var(--color-text) 88%, var(--color-muted));
+    border-radius: 8px;
+    border: 1px solid color-mix(in srgb, var(--color-accent) 10%, var(--color-border));
+    background: color-mix(in srgb, var(--color-bg) 55%, transparent);
+    transition:
+      transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+      border-color 0.22s ease,
+      box-shadow 0.22s ease,
+      color 0.22s ease;
+  }
+
+  @media (min-width: 768px) {
+    .stack-chip {
+      font-size: 11.5px;
+      padding: 0.45rem 0.75rem;
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .stack-chip:hover {
+      transform: translateY(-2px) scale(1.02);
+      border-color: color-mix(in srgb, var(--color-accent) 38%, var(--color-border));
+      color: color-mix(in srgb, var(--color-text) 95%, var(--color-accent));
+      box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.35),
+        0 0 20px color-mix(in srgb, var(--color-accent) 12%, transparent);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .stack-chip:hover {
+      transform: none;
+    }
+  }
+
+  .stack-title-gradient {
+    animation: stackTitleShimmer 14s ease-in-out infinite;
+  }
+
+  @keyframes stackTitleShimmer {
+    0%,
+    100% {
+      filter: brightness(1);
+    }
+    50% {
+      filter: brightness(1.08);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .stack-title-gradient {
+      animation: none;
+    }
+  }
+</style>
