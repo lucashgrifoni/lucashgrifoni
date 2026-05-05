@@ -51,7 +51,7 @@ export const projects: Project[] = [
     name: 'OSS Security Policy as Code Starter Kit',
     tagline:
       'Open source policy-as-code starter kit that helps teams enforce baseline security controls across repositories, pipelines, and release workflows.',
-    status: 'in-development',
+    status: 'available',
     what: [
       'OSS Security Policy as Code Starter Kit is a practical open source foundation for teams that want to secure their repositories and CI/CD workflows with reusable, versioned policies.',
       'It provides ready-to-use security rules, validation patterns, and automation examples for common areas such as GitHub Actions hardening, branch protection, secret prevention, dependency governance, and release safety checks.',
