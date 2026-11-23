@@ -32,23 +32,25 @@ I have led and implemented application security and DevSecOps strategies in the 
 
 ## My motto is: Security as an accelerator and business partner, not a blocker/impediment.
 
+## 🚀 Projects:
+
+Open source tools I build for AppSec and DevSecOps teams. Each card opens the repository.
+
+<p align="center">
+  <a href="https://github.com/lucashgrifoni/OSS-Security-Policy-as-Code-Starter-Kit"><img src="assets/readme/project-oss-policy-kit.svg" alt="OSS Security Policy as Code Starter Kit" width="49%" /></a>
+  <a href="https://github.com/lucashgrifoni/AppSec_DevSecOps-Training-Labs"><img src="assets/readme/project-training-labs.svg" alt="AppSec and DevSecOps Training Labs" width="49%" /></a>
+  <a href="https://github.com/lucashgrifoni/Secure-SDLC-Evidence-Collector"><img src="assets/readme/project-evidence-collector.svg" alt="Secure SDLC Evidence Collector" width="49%" /></a>
+  <a href="https://github.com/lucashgrifoni/AppSec-Rules-Pack"><img src="assets/readme/project-rules-pack.svg" alt="AppSec Rules Pack" width="49%" /></a>
+  <a href="https://github.com/lucashgrifoni/AI-Agent-Security"><img src="assets/readme/project-ai-agent-security.svg" alt="AI Agent Security" width="49%" /></a>
+  <a href="https://github.com/lucashgrifoni/Secrets-Hygiene-Kit"><img src="assets/readme/project-secrets-hygiene-kit.svg" alt="Secrets Hygiene Kit" width="49%" /></a>
+  <a href="https://github.com/lucashgrifoni/GitHub-Org-Security-Dashboard"><img src="assets/readme/project-org-security-dashboard.svg" alt="GitHub Org Security Dashboard" width="49%" /></a>
+</p>
+
 ## 🌐 More About Me:
 
-Everything in one place: narrative, featured projects, technical cases, experience, stack, and contact.
-
-<div align="center">
-  <table align="center" style="border: 0; border-collapse: separate; border-spacing: 14px; margin: 8px auto 0 auto;">
-    <tr>
-      <td align="center" valign="top" style="border: 1px solid #1f2a40; border-radius: 14px; background-color: #0a0e1a; padding: 18px 22px;">
-        <strong style="color: #e6edf7; font-size: 1.05em;">Live portfolio</strong><br><br>
-        <span style="color: #8a96ad; font-size: 0.95em; line-height: 1.55;">Published site — the full experience. Best to read end-to-end.</span><br><br>
-        <a href="https://lucashgrifoni.github.io/lucashgrifoni/" target="_blank" rel="noopener noreferrer">
-          <img src="https://img.shields.io/badge/Open%20portfolio-2ee6c9?style=for-the-badge&logo=githubpages&logoColor=0a0e1a" alt="Open portfolio on GitHub Pages" style="border-radius: 14px; vertical-align: middle; box-shadow: 0 2px 10px rgba(10, 14, 26, 0.45);" />
-        </a>
-      </td>
-    </tr>
-  </table>
-</div>
+<p align="center">
+  <a href="https://lucashgrifoni.github.io/lucashgrifoni/"><img src="assets/readme/portfolio.svg" alt="Live portfolio: projects, technical cases, experience, stack and contact in one place" width="99%" /></a>
+</p>
 
 <br>
 
