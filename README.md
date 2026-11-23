@@ -46,13 +46,11 @@ Open source tools I build for AppSec and DevSecOps teams. Each card opens the re
   <a href="https://github.com/lucashgrifoni/GitHub-Org-Security-Dashboard"><img src="assets/readme/project-org-security-dashboard.svg" alt="GitHub Org Security Dashboard" width="49%" /></a>
 </p>
 
-## 🌐 More About Me:
-
 <p align="center">
   <a href="https://lucashgrifoni.github.io/lucashgrifoni/"><img src="assets/readme/portfolio.svg" alt="Live portfolio: projects, technical cases, experience, stack and contact in one place" width="99%" /></a>
 </p>
 
-<br>
+---
 
 <p align="center">
   <strong style="font-size: 1.8em; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; font-weight: 700; letter-spacing: 0.5px;">Where You Can Find Me</strong>
