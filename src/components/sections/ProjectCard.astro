@@ -132,14 +132,22 @@ const statusKind =
     </div>
 
     <div class="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4 md:mt-12">
-      <a
-        class="btn-primary inline-flex justify-center sm:justify-start"
-        href={project.repoUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        View Repository
-      </a>
+      {
+        project.repoUrl ? (
+          <a
+            class="btn-primary inline-flex justify-center sm:justify-start"
+            href={project.repoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Repository
+          </a>
+        ) : project.repoNote ? (
+          <span class="mono inline-flex justify-center rounded-md border border-border-custom px-4 py-2.5 text-[12px] text-text-muted sm:justify-start">
+            {project.repoNote}
+          </span>
+        ) : null
+      }
       {
         project.docsUrl ? (
           <a

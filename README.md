@@ -34,23 +34,16 @@ I have led and implemented application security and DevSecOps strategies in the 
 
 ## 🌐 More About Me:
 
-Two **different destinations**, same goal: showing my work with **different levels of detail**.
+Everything in one place: narrative, featured projects, technical cases, experience, stack, and contact.
 
 <div align="center">
   <table align="center" style="border: 0; border-collapse: separate; border-spacing: 14px; margin: 8px auto 0 auto;">
     <tr>
       <td align="center" valign="top" style="border: 1px solid #2a2f36; border-radius: 14px; background-color: #000000; padding: 18px 22px;">
         <strong style="color: #d5d8dd; font-size: 1.05em;">Live portfolio</strong><br><br>
-        <span style="color: #7c8394; font-size: 0.95em; line-height: 1.55;">Published site — the full experience: narrative, featured projects, about, experience, stack, and contact. Best to read end-to-end.</span><br><br>
+        <span style="color: #7c8394; font-size: 0.95em; line-height: 1.55;">Published site — the full experience. Best to read end-to-end.</span><br><br>
         <a href="https://lucashgrifoni.github.io/lucashgrifoni/" target="_blank" rel="noopener noreferrer">
           <img src="https://img.shields.io/badge/Open%20portfolio-0c142c?style=for-the-badge&logo=githubpages&logoColor=d5d8dd" alt="Open portfolio on GitHub Pages" style="border-radius: 14px; vertical-align: middle; box-shadow: 0 2px 10px rgba(12, 20, 44, 0.45);" />
-        </a>
-      </td>
-      <td align="center" valign="top" style="border: 1px solid #2a2f36; border-radius: 14px; background-color: #000000; padding: 18px 22px;">
-        <strong style="color: #d5d8dd; font-size: 1.05em;">Portfolio on GitHub</strong><br><br>
-        <span style="color: #7c8394; font-size: 0.95em; line-height: 1.55;">Repository companion — deeper in some spots, shorter in others vs. the site. Not a one-to-one copy; another angle on the same work.</span><br><br>
-        <a href="https://github.com/lucashgrifoni/MyPortfolio-LucasGrifoni" target="_blank" rel="noopener noreferrer">
-          <img src="https://img.shields.io/badge/Portfolio%20on%20GitHub-5a6876?style=for-the-badge&logo=github&logoColor=d5d8dd" alt="MyPortfolio-LucasGrifoni on GitHub" style="border-radius: 14px; vertical-align: middle; box-shadow: 0 2px 10px rgba(90, 104, 118, 0.35);" />
         </a>
       </td>
     </tr>
@@ -68,8 +61,8 @@ Two **different destinations**, same goal: showing my work with **different leve
     <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(0, 119, 181, 0.3); margin: 0 6px;" />
   </a>
 
-  <a href="https://github.com/lucashgrifoni/MyPortfolio-LucasGrifoni" target="_blank">
-    <img src="https://skillicons.dev/icons?i=github" alt="Portfolio" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(24, 23, 23, 0.3); margin: 0 6px;" />
+  <a href="https://github.com/lucashgrifoni" target="_blank">
+    <img src="https://skillicons.dev/icons?i=github" alt="GitHub" style="border-radius: 10px; box-shadow: 0 2px 8px rgba(24, 23, 23, 0.3); margin: 0 6px;" />
   </a>
 
   <a href="https://gitlab.com/lucas.henriquegrifoni" target="_blank">

@@ -7,7 +7,9 @@ export interface Project {
   why: string[];
   problems: string[];
   stack: string[];
-  repoUrl: string;
+  repoUrl?: string;
+  /** Shown instead of the repository button when there is no public repository. */
+  repoNote?: string;
   docsUrl?: string;
   logoSrc: string;
 }
@@ -43,7 +45,7 @@ export const projects: Project[] = [
       'GitHub Actions',
       'Azure DevOps',
     ],
-    repoUrl: 'https://github.com/lucashgrifoni/AppSec-Express',
+    repoNote: 'Service offering · no public repository',
     logoSrc: 'assets/logos/appsec-express.png',
   },
   {
@@ -109,7 +111,8 @@ export const projects: Project[] = [
       'NIST',
       'Docker',
     ],
-    repoUrl: 'https://github.com/lucashgrifoni/App_Suite_Modeling',
+    repoNote: 'Source code is private',
+    docsUrl: 'https://lucashgrifoni.github.io/App-Suite-Modeling/',
     logoSrc: 'assets/logos/app-suite-modeling.png',
   },
   {
@@ -142,7 +145,7 @@ export const projects: Project[] = [
       'Container Security',
       'CI/CD Security',
     ],
-    repoUrl: 'https://github.com/lucashgrifoni/CTF-Platform-AppSec-DevSecOps',
+    repoNote: 'Source code is private',
     logoSrc: 'assets/logos/ctf-platform.png',
   },
   {
