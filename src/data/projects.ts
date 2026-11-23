@@ -1,184 +1,190 @@
+export type ProjectStatus = 'released' | 'development' | 'private';
+
+export type ProjectIcon =
+  | 'policy'
+  | 'evidence'
+  | 'key'
+  | 'flask'
+  | 'rules'
+  | 'agent'
+  | 'chart'
+  | 'model'
+  | 'flag';
+
+export interface ProjectLink {
+  label: string;
+  url: string;
+}
+
 export interface Project {
   id: string;
   name: string;
   tagline: string;
-  status: 'available' | 'alpha' | 'in-development';
-  what: string[];
-  why: string[];
-  problems: string[];
+  status: ProjectStatus;
+  icon: ProjectIcon;
+  highlights: string[];
   stack: string[];
-  repoUrl?: string;
-  /** Shown instead of the repository button when there is no public repository. */
-  repoNote?: string;
-  docsUrl?: string;
-  logoSrc: string;
+  /** First link is the main action. Leave empty for private projects without public pages. */
+  links: ProjectLink[];
 }
 
+const GH = 'https://github.com/lucashgrifoni/';
+
+export const statusLabels: Record<ProjectStatus, string> = {
+  released: 'Released',
+  development: 'In development',
+  private: 'Private',
+};
+
+// Descriptions come from each repository README. Keep claims inside what the README states.
 export const projects: Project[] = [
-  {
-    id: 'appsec-express',
-    name: 'AppSec Express',
-    tagline:
-      'Application security and DevSecOps services that integrate directly into your SDLC without slowing delivery.',
-    status: 'in-development',
-    what: [
-      'AppSec Express is a specialized service offering that brings application security and DevSecOps engineering directly into teams that need it without the overhead of building an internal program from scratch.',
-      'I offer SAST, SCA, IaC security, secrets detection, threat modeling, secure code review, CI/CD security integration, and vulnerability management as a structured engagement, not a one-time audit.',
-    ],
-    why: [
-      "Most companies either can't afford enterprise security platforms or don't have the headcount to operationalize them. AppSec Express exists to close that gap with high-quality execution and measurable outcomes.",
-      'My goal is to transform security into a delivery accelerator with clear priorities, verifiable results, and a path for teams to own it long-term.',
-    ],
-    problems: [
-      'Teams shipping without any security controls in the pipeline',
-      'No structured process for threat modeling or secure code review',
-      'Vulnerability findings with no prioritization or remediation path',
-      'Security treated as a gate at the end instead of a control at the start',
-    ],
-    stack: [
-      'SAST',
-      'SCA',
-      'Threat Modeling',
-      'CI/CD Security',
-      'Checkmarx',
-      'Snyk',
-      'GitHub Actions',
-      'Azure DevOps',
-    ],
-    repoNote: 'Service offering · no public repository',
-    logoSrc: 'assets/logos/appsec-express.png',
-  },
   {
     id: 'oss-security-policy-as-code-starter-kit',
     name: 'OSS Security Policy as Code Starter Kit',
     tagline:
-      'Open source policy-as-code starter kit that helps teams enforce baseline security controls across repositories, pipelines, and release workflows.',
-    status: 'available',
-    what: [
-      'OSS Security Policy as Code Starter Kit is a practical open source foundation for teams that want to secure their repositories and CI/CD workflows with reusable, versioned policies.',
-      'It provides ready-to-use security rules, validation patterns, and automation examples for common areas such as GitHub Actions hardening, branch protection, secret prevention, dependency governance, and release safety checks.',
-      'Instead of leaving security expectations as documentation only, the project turns them into enforceable controls that can be tested, reviewed, and applied consistently across projects.',
+      'Policy-as-code starter kit for OSS repository governance and CI/CD hygiene across GitHub, GitLab, Azure DevOps, and AWS.',
+    status: 'released',
+    icon: 'policy',
+    highlights: [
+      'Reusable, versioned policies for workflow hardening, branch protection, and release safety',
+      'Secret prevention and dependency governance expressed as enforceable checks',
+      'Security expectations turned into controls that can be tested and reviewed',
     ],
-    why: [
-      'Most open source and internal engineering teams know they need stronger baseline security, but the implementation is usually fragmented. Controls live in scattered docs, tribal knowledge, or manual checklists, and enforcement is inconsistent across repositories.',
-      'I built OSS Security Policy as Code Starter Kit to make secure-by-default repository and pipeline governance easier to adopt. The goal is operational clarity: take common security expectations and express them as reusable, auditable policy-as-code building blocks that teams can actually apply.',
+    stack: ['Policy as Code', 'OPA', 'Rego', 'GitHub Actions', 'GitLab CI', 'Azure DevOps'],
+    links: [
+      { label: 'Repository', url: `${GH}OSS-Security-Policy-as-Code-Starter-Kit` },
+      { label: 'Docs', url: 'https://lucashgrifoni.github.io/OSS-Security-Policy-as-Code-Starter-Kit/' },
     ],
-    problems: [
-      'No consistent baseline security controls across repositories and CI/CD workflows',
-      'Security requirements documented but not actually enforced in automation',
-      'Weak workflow hardening, permissions, and pipeline governance',
-      'Missing guardrails for secrets, dependency hygiene, and release protection',
-    ],
-    stack: [
-      'Rego',
-      'OPA',
-      'GitHub Actions',
-      'Policy as Code',
-      'DevSecOps',
-      'OpenSSF',
-      'CI/CD Security',
-    ],
-    repoUrl: 'https://github.com/lucashgrifoni/OSS-Security-Policy-as-Code-Starter-Kit',
-    logoSrc: 'assets/logos/oss-security-policy-as-code.png',
   },
   {
-    id: 'app-suite-modeling',
-    name: 'App Suite Modeling',
+    id: 'secure-sdlc-evidence-collector',
+    name: 'Secure SDLC Evidence Collector',
     tagline:
-      'Multi-methodology threat modeling platform with CLI, API, and visual interface.',
-    status: 'in-development',
-    what: [
-      'App Suite Modeling is a threat modeling platform that supports STRIDE, LINDDUN, NIST, and OCTAVE Allegro methodologies through a unified interface available via CLI, REST API, and a web UI.',
-      'It structures the threat modeling process so that teams can execute sessions consistently, track threats across releases, and integrate modeling outputs directly into their SDLC.',
+      'CLI that answers one question: which evidence proves this release followed a minimum Secure SDLC process?',
+    status: 'released',
+    icon: 'evidence',
+    highlights: [
+      'Collects SAST, SCA, secrets, SBOM, tests, reviews, and approvals into one auditable bundle per release',
+      'Maps evidence to 13 controls aligned with NIST SSDF and OWASP SAMM',
+      'Emits a deterministic readiness verdict and a release-gate exit code for pipelines',
     ],
-    why: [
-      'Threat modeling is one of the most valuable security activities and also one of the most inconsistently executed. Most teams either skip it or run ad-hoc sessions with no structure, no output format, and no traceability.',
-      'I wanted a tool that any engineer could pick up, not just security specialists. CLI-first so it fits into existing workflows. Multi-methodology so teams can choose the framework that fits their context.',
+    stack: ['Python', 'CLI', 'SARIF', 'SBOM', 'NIST SSDF'],
+    links: [
+      { label: 'Repository', url: `${GH}Secure-SDLC-Evidence-Collector` },
+      { label: 'PyPI', url: 'https://pypi.org/project/secure-sdlc-evidence-collector/' },
     ],
-    problems: [
-      'No accessible threat modeling tooling for non-security engineers',
-      'Sessions run ad-hoc with no consistent output or traceability',
-      'Methodology lock-in or tools that support only STRIDE',
-      'No path to integrate threat modeling outputs into CI/CD',
-    ],
-    stack: [
-      'Python',
-      'FastAPI',
-      'CLI',
-      'STRIDE',
-      'LINDDUN',
-      'OCTAVE Allegro',
-      'NIST',
-      'Docker',
-    ],
-    repoNote: 'Source code is private',
-    docsUrl: 'https://lucashgrifoni.github.io/App-Suite-Modeling/',
-    logoSrc: 'assets/logos/app-suite-modeling.png',
   },
   {
-    id: 'ctf-platform',
-    name: 'CTF Platform',
-    tagline:
-      'Defensive AppSec and DevSecOps CTF with 112+ challenges organized by severity and domain.',
-    status: 'in-development',
-    what: [
-      'A monorepo CTF platform built specifically for defensive application security and DevSecOps training. Challenges cover SAST findings, SCA vulnerabilities, secrets exposure, IaC misconfigurations, container security, and CI/CD attack vectors.',
-      'Each challenge is self-contained, tagged by severity tier and domain, and designed to mirror real findings that engineers encounter in actual codebases and pipelines.',
+    id: 'secrets-hygiene-kit',
+    name: 'Secrets Hygiene Kit',
+    tagline: 'Turns secret-scanner reports into consistent CI decisions and response guidance.',
+    status: 'released',
+    icon: 'key',
+    highlights: [
+      'Normalizes Gitleaks, Betterleaks, TruffleHog, and detect-secrets findings',
+      'Enforces expiring exceptions, and an expired waiver blocks the build',
+      'Exports JSON, SARIF 2.1.0, Markdown, and a pull request comment draft',
     ],
-    why: [
-      "Existing CTF platforms are almost exclusively offensive: exploitation, reverse engineering, binary. They don't address the defensive skills an AppSec or DevSecOps engineer needs daily.",
-      'I built this platform to fill that gap with challenges grounded in real-world scenarios: misconfigurations developers actually write, dependency issues that slip through reviews, and pipeline weaknesses that are easy to overlook.',
+    stack: ['Python', 'secguard CLI', 'SARIF', 'Gitleaks', 'TruffleHog'],
+    links: [
+      { label: 'Repository', url: `${GH}Secrets-Hygiene-Kit` },
+      { label: 'Docs', url: 'https://lucashgrifoni.github.io/Secrets-Hygiene-Kit/' },
     ],
-    problems: [
-      'No practical defensive CTF content for AppSec/DevSecOps engineers',
-      'Training materials that are too theoretical without hands-on context',
-      'No structured progression from low to critical severity',
-      'No coverage of pipeline and IaC security scenarios',
-    ],
-    stack: [
-      'Docker',
-      'Python',
-      'SAST',
-      'SCA',
-      'IaC Security',
-      'Secrets Detection',
-      'Container Security',
-      'CI/CD Security',
-    ],
-    repoNote: 'Source code is private',
-    logoSrc: 'assets/logos/ctf-platform.png',
   },
   {
     id: 'training-labs',
     name: 'AppSec & DevSecOps Training Labs',
-    tagline:
-      'Ready-to-use hands-on labs covering the full AppSec and DevSecOps stack. Clone it, run it.',
-    status: 'available',
-    what: [
-      'A repository of self-contained training labs covering the core AppSec and DevSecOps domains: SAST, SCA, IaC security, secrets detection, container security, threat modeling, and CI/CD security controls.',
-      'Each lab includes setup instructions, a vulnerable or misconfigured target environment, guided exercises, and expected outcomes. No external platform required — everything runs locally.',
+    tagline: 'Catalog of intentionally vulnerable applications and environments for hands-on AppSec and DevSecOps training.',
+    status: 'released',
+    icon: 'flask',
+    highlights: [
+      'Self-contained labs for SAST, SCA, IaC, secrets, containers, and CI/CD security',
+      'Each lab ships setup steps, a vulnerable target, guided exercises, and expected outcomes',
+      'Runs locally, ready for Security Champions workshops or personal practice',
     ],
-    why: [
-      'Most AppSec training either lives behind a paid platform or is so disconnected from real tooling that engineers cannot apply it directly to their pipelines.',
-      'I wanted something you could fork today and use tomorrow in an internal training session, a Security Champions workshop, or personal practice — without any dependencies beyond Docker.',
+    stack: ['Docker', 'GitHub Actions', 'Trivy', 'Terraform', 'Python'],
+    links: [
+      { label: 'Repository', url: `${GH}AppSec_DevSecOps-Training-Labs` },
+      { label: 'Docs', url: 'https://lucashgrifoni.github.io/AppSec_DevSecOps-Training-Labs/' },
     ],
-    problems: [
-      'Existing training requires expensive platform subscriptions',
-      "Labs don't reflect real pipeline and tooling environments",
-      'No practical material for Security Champions programs',
-      'Security training disconnected from engineering workflows',
+  },
+  {
+    id: 'appsec-rules-pack',
+    name: 'AppSec Rules Pack',
+    tagline: 'A versioned AppSec rules pack and the validator that keeps it honest.',
+    status: 'development',
+    icon: 'rules',
+    highlights: [
+      'Baseline of 29 review rules, each with a compliant and a violating example',
+      'Mappings to OWASP ASVS 5.0, API Security Top 10, OWASP Top 10:2025, CWE, and NIST SSDF',
+      'CLI validates packs and review records against a JSON Schema contract for CI gates',
     ],
-    stack: [
-      'Docker',
-      'GitHub Actions',
-      'Checkmarx',
-      'Snyk',
-      'Trivy',
-      'Terraform',
-      'Python',
-      'Bash',
+    stack: ['Python', 'JSON Schema', 'CLI', 'OWASP ASVS'],
+    links: [
+      { label: 'Repository', url: `${GH}AppSec-Rules-Pack` },
+      { label: 'Docs', url: 'https://lucashgrifoni.github.io/AppSec-Rules-Pack/' },
     ],
-    repoUrl: 'https://github.com/lucashgrifoni/AppSec_DevSecOps-Training-Labs',
-    logoSrc: 'assets/logos/training-labs.png',
+  },
+  {
+    id: 'ai-agent-security',
+    name: 'AI Agent Security',
+    tagline: 'Reproducible testbed for adversarial regression checks against AI agents and MCP tool boundaries.',
+    status: 'development',
+    icon: 'agent',
+    highlights: [
+      '22 probes across 7 attack categories mapped to the OWASP LLM, MCP, and Agentic Top 10 lists',
+      'Deterministic, rules-only scoring: no LLM decides the result',
+      'Markdown and SARIF 2.1.0 reports plus a fail-closed release gate',
+    ],
+    stack: ['Python', 'MCP', 'SARIF', 'OWASP LLM Top 10'],
+    links: [
+      { label: 'Repository', url: `${GH}AI-Agent-Security` },
+      { label: 'Releases', url: `${GH}AI-Agent-Security/releases` },
+    ],
+  },
+  {
+    id: 'github-org-security-dashboard',
+    name: 'GitHub Org Security Dashboard',
+    tagline: 'CLI that consolidates security controls per GitHub repository into a posture report.',
+    status: 'development',
+    icon: 'chart',
+    highlights: [
+      'Offline by default; opt-in live collection reads only repositories visible to the token',
+      'Per-control coverage and a deterministic risk rating for each repository',
+      'Markdown or JSON output, plus a comparison between two snapshots',
+    ],
+    stack: ['Python', 'Typer', 'GitHub API'],
+    links: [
+      { label: 'Repository', url: `${GH}GitHub-Org-Security-Dashboard` },
+      { label: 'Releases', url: `${GH}GitHub-Org-Security-Dashboard/releases` },
+    ],
+  },
+  {
+    id: 'app-suite-modeling',
+    name: 'App Suite Modeling',
+    tagline: 'Threat modeling as code with one versioned model behind a CLI, a REST API, and a web UI.',
+    status: 'private',
+    icon: 'model',
+    highlights: [
+      'One canonical .otm.yaml model powers every interface',
+      'Multi-methodology analysis: STRIDE, LINDDUN, PASTA, and PLOT4ai',
+      'Threat models versioned and reviewed like code',
+    ],
+    stack: ['Python', 'FastAPI', 'CLI', 'STRIDE', 'LINDDUN'],
+    links: [{ label: 'Docs', url: 'https://lucashgrifoni.github.io/App-Suite-Modeling/' }],
+  },
+  {
+    id: 'ctf-platform',
+    name: 'CTF Platform',
+    tagline: 'Defensive AppSec and DevSecOps CTF with 112+ challenges organized by severity and domain.',
+    status: 'private',
+    icon: 'flag',
+    highlights: [
+      'Challenges cover SAST, SCA, secrets, IaC, container, and CI/CD scenarios',
+      'Structured progression from low to critical severity',
+      'Mirrors findings engineers meet in real codebases and pipelines',
+    ],
+    stack: ['Docker', 'Python', 'IaC Security', 'Container Security'],
+    links: [],
   },
 ];

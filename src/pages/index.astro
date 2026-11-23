@@ -8,9 +8,16 @@ import Manifesto from '../components/sections/Manifesto.astro';
 import Experiences from '../components/sections/Experiences.astro';
 import TechnicalCases from '../components/sections/TechnicalCases.astro';
 import ProjectCard from '../components/sections/ProjectCard.astro';
+import NowBuilding from '../components/sections/NowBuilding.astro';
 import SkillGrid from '../components/sections/SkillGrid.astro';
 import Footer from '../components/layout/Footer.astro';
 import { projects } from '../data/projects';
+
+const projectGroups = [
+  { title: 'Released', items: projects.filter((p) => p.status === 'released') },
+  { title: 'In active development', items: projects.filter((p) => p.status === 'development') },
+].filter((g) => g.items.length > 0);
+const privateProjects = projects.filter((p) => p.status === 'private');
 ---
 
 <BaseLayout>
@@ -24,55 +31,68 @@ import { projects } from '../data/projects';
     <TechnicalCases />
     <section
       id="projects"
-      class="relative z-10 overflow-hidden border-t border-[color-mix(in_srgb,var(--color-accent)_8%,var(--color-border))] bg-canvas py-24 md:py-32"
+      class="relative z-10 overflow-hidden border-t border-[color-mix(in_srgb,var(--color-accent-2)_14%,var(--color-border))] bg-canvas py-24 md:py-32"
       aria-labelledby="projects-heading"
     >
       <div class="pointer-events-none absolute inset-0" aria-hidden="true">
         <div
-          class="absolute left-1/2 top-0 h-[min(100vw,900px)] w-[min(140vw,1200px)] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-[0.35]"
-          style="background: radial-gradient(ellipse at center, color-mix(in srgb, var(--color-accent) 16%, transparent) 0%, transparent 55%); filter: blur(64px);"
+          class="absolute left-1/2 top-0 h-[min(100vw,900px)] w-[min(140vw,1200px)] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-40"
+          style="background: radial-gradient(ellipse at center, color-mix(in srgb, var(--color-accent-2) 18%, transparent) 0%, transparent 55%); filter: blur(64px);"
         >
         </div>
         <div
-          class="absolute bottom-0 right-0 h-72 w-72 rounded-full opacity-25 blur-3xl"
-          style="background: radial-gradient(circle, color-mix(in srgb, var(--color-accent) 12%, transparent) 0%, transparent 70%);"
+          class="absolute bottom-0 right-0 h-80 w-80 rounded-full opacity-30 blur-3xl"
+          style="background: radial-gradient(circle, color-mix(in srgb, var(--color-accent) 14%, transparent) 0%, transparent 70%);"
         >
         </div>
       </div>
 
-      <div class="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <div class="mb-14 md:mb-20" data-reveal>
-          <p
-            class="mono mb-4 text-[11px] font-semibold uppercase tracking-[0.28em] text-accent/95 md:text-xs"
-          >
+      <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-14 md:mb-16" data-reveal>
+          <p class="mono mb-4 text-[11px] font-semibold uppercase tracking-[0.28em] text-[color:var(--color-accent-2)] md:text-xs">
             Open Source & Products
           </p>
           <h2
             id="projects-heading"
-            class="max-w-[28rem] text-3xl font-bold tracking-[-0.02em] text-text-primary md:max-w-none md:text-[2.35rem] md:leading-tight"
+            class="font-display text-3xl font-bold tracking-[-0.02em] text-text-primary md:text-[2.35rem] md:leading-tight"
           >
-            What I'm Building
+            What I'm <span class="text-violet-gradient">Building</span>
           </h2>
+          <p class="mt-4 max-w-2xl text-[15px] leading-relaxed text-text-muted md:text-base">
+            Open source tools for AppSec and DevSecOps teams, each one born from a problem I kept meeting in real delivery pipelines.
+          </p>
           <div
-            class="mt-6 h-px w-16 bg-gradient-to-r from-accent/80 to-transparent md:mt-8"
+            class="mt-6 h-px w-20 bg-gradient-to-r from-[color:var(--color-accent-2)] to-transparent md:mt-8"
             aria-hidden="true"
           >
           </div>
         </div>
 
-        <div class="flex flex-col gap-14 md:gap-20">
+        <div class="flex flex-col gap-14 md:gap-16">
           {
-            projects.map((project, index) => (
-              <div
-                data-project-card
-                style={`transition-delay: ${index * 0.1}s`}
-                class="will-change-transform"
-              >
-                <ProjectCard project={project} />
+            projectGroups.map((group) => (
+              <div>
+                <div class="mb-6 flex items-center gap-4" data-reveal>
+                  <h3 class="mono text-[12px] font-semibold uppercase tracking-[0.22em] text-text-primary md:text-[13px]">
+                    {group.title}
+                  </h3>
+                  <span class="mono rounded-full px-2.5 py-0.5 text-[11px] text-[color:var(--color-accent-2)] ring-1 ring-[color-mix(in_srgb,var(--color-accent-2)_40%,transparent)]">
+                    {group.items.length}
+                  </span>
+                  <span class="h-px flex-1 bg-gradient-to-r from-[color-mix(in_srgb,var(--color-accent-2)_35%,transparent)] to-transparent" aria-hidden="true" />
+                </div>
+                <div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-7">
+                  {group.items.map((project, index) => (
+                    <div data-project-card style={`transition-delay: ${index * 0.08}s`}>
+                      <ProjectCard project={project} />
+                    </div>
+                  ))}
+                </div>
               </div>
             ))
           }
         </div>
+        {privateProjects.length > 0 && <NowBuilding projects={privateProjects} />}
       </div>
     </section>
     <SkillGrid />
@@ -129,4 +149,17 @@ import { projects } from '../data/projects';
     });
   }
   initTilt();
+
+  function initSpotlight() {
+    if (reduceMotion) return;
+    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+    document.addEventListener('pointermove', (e) => {
+      const el = e.target instanceof Element ? e.target.closest('[data-spotlight]') : null;
+      if (!(el instanceof HTMLElement)) return;
+      const r = el.getBoundingClientRect();
+      el.style.setProperty('--mx', `${e.clientX - r.left}px`);
+      el.style.setProperty('--my', `${e.clientY - r.top}px`);
+    }, { passive: true });
+  }
+  initSpotlight();
 </script>

@@ -44,6 +44,7 @@ Open source tools I build for AppSec and DevSecOps teams. Each card opens the re
   <a href="https://github.com/lucashgrifoni/AI-Agent-Security"><img src="assets/readme/project-ai-agent-security.svg" alt="AI Agent Security" width="49%" /></a>
   <a href="https://github.com/lucashgrifoni/Secrets-Hygiene-Kit"><img src="assets/readme/project-secrets-hygiene-kit.svg" alt="Secrets Hygiene Kit" width="49%" /></a>
   <a href="https://github.com/lucashgrifoni/GitHub-Org-Security-Dashboard"><img src="assets/readme/project-org-security-dashboard.svg" alt="GitHub Org Security Dashboard" width="49%" /></a>
+  <a href="https://github.com/lucashgrifoni?tab=repositories"><img src="assets/readme/project-all-repositories.svg" alt="All repositories" width="49%" /></a>
 </p>
 
 <p align="center">

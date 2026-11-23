@@ -1,0 +1,395 @@
+---
+import type { Project } from '../../data/projects';
+import ProjectEmblem from './ProjectEmblem.astro';
+
+interface Props {
+  projects: Project[];
+}
+
+const { projects } = Astro.props;
+
+// Circuit traces drawn as an SVG tile, echoing the PCB look of the profile banner.
+const circuit = encodeURIComponent(
+  `<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240" fill="none" stroke="#2ee6c9" stroke-width="1.2" stroke-linecap="round"><path d="M0 40h60l20 20h60"/><path d="M140 60l20-20h80"/><path d="M0 120h40l20-20h40"/><path d="M100 100h40l20 20h80"/><path d="M0 200h90l20-20h50l20 20h60"/><path d="M60 0v20l20 20"/><path d="M180 240v-30l-20-20"/><path d="M200 120v-40" stroke="#9d7bff"/><path d="M30 120v50l20 20" stroke="#9d7bff"/><circle cx="140" cy="60" r="3"/><circle cx="100" cy="100" r="3" stroke="#9d7bff"/><circle cx="160" cy="180" r="3"/><circle cx="200" cy="80" r="3" stroke="#9d7bff"/><circle cx="80" cy="40" r="2.5"/></svg>`,
+);
+---
+
+<section class="nb" aria-labelledby="now-building-heading">
+  <div class="nb-frame">
+    <div class="nb-circuit" style={`background-image: url("data:image/svg+xml,${circuit}")`} aria-hidden="true"></div>
+
+    <header class="nb-head">
+      <div>
+        <p class="nb-live mono"><span class="nb-pulse" aria-hidden="true"></span>Building now</p>
+        <h3 id="now-building-heading" class="nb-title font-display">
+          <span class="text-brand-gradient">On my workbench</span>
+        </h3>
+      </div>
+      <p class="nb-intro">
+        Private projects I'm developing right now. The repositories are closed for the moment, so here is what each one
+        does.
+      </p>
+    </header>
+
+    <div class="nb-grid">
+      {
+        projects.map((p) => {
+          const docs = p.links.find((l) => l.label === 'Docs');
+          return (
+            <article class="nb-item" data-spotlight>
+              <div class="nb-item-top">
+                <ProjectEmblem class="nb-emblem" icon={p.icon} id={`nb-${p.id}`} />
+                <div class="min-w-0">
+                  <h4 class="nb-name font-display">{p.name}</h4>
+                  <p class="nb-tagline">{p.tagline}</p>
+                </div>
+              </div>
+              <ul class="nb-points">
+                {p.highlights.map((h) => (
+                  <li>{h}</li>
+                ))}
+              </ul>
+              <div class="nb-foot">
+                <ul class="nb-stack" aria-label="Stack">
+                  {p.stack.map((s) => (
+                    <li class="mono">{s}</li>
+                  ))}
+                </ul>
+                {docs ? (
+                  <a class="nb-docs" href={docs.url} target="_blank" rel="noopener noreferrer">
+                    Read the docs <span aria-hidden="true">↗</span>
+                  </a>
+                ) : (
+                  <span class="nb-lock mono">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <rect x="5" y="11" width="14" height="10" rx="2" />
+                      <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+                    </svg>
+                    Private repository
+                  </span>
+                )}
+              </div>
+            </article>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  @property --nb-angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+  }
+
+  .nb {
+    margin-top: clamp(3.5rem, 7vw, 5rem);
+  }
+
+  /* Rotating light border: a conic gradient shown only in the 1.5px ring. */
+  .nb-frame {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    border-radius: 1.75rem;
+    padding: clamp(1.5rem, 3.5vw, 2.75rem);
+    background:
+      radial-gradient(120% 90% at 0% 0%, color-mix(in srgb, var(--color-accent) 10%, transparent) 0%, transparent 55%),
+      radial-gradient(110% 90% at 100% 100%, color-mix(in srgb, var(--color-accent-2) 14%, transparent) 0%, transparent 60%),
+      var(--color-bg);
+    box-shadow:
+      var(--shadow-lg),
+      0 0 80px color-mix(in srgb, var(--color-accent-2) 10%, transparent);
+  }
+
+  .nb-frame::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    padding: 1.5px;
+    border-radius: inherit;
+    background: conic-gradient(
+      from var(--nb-angle),
+      transparent 0deg,
+      var(--color-accent) 60deg,
+      var(--color-accent-2) 140deg,
+      transparent 200deg,
+      transparent 360deg
+    );
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    animation: nb-spin 7s linear infinite;
+  }
+
+  .nb-frame::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: inherit;
+    border: 1px solid color-mix(in srgb, var(--color-accent-2) 22%, var(--color-border));
+    pointer-events: none;
+  }
+
+  @keyframes nb-spin {
+    to {
+      --nb-angle: 360deg;
+    }
+  }
+
+  .nb-circuit {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.12;
+    background-size: 240px 240px;
+    mask-image: radial-gradient(ellipse 70% 80% at 85% 20%, #000 10%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 80% at 85% 20%, #000 10%, transparent 75%);
+  }
+
+  .nb-head {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 1.5rem 3rem;
+    align-items: end;
+    margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
+  }
+
+  .nb-live {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0 0.75rem;
+    padding: 0.35rem 0.8rem 0.35rem 0.65rem;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-accent);
+    background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-accent) 35%, transparent);
+  }
+
+  .nb-pulse {
+    position: relative;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--color-accent);
+  }
+
+  .nb-pulse::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: var(--color-accent);
+    animation: nb-pulse 1.8s ease-out infinite;
+  }
+
+  @keyframes nb-pulse {
+    from {
+      transform: scale(1);
+      opacity: 0.7;
+    }
+    to {
+      transform: scale(3.2);
+      opacity: 0;
+    }
+  }
+
+  .nb-title {
+    margin: 0;
+    font-size: clamp(1.9rem, 3.6vw, 2.75rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+  }
+
+  .nb-intro {
+    margin: 0;
+    max-width: 46ch;
+    font-size: 15.5px;
+    line-height: 1.65;
+    color: var(--color-muted);
+  }
+
+  .nb-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .nb-item {
+    --spot: var(--color-accent);
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    padding: clamp(1.25rem, 2.4vw, 1.75rem);
+    border-radius: 1.25rem;
+    border: 1px solid color-mix(in srgb, var(--color-accent) 12%, var(--color-border));
+    background: color-mix(in srgb, var(--color-surface) 78%, transparent);
+    backdrop-filter: blur(6px);
+    transition:
+      border-color 300ms ease,
+      transform 300ms var(--ease-out-expo);
+  }
+
+  .nb-item-top {
+    display: flex;
+    gap: 1.1rem;
+    align-items: flex-start;
+  }
+
+  .nb-item :global(.nb-emblem) {
+    width: 4.5rem;
+    height: 4.5rem;
+    flex: none;
+    filter: drop-shadow(0 8px 24px color-mix(in srgb, var(--color-accent) 25%, transparent));
+  }
+
+  .nb-name {
+    margin: 0.2rem 0 0.4rem;
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--color-text);
+  }
+
+  .nb-tagline {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--color-muted);
+  }
+
+  .nb-points {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.5rem;
+    counter-reset: nb;
+  }
+
+  .nb-points li {
+    position: relative;
+    padding: 0.65rem 0.85rem 0.65rem 2.4rem;
+    border-radius: 0.75rem;
+    font-size: 14.5px;
+    line-height: 1.5;
+    color: color-mix(in srgb, var(--color-text) 90%, var(--color-muted));
+    background: color-mix(in srgb, var(--color-bg) 55%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
+  }
+
+  .nb-points li::before {
+    content: '';
+    position: absolute;
+    left: 0.95rem;
+    top: 1.05rem;
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 3px;
+    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+    box-shadow: 0 0 10px color-mix(in srgb, var(--color-accent) 50%, transparent);
+  }
+
+  .nb-foot {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.9rem;
+    margin-top: auto;
+  }
+
+  .nb-stack {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .nb-stack li {
+    font-size: 11.5px;
+    padding: 0.28rem 0.6rem;
+    border-radius: 0.45rem;
+    color: var(--color-muted);
+    border: 1px solid var(--color-border);
+  }
+
+  .nb-docs {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-accent);
+    padding: 0.5rem 0.9rem;
+    border-radius: 0.6rem;
+    border: 1px solid color-mix(in srgb, var(--color-accent) 40%, var(--color-border));
+    transition:
+      background 200ms ease,
+      transform 200ms ease;
+  }
+
+  .nb-docs:hover {
+    background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+    transform: translateY(-1px);
+  }
+
+  .nb-docs:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  .nb-lock {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 12px;
+    color: var(--color-muted);
+  }
+
+  .nb-lock svg {
+    width: 0.95rem;
+    height: 0.95rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .nb-item:hover {
+      border-color: color-mix(in srgb, var(--color-accent) 40%, var(--color-border));
+      transform: translateY(-3px);
+    }
+  }
+
+  @media (max-width: 860px) {
+    .nb-head,
+    .nb-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .nb-frame::before,
+    .nb-pulse::after {
+      animation: none;
+    }
+
+    .nb-item {
+      transition: none;
+    }
+  }
+</style>

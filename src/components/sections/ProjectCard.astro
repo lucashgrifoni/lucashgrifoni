@@ -1,291 +1,273 @@
 ---
-import type { Project } from '../../data/projects';
-import { withBase } from '../../utils/withBase';
+import { statusLabels, type Project } from '../../data/projects';
+import ProjectEmblem from './ProjectEmblem.astro';
 
 interface Props {
   project: Project;
 }
 
 const { project } = Astro.props;
-const logoUrl = withBase(project.logoSrc);
-const statusLabel = project.status.replace(/-/g, ' ');
 
-const statusKind =
-  project.status === 'in-development' ? 'muted' : 'live';
+const isPrivate = project.status === 'private';
 ---
 
-<div class="project-card-outer" data-tilt-card>
-  <article
-    class="project-card-inner group relative overflow-hidden rounded-2xl border border-[color-mix(in_srgb,var(--color-accent)_12%,var(--color-border))] bg-gradient-to-b from-[color-mix(in_srgb,var(--color-surface)_95%,transparent)] to-surface p-7 shadow-float transition-[box-shadow,transform] duration-300 ease-out md:p-10 lg:p-12"
-    data-project-id={project.id}
-  >
-    <!-- Brilho radial superior -->
-    <div
-      class="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full opacity-40 blur-3xl"
-      style="background: radial-gradient(circle, color-mix(in srgb, var(--color-accent) 28%, transparent) 0%, transparent 70%);"
-      aria-hidden="true"
-    >
-    </div>
-    <div
-      class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[color-mix(in_srgb,var(--color-accent)_45%,transparent)] to-transparent opacity-80"
-      aria-hidden="true"
-    >
-    </div>
+<article class="pcard" data-spotlight data-status={project.status}>
+  <div class="pcard-top">
+    <ProjectEmblem class="pcard-emblem" icon={project.icon} id={project.id} />
+    <span class="pcard-status mono">{statusLabels[project.status]}</span>
+  </div>
 
-    <div class="relative flex flex-wrap items-center gap-5 md:gap-6">
-      <div class="project-logo-frame shrink-0">
-        <div class="project-logo-inner">
-          <img
-            src={logoUrl}
-            alt=""
-            width="1024"
-            height="1024"
-            class="project-logo-img"
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
-      </div>
-      <div class="min-w-0 flex-1">
-        <div class="flex flex-wrap items-center gap-3 md:gap-4">
-          <h2
-            class="text-[1.35rem] font-bold leading-tight tracking-tight text-text-primary md:text-[1.65rem]"
-          >
-            {project.name}
-          </h2>
-          <span
-            class:list={[
-              'mono inline-flex items-center rounded-full px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] ring-1',
-              statusKind === 'live'
-                ? 'text-accent ring-[color-mix(in_srgb,var(--color-accent)_55%,transparent)] bg-[color-mix(in_srgb,var(--color-accent)_10%,transparent)]'
-                : 'text-text-muted ring-border-custom bg-[color-mix(in_srgb,var(--color-muted)_12%,transparent)]',
-            ]}
-          >
-            {statusLabel}
-          </span>
-        </div>
-        <p
-          class="mt-3 max-w-[40rem] text-[15px] leading-relaxed text-text-muted md:text-base md:leading-relaxed"
+  <h3 class="pcard-title">{project.name}</h3>
+  <p class="pcard-tagline">{project.tagline}</p>
+
+  <ul class="pcard-highlights">
+    {project.highlights.map((h) => <li>{h}</li>)}
+  </ul>
+
+  <ul class="pcard-stack" aria-label="Stack">
+    {project.stack.map((s) => <li class="mono">{s}</li>)}
+  </ul>
+
+  <div class="pcard-actions">
+    {
+      project.links.map((link, i) => (
+        <a
+          class:list={['pcard-link', { 'pcard-link--main': i === 0 && !isPrivate }]}
+          href={link.url}
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          {project.tagline}
-        </p>
-      </div>
-    </div>
-
-    <div
-      class="my-8 h-px w-full bg-gradient-to-r from-transparent via-border-custom to-transparent md:my-10"
-    >
-    </div>
-
-    <div class="relative grid gap-10 md:grid-cols-2 md:gap-14">
-      <div class="space-y-4">
-        <h3
-          class="mono text-[11px] font-semibold uppercase tracking-[0.2em] text-accent/95 md:text-xs"
-        >
-          What it is
-        </h3>
-        <div class="space-y-4 text-[15px] leading-[1.75] text-text-primary/95 md:text-[15.5px]">
-          {project.what.map((p) => <p>{p}</p>)}
-        </div>
-      </div>
-      <div class="space-y-4">
-        <h3
-          class="mono text-[11px] font-semibold uppercase tracking-[0.2em] text-accent/95 md:text-xs"
-        >
-          Why I built it
-        </h3>
-        <div class="space-y-4 text-[15px] leading-[1.75] text-text-primary/95 md:text-[15.5px]">
-          {project.why.map((p) => <p>{p}</p>)}
-        </div>
-      </div>
-    </div>
-
-    <div class="mt-10 md:mt-12">
-      <h3
-        class="mono mb-5 text-[11px] font-semibold uppercase tracking-[0.2em] text-accent/95 md:text-xs"
-      >
-        Problems it solves
-      </h3>
-      <ul class="grid gap-3 sm:gap-3.5">
-        {
-          project.problems.map((item) => (
-            <li class="flex gap-3 text-[15px] leading-snug text-text-primary/95">
-              <span
-                class="mt-2 h-1.5 w-1.5 shrink-0 rounded-[1px] bg-accent shadow-[0_0_12px_color-mix(in_srgb,var(--color-accent)_55%,transparent)]"
-                aria-hidden="true"
-              />
-              <span>{item}</span>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-
-    <div class="mt-9 flex flex-wrap gap-2 md:mt-10">
-      {
-        project.stack.map((tech) => (
-          <span class="mono rounded-md border border-[color-mix(in_srgb,var(--color-accent)_10%,var(--color-border))] bg-[color-mix(in_srgb,var(--color-bg)_55%,transparent)] px-2.5 py-1.5 text-[11px] text-text-muted transition-colors group-hover:border-[color-mix(in_srgb,var(--color-accent)_22%,var(--color-border))] md:text-xs">
-            {tech}
-          </span>
-        ))
-      }
-    </div>
-
-    <div class="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4 md:mt-12">
-      {
-        project.repoUrl ? (
-          <a
-            class="btn-primary inline-flex justify-center sm:justify-start"
-            href={project.repoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View Repository
-          </a>
-        ) : project.repoNote ? (
-          <span class="mono inline-flex justify-center rounded-md border border-border-custom px-4 py-2.5 text-[12px] text-text-muted sm:justify-start">
-            {project.repoNote}
-          </span>
-        ) : null
-      }
-      {
-        project.docsUrl ? (
-          <a
-            class="btn-secondary inline-flex justify-center sm:justify-start"
-            href={project.docsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        ) : null
-      }
-    </div>
-  </article>
-</div>
+          {link.label}
+          <span aria-hidden="true">↗</span>
+        </a>
+      ))
+    }
+    {isPrivate && <span class="pcard-note mono">Source code is private</span>}
+  </div>
+</article>
 
 <style>
-  /*
-   * Logos 1024×1024 (1:1): container maior, padding mais apertado para a arte
-   * ocupar melhor a moldura; object-fit: contain sem crop nem distorção.
-   */
-  .project-logo-frame {
-    --logo-frame-size: 5.35rem;
-    --logo-frame-pad: 0.45rem;
-    position: relative;
+  .pcard {
+    --spot: var(--color-accent-2);
     display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    overflow: hidden;
-    width: var(--logo-frame-size);
-    height: var(--logo-frame-size);
-    padding: var(--logo-frame-pad);
-    border-radius: 1rem;
-    border: 1px solid color-mix(in srgb, var(--color-accent) 28%, var(--color-border));
+    flex-direction: column;
+    gap: 0.9rem;
+    height: 100%;
+    padding: 1.6rem;
+    border-radius: 1.25rem;
+    border: 1px solid color-mix(in srgb, var(--color-accent-2) 14%, var(--color-border));
     background: linear-gradient(
-      165deg,
-      color-mix(in srgb, var(--color-surface) 94%, var(--color-accent)) 0%,
-      color-mix(in srgb, var(--color-bg) 92%, transparent) 100%
+      180deg,
+      color-mix(in srgb, var(--color-surface) 92%, var(--color-accent-2)) 0%,
+      var(--color-surface) 38%,
+      color-mix(in srgb, var(--color-bg) 70%, var(--color-surface)) 100%
     );
-    box-shadow:
-      inset 0 1px 0 color-mix(in srgb, var(--color-accent) 16%, transparent),
-      inset 0 -2px 4px rgba(0, 0, 0, 0.35),
-      0 6px 20px rgba(0, 0, 0, 0.42),
-      0 0 0 1px color-mix(in srgb, var(--color-accent) 9%, transparent),
-      0 0 32px color-mix(in srgb, var(--color-accent) 11%, transparent);
+    box-shadow: var(--shadow-float);
+    transition:
+      transform 320ms var(--ease-out-expo),
+      border-color 320ms ease,
+      box-shadow 320ms ease;
   }
 
-  .project-logo-frame::before {
+  .pcard::before {
     content: '';
     position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    pointer-events: none;
-    background: linear-gradient(
-      145deg,
-      color-mix(in srgb, var(--color-accent) 8%, transparent) 0%,
-      transparent 42%
-    );
+    inset: 0 1.25rem auto;
+    height: 2px;
+    border-radius: 0 0 2px 2px;
+    background: linear-gradient(90deg, var(--color-accent), var(--color-accent-2));
+    opacity: 0.7;
   }
 
-  /* Canvas quadrado 1:1 — mesma área útil para todas as artes */
-  .project-logo-inner {
-    position: relative;
-    z-index: 1;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    min-width: 0;
-    min-height: 0;
-    aspect-ratio: 1 / 1;
+  .pcard[data-status='private'] {
+    --spot: var(--color-muted);
+    border-style: dashed;
+  }
+
+  .pcard[data-status='private']::before {
+    background: linear-gradient(90deg, var(--color-muted), transparent);
+    opacity: 0.45;
+  }
+
+  .pcard-top {
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 0.5rem;
-    background: radial-gradient(
-      70% 70% at 50% 50%,
-      color-mix(in srgb, var(--color-bg) 28%, transparent) 0%,
-      transparent 78%
-    );
+    justify-content: space-between;
+    gap: 1rem;
   }
 
-  .project-logo-img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    object-position: center;
-    opacity: 1;
-    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.45));
+  .pcard :global(.pcard-emblem) {
+    width: 3.5rem;
+    height: 3.5rem;
+    flex: none;
+    filter: drop-shadow(0 6px 18px color-mix(in srgb, var(--color-accent-2) 22%, transparent));
+    transition: transform 420ms var(--ease-out-expo);
   }
 
-  @media (min-width: 768px) {
-    .project-logo-frame {
-      --logo-frame-size: 6rem;
-      --logo-frame-pad: 0.5rem;
-      border-radius: 1.125rem;
-    }
-
-    .project-logo-inner {
-      border-radius: 0.625rem;
-    }
+  .pcard-status {
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    color: var(--color-accent);
+    background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-accent) 45%, transparent);
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    .project-logo-frame {
-      box-shadow:
-        inset 0 1px 0 color-mix(in srgb, var(--color-accent) 12%, transparent),
-        inset 0 -2px 4px rgba(0, 0, 0, 0.3),
-        0 4px 14px rgba(0, 0, 0, 0.38),
-        0 0 0 1px color-mix(in srgb, var(--color-accent) 8%, transparent);
-    }
+  [data-status='development'] .pcard-status {
+    color: var(--color-accent-2);
+    background: color-mix(in srgb, var(--color-accent-2) 12%, transparent);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-accent-2) 50%, transparent);
+  }
+
+  [data-status='private'] .pcard-status {
+    color: var(--color-muted);
+    background: color-mix(in srgb, var(--color-muted) 10%, transparent);
+    box-shadow: inset 0 0 0 1px var(--color-border);
+  }
+
+  .pcard-title {
+    margin: 0.35rem 0 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    color: var(--color-text);
+    text-wrap: balance;
+    transition: color 260ms ease;
+  }
+
+  .pcard-tagline {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--color-muted);
+  }
+
+  .pcard-highlights {
+    margin: 0.2rem 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.55rem;
+  }
+
+  .pcard-highlights li {
+    position: relative;
+    padding-left: 1.15rem;
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: color-mix(in srgb, var(--color-text) 90%, var(--color-muted));
+  }
+
+  .pcard-highlights li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 2px;
+    background: var(--color-accent-2);
+    box-shadow: 0 0 10px color-mix(in srgb, var(--color-accent-2) 60%, transparent);
+  }
+
+  .pcard-stack {
+    margin: 0.3rem 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .pcard-stack li {
+    font-size: 11.5px;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.45rem;
+    color: var(--color-muted);
+    border: 1px solid var(--color-border);
+    background: color-mix(in srgb, var(--color-bg) 60%, transparent);
+  }
+
+  .pcard-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: auto;
+    padding-top: 0.6rem;
+  }
+
+  .pcard-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.55rem 0.95rem;
+    border-radius: 0.6rem;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-accent-2);
+    border: 1px solid color-mix(in srgb, var(--color-accent-2) 45%, var(--color-border));
+    background: color-mix(in srgb, var(--color-accent-2) 6%, transparent);
+    transition:
+      background 200ms ease,
+      border-color 200ms ease,
+      transform 200ms ease;
+  }
+
+  .pcard-link:hover {
+    background: color-mix(in srgb, var(--color-accent-2) 16%, transparent);
+    border-color: var(--color-accent-2);
+    transform: translateY(-1px);
+  }
+
+  .pcard-link--main {
+    color: var(--color-cta-on-accent);
+    border-color: transparent;
+    background: linear-gradient(100deg, var(--color-accent), color-mix(in srgb, var(--color-accent) 40%, var(--color-accent-2)));
+  }
+
+  .pcard-link--main:hover {
+    background: linear-gradient(100deg, var(--color-accent), var(--color-accent-2));
+    border-color: transparent;
+  }
+
+  .pcard-link:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  .pcard-note {
+    font-size: 12px;
+    color: var(--color-muted);
   }
 
   @media (hover: hover) and (pointer: fine) {
-    .project-card-outer:hover .project-card-inner {
+    .pcard:hover {
+      transform: translateY(-4px);
+      border-color: color-mix(in srgb, var(--color-accent-2) 45%, var(--color-border));
       box-shadow:
         var(--shadow-lg),
-        0 0 0 1px color-mix(in srgb, var(--color-accent) 14%, transparent),
-        0 0 48px color-mix(in srgb, var(--color-accent) 10%, transparent);
+        0 0 40px color-mix(in srgb, var(--color-accent-2) 12%, transparent);
     }
 
-    .project-card-outer:hover .project-logo-frame {
-      border-color: color-mix(in srgb, var(--color-accent) 38%, var(--color-border));
-      box-shadow:
-        inset 0 1px 0 color-mix(in srgb, var(--color-accent) 20%, transparent),
-        inset 0 -2px 4px rgba(0, 0, 0, 0.35),
-        0 8px 24px rgba(0, 0, 0, 0.45),
-        0 0 0 1px color-mix(in srgb, var(--color-accent) 14%, transparent),
-        0 0 40px color-mix(in srgb, var(--color-accent) 14%, transparent);
+    .pcard:hover :global(.pcard-emblem) {
+      transform: rotate(-4deg) scale(1.06);
+    }
+
+    .pcard:hover .pcard-title {
+      color: color-mix(in srgb, var(--color-accent-2) 55%, var(--color-text));
     }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .project-card-outer:hover .project-card-inner {
-      box-shadow: var(--shadow-float);
+    .pcard,
+    .pcard :global(.pcard-emblem),
+    .pcard-link {
+      transition: none;
     }
   }
 </style>

@@ -22,9 +22,9 @@ const steps = [
       </p>
       <h2
         id="cases-heading"
-        class="max-w-[32rem] text-3xl font-bold tracking-[-0.02em] text-text-primary md:max-w-none md:text-[2.35rem] md:leading-tight"
+        class="font-display max-w-[32rem] text-3xl font-bold tracking-[-0.02em] text-text-primary md:max-w-none md:text-[2.35rem] md:leading-tight"
       >
-        How I Approach the Work
+        How I Approach <span class="text-brand-gradient">the Work</span>
       </h2>
       <div
         class="mt-6 h-px w-16 bg-gradient-to-r from-accent/80 to-transparent md:mt-8"
@@ -37,6 +37,7 @@ const steps = [
       {
         technicalCases.map((item, index) => (
           <article
+            data-spotlight
             class="relative flex flex-col rounded-2xl border border-[color-mix(in_srgb,var(--color-accent)_12%,var(--color-border))] bg-gradient-to-b from-[color-mix(in_srgb,var(--color-surface)_95%,transparent)] to-surface p-7 shadow-float"
             data-reveal
             style={`transition-delay: ${index * 0.1}s`}
