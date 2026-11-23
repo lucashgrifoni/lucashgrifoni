@@ -33,13 +33,19 @@ const gid = `emblem-${id}`;
       <stop offset="0" style="stop-color: var(--color-accent)"></stop>
       <stop offset="1" style="stop-color: var(--color-accent-2)"></stop>
     </linearGradient>
+    <!-- Glyph gradient in the glyph's own 24x24 space: a bounding-box gradient cannot paint
+         straight strokes (zero width or height), which left icons like "chart" without color. -->
+    <linearGradient id={`${gid}-glyph`} gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="24" y2="24">
+      <stop offset="0" style="stop-color: var(--color-accent)"></stop>
+      <stop offset="1" style="stop-color: var(--color-accent-2)"></stop>
+    </linearGradient>
   </defs>
   <rect x="1.5" y="1.5" width="61" height="61" rx="16" style="fill: var(--color-bg)" stroke={`url(#${gid})`} stroke-width="1.5"></rect>
   <rect x="1.5" y="1.5" width="61" height="61" rx="16" fill={`url(#${gid})`} opacity="0.08"></rect>
   <g
     transform="translate(14 14) scale(1.5)"
     fill="none"
-    stroke={`url(#${gid})`}
+    stroke={`url(#${gid}-glyph)`}
     stroke-width="1.6"
     stroke-linecap="round"
     stroke-linejoin="round"
