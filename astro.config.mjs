@@ -1,6 +1,5 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
@@ -8,5 +7,9 @@ export default defineConfig({
   // Repositório github.com/lucashgrifoni/lucashgrifoni → Pages em /lucashgrifoni/
   base: '/lucashgrifoni/',
   output: 'static',
-  integrations: [tailwind()],
+  vite: {
+    // Keep the pre-Vite 8 CSS browser target: newer defaults emit range media
+    // queries (width>=768px) that Safari < 16.4 ignores.
+    build: { cssTarget: ['chrome87', 'edge88', 'firefox78', 'safari14'] },
+  },
 });
