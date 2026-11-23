@@ -4,18 +4,19 @@
 
 /* —— Design tokens (paleta oficial + derivações) —— */
 :root {
-  --color-bg: #1e1e1e;
-  --color-accent: #99ffcc;
-  --color-text: #e8e8e8;
-  --color-muted: #6b7280;
-  --color-surface: #2a2a2a;
-  --color-border: #333333;
-  --color-footer-bg: #111111;
-  --color-cta-on-accent: #1e1e1e;
-  --color-nav-scrolled-bg: rgba(22, 24, 28, 0.82);
+  --color-bg: #0a0e1a;
+  --color-accent: #2ee6c9;
+  --color-accent-2: #9d7bff;
+  --color-text: #e6edf7;
+  --color-muted: #8a96ad;
+  --color-surface: #121829;
+  --color-border: #1f2a40;
+  --color-footer-bg: #070a13;
+  --color-cta-on-accent: #0a0e1a;
+  --color-nav-scrolled-bg: rgba(10, 14, 26, 0.82);
   --color-accent-soft: color-mix(in srgb, var(--color-accent) 14%, transparent);
   --color-accent-muted: color-mix(in srgb, var(--color-accent) 45%, var(--color-bg));
-  --color-surface-glass: rgba(42, 42, 42, 0.55);
+  --color-surface-glass: rgba(18, 24, 41, 0.55);
   --color-border-glow: color-mix(in srgb, var(--color-accent) 22%, var(--color-border));
   --radius-sm: 8px;
   --radius-md: 12px;
@@ -197,9 +198,9 @@ body {
   font-size: 0.9375rem;
   letter-spacing: 0.02em;
   border-radius: var(--radius-sm);
-  border: 1px solid color-mix(in srgb, var(--color-accent) 55%, var(--color-border));
-  color: var(--color-accent);
-  background: color-mix(in srgb, var(--color-accent) 6%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-accent-2) 55%, var(--color-border));
+  color: var(--color-accent-2);
+  background: color-mix(in srgb, var(--color-accent-2) 6%, transparent);
   transition:
     background var(--transition-fast),
     border-color var(--transition-fast),
@@ -208,10 +209,10 @@ body {
 }
 
 .btn-secondary:hover {
-  background: color-mix(in srgb, var(--color-accent) 14%, transparent);
-  border-color: color-mix(in srgb, var(--color-accent) 75%, var(--color-border));
+  background: color-mix(in srgb, var(--color-accent-2) 14%, transparent);
+  border-color: color-mix(in srgb, var(--color-accent-2) 75%, var(--color-border));
   transform: translateY(-1px);
-  box-shadow: 0 4px 20px color-mix(in srgb, var(--color-accent) 12%, transparent);
+  box-shadow: 0 4px 20px color-mix(in srgb, var(--color-accent-2) 12%, transparent);
 }
 
 .btn-secondary:active {
