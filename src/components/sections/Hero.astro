@@ -6,13 +6,6 @@ const gateLines = [
   { check: 'IaC', detail: 'policy checks passed' },
   { check: 'Evidence', detail: 'SBOM + SARIF bundled' },
 ];
-
-const facts = [
-  { value: '6+ years', label: 'in Application Security' },
-  { value: '4 industries', label: 'aviation, finance, telecom, healthcare' },
-  { value: '7 tools', label: 'open source on GitHub' },
-  { value: '3 frameworks', label: 'ISO 27001, NIST, and PCI DSS in practice' },
-];
 ---
 
 <section class="hero relative z-10 overflow-hidden" aria-label="Introduction">
@@ -80,24 +73,13 @@ const facts = [
         </div>
       </div>
     </div>
-
-    <dl class="hero-facts animate-hero-cta">
-      {
-        facts.map((f) => (
-          <div>
-            <dt class="font-display">{f.value}</dt>
-            <dd>{f.label}</dd>
-          </div>
-        ))
-      }
-    </dl>
   </div>
 </section>
 
 <style>
   .hero {
     padding-top: clamp(6.5rem, 12vw, 9rem);
-    padding-bottom: clamp(3rem, 6vw, 4.5rem);
+    padding-bottom: clamp(4rem, 8vw, 6rem);
   }
 
   .hero-grid {
@@ -112,8 +94,7 @@ const facts = [
   }
 
   /* Soft backdrop so the floating telemetry stays behind the copy. */
-  .hero-copy::before,
-  .hero-facts::before {
+  .hero-copy::before {
     content: '';
     position: absolute;
     z-index: -1;
@@ -280,57 +261,9 @@ const facts = [
     }
   }
 
-  .hero-facts {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    margin: clamp(3rem, 6vw, 4.5rem) 0 0;
-    border-top: 1px solid var(--color-border);
-  }
-
-  .hero-facts::before {
-    inset: 0 -2rem -1.5rem;
-    background: linear-gradient(180deg, color-mix(in srgb, var(--color-bg) 88%, transparent), color-mix(in srgb, var(--color-bg) 70%, transparent));
-    backdrop-filter: blur(3px);
-  }
-
-  .hero-facts > div {
-    padding: 1.4rem 1.4rem 0.5rem;
-    border-left: 1px solid var(--color-border);
-  }
-
-  .hero-facts > div:first-child {
-    padding-left: 0;
-    border-left: 0;
-  }
-
-  .hero-facts dt {
-    font-size: clamp(1.4rem, 2.2vw, 1.75rem);
-    font-weight: 600;
-    color: var(--color-text);
-  }
-
-  .hero-facts dd {
-    margin: 0.3rem 0 0;
-    font-size: 14px;
-    line-height: 1.5;
-    color: var(--color-muted);
-  }
-
   @media (max-width: 900px) {
     .hero-grid {
       grid-template-columns: minmax(0, 1fr);
-    }
-
-    .hero-facts {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .hero-facts > div,
-    .hero-facts > div:first-child {
-      padding: 1.2rem 1rem 1rem 0;
-      border-left: 0;
-      border-bottom: 1px solid var(--color-border);
     }
   }
 
