@@ -88,6 +88,10 @@ const links = [
       if (!el) continue;
       if (el.offsetTop <= scrollY) current = id;
     }
+    // The last section is shorter than the viewport, so its top never reaches the nav line.
+    // At the bottom of the page, mark the last section as current.
+    const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+    if (atBottom) current = sectionIds[sectionIds.length - 1];
     navLinks.forEach((link) => {
       const id = link.dataset.navLink ?? '';
       const active = id === current && current !== '';
