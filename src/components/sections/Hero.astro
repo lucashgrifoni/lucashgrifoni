@@ -141,15 +141,16 @@ const gateLines = [
       }
       card.style.visibility = '';
       term.dataset.alert = a.sev;
-      window.setTimeout(() => card.classList.add('is-leaving'), 2600);
+      // One alert every 2 s: visible ~1.45 s, fades out, gone before the next.
+      window.setTimeout(() => card.classList.add('is-leaving'), 1450);
       window.setTimeout(() => {
         card.remove();
         delete term.dataset.alert;
-      }, 3100);
+      }, 1950);
       schedule();
     };
-    const schedule = () => window.setTimeout(show, 3200 + Math.random() * 1800);
-    window.setTimeout(show, 2800);
+    const schedule = () => window.setTimeout(show, 2000);
+    window.setTimeout(show, 1500);
   }
   initHeroAlerts();
 </script>
