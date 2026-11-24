@@ -9,6 +9,7 @@ const gateLines = [
 ---
 
 <section class="hero relative z-10 overflow-hidden" aria-label="Introduction">
+  <div class="hero-alerts" data-hero-alerts aria-hidden="true"></div>
   <div class="pointer-events-none absolute inset-0" aria-hidden="true">
     <div
       class="absolute -top-40 left-[8%] h-[min(70vw,560px)] w-[min(80vw,640px)] rounded-full opacity-60"
@@ -54,7 +55,6 @@ const gateLines = [
       </div>
 
       <div class="hero-term-wrap">
-      <div class="hero-alerts" data-hero-alerts aria-hidden="true"></div>
       <div class="hero-term animate-hero-deco" role="img" aria-label="Illustration: a release gate running security checks before a release">
         <div class="hero-term-bar mono" aria-hidden="true">
           <i></i><i></i><i></i><span>release-gate.log</span>
@@ -93,8 +93,37 @@ const gateLines = [
   function initHeroAlerts() {
     const host = document.querySelector<HTMLElement>('[data-hero-alerts]');
     const term = document.querySelector<HTMLElement>('.hero-term');
-    if (!host || !term) return;
+    const copy = document.querySelector<HTMLElement>('.hero-copy');
+    if (!host || !term || !copy) return;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const GAP = 18; // clearance kept around the protected areas
+    const NAV = 80; // keep clear of the fixed nav bar
+
+    // Random spot inside the hero that avoids the name block and the terminal.
+    const place = (card: HTMLElement) => {
+      const box = host.getBoundingClientRect();
+      const blocked = [copy, term].map((el) => {
+        const r = el.getBoundingClientRect();
+        return { l: r.left - box.left - GAP, t: r.top - box.top - GAP, r: r.right - box.left + GAP, b: r.bottom - box.top + GAP };
+      });
+      const w = card.offsetWidth;
+      const h = card.offsetHeight;
+      const maxX = box.width - w - 12;
+      const maxY = box.height - h - 12;
+      if (maxX < 12 || maxY < NAV) return false;
+      for (let tries = 0; tries < 40; tries += 1) {
+        const x = 12 + Math.random() * (maxX - 12);
+        const y = NAV + Math.random() * (maxY - NAV);
+        const hit = blocked.some((z) => x < z.r && x + w > z.l && y < z.b && y + h > z.t);
+        if (!hit) {
+          card.style.left = `${Math.round(x)}px`;
+          card.style.top = `${Math.round(y)}px`;
+          return true;
+        }
+      }
+      return false;
+    };
 
     let i = 0;
     const show = () => {
@@ -104,7 +133,13 @@ const gateLines = [
       const card = document.createElement('div');
       card.className = `hero-alert hero-alert--${a.sev}`;
       card.innerHTML = `<span class="hero-alert-dot"></span><span class="hero-alert-sev mono">${a.label}</span><span class="hero-alert-tool mono">${a.tool}</span><span class="hero-alert-msg">${a.msg}</span>`;
+      card.style.visibility = 'hidden';
       host.replaceChildren(card);
+      if (!place(card)) {
+        card.remove(); // no free spot on this screen size
+        return schedule();
+      }
+      card.style.visibility = '';
       term.dataset.alert = a.sev;
       window.setTimeout(() => card.classList.add('is-leaving'), 2600);
       window.setTimeout(() => {
@@ -228,9 +263,6 @@ const gateLines = [
 
   .hero-term-wrap {
     position: relative;
-    --sev-critical: #ff5d73;
-    --sev-high: #ffb547;
-    --sev-medium: var(--color-accent-2);
   }
 
   .hero-term {
@@ -251,20 +283,23 @@ const gateLines = [
     border-color: color-mix(in srgb, var(--sev-medium) 45%, var(--color-border));
   }
 
-  /* Alerts slide out below the terminal, in free space, so they never cover it. */
+  /* Alerts pop at random spots in the hero; the script keeps them off the copy and the terminal. */
+  .hero {
+    --sev-critical: #ff5d73;
+    --sev-high: #ffb547;
+    --sev-medium: #ffe14d;
+  }
+
   .hero-alerts {
     position: absolute;
-    top: calc(100% + 0.9rem);
-    left: 0;
-    right: 0;
-    z-index: 2;
-    display: flex;
-    justify-content: flex-end;
+    inset: 0;
+    z-index: 1;
     pointer-events: none;
   }
 
   .hero-alerts :global(.hero-alert) {
     --sev: var(--sev-high);
+    position: absolute;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -328,7 +363,7 @@ const gateLines = [
   @keyframes alert-in {
     from {
       opacity: 0;
-      transform: translateY(-10px) scale(0.96);
+      transform: scale(0.9);
     }
     to {
       opacity: 1;
@@ -339,7 +374,7 @@ const gateLines = [
   @keyframes alert-out {
     to {
       opacity: 0;
-      transform: translateY(6px);
+      transform: scale(0.96);
     }
   }
 
