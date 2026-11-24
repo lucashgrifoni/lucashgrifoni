@@ -48,7 +48,7 @@ Open source tools I build for AppSec and DevSecOps teams. Each card opens the re
 </p>
 
 <p align="center">
-  <a href="https://lucashgrifoni.github.io/lucashgrifoni/"><img src="assets/readme/portfolio.svg" alt="Live portfolio: projects, technical cases, experience, stack and contact in one place" width="99%" /></a>
+  <a href="https://lucashgrifoni.github.io/lucashgrifoni/"><img src="assets/readme/portfolio.svg" alt="Live portfolio: projects, experience, stack, and contact in one place" width="99%" /></a>
 </p>
 
 ---

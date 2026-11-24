@@ -6,7 +6,6 @@ import Nav from '../components/layout/Nav.astro';
 import Hero from '../components/sections/Hero.astro';
 import Manifesto from '../components/sections/Manifesto.astro';
 import Experiences from '../components/sections/Experiences.astro';
-import TechnicalCases from '../components/sections/TechnicalCases.astro';
 import ProjectCard from '../components/sections/ProjectCard.astro';
 import NowBuilding from '../components/sections/NowBuilding.astro';
 import SkillGrid from '../components/sections/SkillGrid.astro';
@@ -28,7 +27,6 @@ const privateProjects = projects.filter((p) => p.status === 'private');
     <Hero />
     <Manifesto />
     <Experiences />
-    <TechnicalCases />
     <section
       id="projects"
       class="relative z-10 overflow-hidden border-t border-[color-mix(in_srgb,var(--color-accent-2)_14%,var(--color-border))] bg-canvas py-24 md:py-32"
