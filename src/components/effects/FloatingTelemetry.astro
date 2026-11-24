@@ -7,12 +7,8 @@ const mobileMax = 6;
 const rows = telemetryLines.map((line, i) => ({
   ...line,
   i,
-  topPct: 6 + (i * 3.7) % 72,
-  durationSec: 28 + (i % 7) * 3.5,
-  delaySec: -(i * 2.1),
   depth: 0.85 + (i % 4) * 0.04,
   blurPx: i % 3 === 0 ? 0.4 : 0,
-  reverse: i % 2 === 1,
 }));
 ---
 
@@ -21,13 +17,9 @@ const rows = telemetryLines.map((line, i) => ({
     rows.map((row) => (
       <div
         class:list={['ft-line', row.i >= mobileMax && 'ft-line--desktop-only']}
+        data-depth={row.depth}
         style={{
-          '--ft-top': `${row.topPct}%`,
-          '--ft-dur': `${row.durationSec}s`,
-          '--ft-delay': `${row.delaySec}s`,
-          '--ft-depth': String(row.depth),
           '--ft-blur': `${row.blurPx}px`,
-          animationDirection: row.reverse ? 'reverse' : 'normal',
         }}
       >
         <span class="ft-chip mono">
@@ -40,6 +32,61 @@ const rows = telemetryLines.map((line, i) => ({
     ))
   }
 </div>
+
+<script>
+  // Each chip wanders: its heading drifts a little every frame and picks a new
+  // target now and then, so paths curve at random instead of running in lanes.
+  function initTelemetryWander() {
+    const layer = document.querySelector<HTMLElement>('[data-telemetry-layer]');
+    if (!layer) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    type Chip = { el: HTMLElement; x: number; y: number; angle: number; target: number; speed: number; scale: number; w: number; h: number };
+    const chips: Chip[] = [];
+
+    layer.querySelectorAll<HTMLElement>('.ft-line').forEach((el) => {
+      if (el.offsetParent === null) return; // hidden on this screen size
+      const scale = Number(el.dataset.depth ?? 1);
+      const angle = Math.random() * Math.PI * 2;
+      chips.push({
+        el,
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        angle,
+        target: angle,
+        speed: (10 + Math.random() * 14) * scale,
+        scale,
+        w: el.offsetWidth,
+        h: el.offsetHeight,
+      });
+    });
+
+    let last = performance.now();
+    function frame(now: number) {
+      const dt = Math.min((now - last) / 1000, 0.05);
+      last = now;
+      const W = window.innerWidth;
+      const H = window.innerHeight;
+      for (const c of chips) {
+        if (Math.random() < dt * 0.35) c.target = c.angle + (Math.random() - 0.5) * Math.PI * 1.4;
+        c.angle += (c.target - c.angle) * Math.min(1, dt * 0.8);
+        c.x += Math.cos(c.angle) * c.speed * dt;
+        c.y += Math.sin(c.angle) * c.speed * dt;
+        if (c.x > W + 20) c.x = -c.w - 20;
+        else if (c.x < -c.w - 20) c.x = W + 20;
+        if (c.y > H + 20) c.y = -c.h - 20;
+        else if (c.y < -c.h - 20) c.y = H + 20;
+        c.el.style.transform = `translate3d(${c.x.toFixed(1)}px, ${c.y.toFixed(1)}px, 0) scale(${c.scale})`;
+      }
+      requestAnimationFrame(frame);
+    }
+
+    for (const c of chips) c.el.style.transform = `translate3d(${c.x}px, ${c.y}px, 0) scale(${c.scale})`;
+    layer.setAttribute('data-ready', '');
+    requestAnimationFrame(frame);
+  }
+  initTelemetryWander();
+</script>
 
 <style>
   .floating-telemetry {
@@ -56,28 +103,23 @@ const rows = telemetryLines.map((line, i) => ({
     }
   }
 
-  @keyframes ft-drift {
-    0% {
-      transform: translate3d(105vw, 0, 0) scale(var(--ft-depth)) translateZ(0);
-    }
-    100% {
-      transform: translate3d(calc(-100% - 15vw), 0, 0) scale(var(--ft-depth)) translateZ(0);
-    }
-  }
-
+  /* Position comes from the wander script below; lines fade in once placed. */
   .ft-line {
     position: absolute;
-    top: var(--ft-top);
+    top: 0;
     left: 0;
-    opacity: 0.38;
+    opacity: 0;
     filter: blur(var(--ft-blur));
-    animation: ft-drift var(--ft-dur) linear infinite;
-    animation-delay: var(--ft-delay);
+    transition: opacity 1.2s ease;
     will-change: transform;
   }
 
+  .floating-telemetry[data-ready] .ft-line {
+    opacity: 0.38;
+  }
+
   @media (min-width: 768px) {
-    .ft-line {
+    .floating-telemetry[data-ready] .ft-line {
       opacity: 0.42;
     }
   }
@@ -86,7 +128,7 @@ const rows = telemetryLines.map((line, i) => ({
     .ft-line--desktop-only {
       display: none;
     }
-    .ft-line {
+    .floating-telemetry[data-ready] .ft-line {
       opacity: 0.28;
     }
     .ft-chip {

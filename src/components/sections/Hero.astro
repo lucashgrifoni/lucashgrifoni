@@ -53,6 +53,8 @@ const gateLines = [
         </div>
       </div>
 
+      <div class="hero-term-wrap">
+      <div class="hero-alerts" data-hero-alerts aria-hidden="true"></div>
       <div class="hero-term animate-hero-deco" role="img" aria-label="Illustration: a release gate running security checks before a release">
         <div class="hero-term-bar mono" aria-hidden="true">
           <i></i><i></i><i></i><span>release-gate.log</span>
@@ -72,9 +74,50 @@ const gateLines = [
           </p>
         </div>
       </div>
+      </div>
     </div>
   </div>
 </section>
+
+<script>
+  // Decorative scanner feed: a small alert card pops on the terminal every few seconds.
+  const ALERTS = [
+    { sev: 'critical', label: 'Critical', tool: 'SAST', msg: 'SQL injection in orders API' },
+    { sev: 'high', label: 'High', tool: 'SCA', msg: 'Vulnerable dependency in build' },
+    { sev: 'critical', label: 'Critical', tool: 'Secrets', msg: 'Hardcoded token in repository' },
+    { sev: 'high', label: 'High', tool: 'DAST', msg: 'Reflected XSS on /search' },
+    { sev: 'medium', label: 'Medium', tool: 'IaC', msg: 'Public storage bucket' },
+    { sev: 'high', label: 'High', tool: 'Container', msg: 'Base image with known CVEs' },
+  ];
+
+  function initHeroAlerts() {
+    const host = document.querySelector<HTMLElement>('[data-hero-alerts]');
+    const term = document.querySelector<HTMLElement>('.hero-term');
+    if (!host || !term) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    let i = 0;
+    const show = () => {
+      if (document.hidden) return schedule();
+      const a = ALERTS[i % ALERTS.length];
+      i += 1;
+      const card = document.createElement('div');
+      card.className = `hero-alert hero-alert--${a.sev}`;
+      card.innerHTML = `<span class="hero-alert-dot"></span><span class="hero-alert-sev mono">${a.label}</span><span class="hero-alert-tool mono">${a.tool}</span><span class="hero-alert-msg">${a.msg}</span>`;
+      host.replaceChildren(card);
+      term.dataset.alert = a.sev;
+      window.setTimeout(() => card.classList.add('is-leaving'), 2600);
+      window.setTimeout(() => {
+        card.remove();
+        delete term.dataset.alert;
+      }, 3100);
+      schedule();
+    };
+    const schedule = () => window.setTimeout(show, 3200 + Math.random() * 1800);
+    window.setTimeout(show, 2800);
+  }
+  initHeroAlerts();
+</script>
 
 <style>
   .hero {
@@ -181,6 +224,129 @@ const gateLines = [
       var(--shadow-lg),
       0 0 60px color-mix(in srgb, var(--color-accent-2) 10%, transparent);
     overflow: hidden;
+  }
+
+  .hero-term-wrap {
+    position: relative;
+    --sev-critical: #ff5d73;
+    --sev-high: #ffb547;
+    --sev-medium: var(--color-accent-2);
+  }
+
+  .hero-term {
+    transition: box-shadow 400ms ease, border-color 400ms ease;
+  }
+
+  .hero-term[data-alert='critical'] {
+    border-color: color-mix(in srgb, var(--sev-critical) 45%, var(--color-border));
+    box-shadow: var(--shadow-lg), 0 0 46px color-mix(in srgb, var(--sev-critical) 18%, transparent);
+  }
+
+  .hero-term[data-alert='high'] {
+    border-color: color-mix(in srgb, var(--sev-high) 40%, var(--color-border));
+    box-shadow: var(--shadow-lg), 0 0 46px color-mix(in srgb, var(--sev-high) 14%, transparent);
+  }
+
+  .hero-term[data-alert='medium'] {
+    border-color: color-mix(in srgb, var(--sev-medium) 45%, var(--color-border));
+  }
+
+  /* Alerts slide out below the terminal, in free space, so they never cover it. */
+  .hero-alerts {
+    position: absolute;
+    top: calc(100% + 0.9rem);
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    pointer-events: none;
+  }
+
+  .hero-alerts :global(.hero-alert) {
+    --sev: var(--sev-high);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 0.8rem;
+    border-radius: 0.7rem;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: var(--color-text);
+    background: color-mix(in srgb, var(--color-bg) 88%, var(--sev));
+    border: 1px solid color-mix(in srgb, var(--sev) 55%, transparent);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), 0 0 22px color-mix(in srgb, var(--sev) 22%, transparent);
+    backdrop-filter: blur(8px);
+    animation: alert-in 420ms var(--ease-out-expo) both;
+  }
+
+  .hero-alerts :global(.hero-alert--critical) {
+    --sev: var(--sev-critical);
+  }
+
+  .hero-alerts :global(.hero-alert--medium) {
+    --sev: var(--sev-medium);
+  }
+
+  .hero-alerts :global(.hero-alert.is-leaving) {
+    animation: alert-out 480ms ease forwards;
+  }
+
+  .hero-alerts :global(.hero-alert-dot) {
+    flex: none;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--sev);
+    box-shadow: 0 0 10px var(--sev);
+    animation: alert-blink 0.7s steps(1) infinite;
+  }
+
+  .hero-alerts :global(.hero-alert-sev) {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sev);
+  }
+
+  .hero-alerts :global(.hero-alert-tool) {
+    font-size: 10.5px;
+    padding: 0.1rem 0.4rem;
+    border-radius: 0.35rem;
+    color: var(--color-text);
+    background: color-mix(in srgb, var(--color-text) 8%, transparent);
+  }
+
+  .hero-alerts :global(.hero-alert-msg) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: color-mix(in srgb, var(--color-text) 85%, var(--color-muted));
+  }
+
+  @keyframes alert-in {
+    from {
+      opacity: 0;
+      transform: translateY(-10px) scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes alert-out {
+    to {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+  }
+
+  @keyframes alert-blink {
+    50% {
+      opacity: 0.25;
+    }
   }
 
   .hero-term-bar {
