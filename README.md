@@ -16,10 +16,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/AppSec-%231f2a40?style=for-the-badge&logo=shield&logoColor=%232ee6c9" alt="AppSec" style="border-radius: 14px; vertical-align: middle; margin: 6px 5px; box-shadow: 0 2px 10px rgba(10, 14, 26, 0.45);" />
-  <img src="https://img.shields.io/badge/DevSecOps-%232ee6c9?style=for-the-badge&logo=githubactions&logoColor=%230a0e1a" alt="DevSecOps" style="border-radius: 14px; vertical-align: middle; margin: 6px 5px; box-shadow: 0 2px 10px rgba(46, 230, 201, 0.25);" />
-  <img src="https://img.shields.io/badge/Secure%20by%20Design-%239d7bff?style=for-the-badge&logo=dependabot&logoColor=%230a0e1a" alt="Secure by Design" style="border-radius: 14px; vertical-align: middle; margin: 6px 5px; box-shadow: 0 2px 10px rgba(157, 123, 255, 0.3);" />
-  <img src="https://img.shields.io/badge/Risk%20Driven-%232b3a5c?style=for-the-badge&logo=datadog&logoColor=%239d7bff" alt="Risk Driven" style="border-radius: 14px; vertical-align: middle; margin: 6px 5px; box-shadow: 0 2px 10px rgba(31, 42, 64, 0.45);" />
+  <img src="assets/readme/badges.svg" alt="AppSec, DevSecOps, Secure by Design, Risk Driven" />
 </p>
 
 ## 👋 About Me:
